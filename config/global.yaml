@@ -1,0 +1,44 @@
+SAMP_RATE_iEEG:
+  2000
+
+SAMP_RATE_EEG:
+  200
+
+EEG_8_COMMON_CHANNELS:
+  ["F3", "F4", "C3", "C4", "O1", "O2", "A1", "A2"]
+
+PHASES:
+  ["Fixation", "Encoding", "Maintenance", "Retrieval"]  
+
+DURS_OF_PHASES:
+  [1, 2, 3, 2]  
+
+LONG_RIPPLE_THRES_MS:
+  100
+
+LARGE_RIPPLE_THRES_SD:
+  4
+
+SESSION_THRES:
+  # 1
+  2
+  # 3
+  # 4
+  # 5
+  # 7
+
+IoU_RIPPLE_THRES:
+  1.0
+  # 0.8  
+  # 0.75
+  # 0.6
+  # 0.5
+  # 0.3
+  # 0.25
+  # 0.1
+  # 0
+
+
+  
+  
+  

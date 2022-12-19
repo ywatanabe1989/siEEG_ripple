@@ -1,0 +1,7 @@
+d_ratio1: 0.85
+d_ratio2: 0.85
+lr: 1e-3
+n_fc1: 1024
+n_fc2: 256
+n_gpus: 1
+window_size_pts: 100

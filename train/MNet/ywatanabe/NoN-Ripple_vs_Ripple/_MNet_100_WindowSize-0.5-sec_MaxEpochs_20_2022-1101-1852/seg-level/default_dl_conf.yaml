@@ -1,0 +1,10 @@
+batch_size: 64
+do_under_sampling: true
+dtype: fp32
+n_repeat: 5
+num_workers: 20
+random_state: 42
+tau_ms: 0
+tes_ratio: 0.333
+val_ratio: 0.333
+ws_pts: 100

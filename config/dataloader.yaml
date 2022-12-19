@@ -1,0 +1,32 @@
+n_repeat:
+  5
+  
+ws_pts:
+  100
+  
+batch_size:
+  64
+  
+num_workers:
+  20
+  
+do_under_sampling:
+  True
+  
+dtype:
+  "fp32"
+  
+val_ratio:
+  0.333
+  
+tes_ratio:
+  0.333
+  
+random_state:
+  42
+  
+tau_ms:
+  0
+  
+# SAMP_RATE_EEG:
+#   200
