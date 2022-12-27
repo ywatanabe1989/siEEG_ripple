@@ -15,7 +15,7 @@ import scipy
 from tqdm import tqdm
 
 sys.path.append(".")
-from eeg_ieeg_ripple_clf import utils
+from siEEG_ripple import utils
 
 
 

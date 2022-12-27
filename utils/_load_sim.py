@@ -5,7 +5,7 @@
 import mngs
 import sys
 sys.path.append(".")
-from eeg_ieeg_ripple_clf import utils
+from siEEG_ripple import utils
 from tqdm import tqdm
 
 ROIs = mngs.io.load("./config/ripple_detectable_ROI.yaml")

@@ -13,7 +13,7 @@ import mngs
 # from scipy.sparse.csgraph import connected_components
 
 sys.path.append(".")
-from eeg_ieeg_ripple_clf import utils
+from siEEG_ripple import utils
 
 import numpy as np
 

@@ -10,7 +10,7 @@ import mngs
 import seaborn as sns
 
 sys.path.append(".")
-from eeg_ieeg_ripple_clf import utils
+from siEEG_ripple import utils
 
 # Parameters
 SAMP_RATE_iEEG = mngs.io.load("./config/global.yaml")["SAMP_RATE_iEEG"]

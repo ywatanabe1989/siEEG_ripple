@@ -12,7 +12,7 @@ from itertools import combinations
 import statsmodels
     
 sys.path.append(".")
-from eeg_ieeg_ripple_clf import utils
+from siEEG_ripple import utils
 
 """
 phase_a, phase_b = "Fixation", "Encoding"

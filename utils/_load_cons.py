@@ -1,32 +1,45 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-# Time-stamp: "2022-12-10 15:39:15 (ywatanabe)"
+# Time-stamp: "2022-12-23 17:13:31 (ywatanabe)"
 
 import sys
 
 sys.path.append(".")
-from eeg_ieeg_ripple_clf import utils
+from siEEG_ripple import utils
 import random
 import mngs
 import pandas as pd
 import numpy as np
 from utils._load_rips import _determine_firing_patterns
+from tqdm import tqdm
 
 
 def randomly_define_control_events(rips):
     def randomly_define_a_control_event(rip):
         phase = rip.phase
 
+        if phase is None:
+            return None, None, None
+
         phase_dur = PHASE2DUR_DICT[phase]
         phase_start = PHASE2START_SEC[phase]
         phase_end = phase_start + phase_dur
 
+        count = 0
+        dur_ms = rip.duration_ms        
         while True:
+            
             rand_start = phase_start + phase_dur * random.random()
-            rand_end = rand_start + rip.duration_ms * 1e-3
+            rand_end = rand_start + dur_ms * 1e-3
             iou = utils.calc_iou([rand_start, rand_end], [rip.start_time, rip.end_time])
+
             if (iou == 0) * (rand_end <= phase_end):
                 return rand_start, rand_end, phase
+            
+            if count > 100:
+                return rand_start, rand_end, phase
+                
+            count += 1
 
     starts, ends, phases = [], [], []
     for _, rip in rips.iterrows():
@@ -40,19 +53,19 @@ def randomly_define_control_events(rips):
     if data.ndim == 1:
         data = data.reshape(1, -1)
 
-    out = pd.DataFrame(
+    cons = pd.DataFrame(
         columns=["start_time", "end_time"],
         data=data,
     )
-    out["phase"] = phases # object
+    cons["phase"] = phases  # object
 
-    return out
+    return cons
 
 
-def have_no_overlap(rips, controls):
+def have_no_overlap(rips, cons):
     ious = []
     for _, rip in rips.iterrows():
-        for _, cont in controls.iterrows():
+        for _, cont in cons.iterrows():
             iou = utils.calc_iou(
                 [rip.start_time, rip.end_time], [cont.start_time, cont.end_time]
             )
@@ -63,40 +76,52 @@ def have_no_overlap(rips, controls):
         return False
 
 
-def define_controls(trials_uq, rips_df):
-    controls = []
-    for _, trial in trials_uq.iterrows():
+def define_cons(trials_uq, rips_df):
+    print("defining controls...")
+    cons = []
+
+    for i_trial, (_, trial) in enumerate(tqdm(trials_uq.iterrows())): # 1745
         rips = rips_df[
             (rips_df.subject == trial.subject)
             * (rips_df.session == trial.session)
             * (rips_df.trial_number == trial.trial_number)
-        ]
-        
-        not_overlapped = False
-        while not not_overlapped:
-            _controls = randomly_define_control_events(rips)
-            not_overlapped = have_no_overlap(rips, _controls)
+        ].copy()
 
-        for k in [
-            "subject",
-            "session",
-            "trial_number",
-            "set_size",
-            "match",
-            "correct",
-            "response_time",
-            # "probe_letter",
-        ]:
-            _controls[k] = np.array(rips[k])
-        _controls["IoU"] = 0
+        if rips is pd.DataFrame():
+            _cons = rips
+        else:
+            not_overlapped = False
+            count = 0
+            while not not_overlapped:
+                _cons = randomly_define_control_events(rips)
+                not_overlapped = have_no_overlap(rips, _cons)
 
-        controls.append(_controls)
+                if count > 100:
+                    # print(count)                
+                    not_overlapped = True
+                count += 1
 
-    controls = pd.concat(controls)
-    return controls
+            for k in [
+                "subject",
+                "session",
+                "trial_number",
+                "set_size",
+                "match",
+                "correct",
+                "response_time",
+                "ROI",
+                # "probe_letter",
+            ]:
+                _cons[k] = np.array(rips[k])
+            _cons["IoU"] = 0
+
+        cons.append(_cons)
+
+    cons = pd.concat(cons)
+    return cons
 
 
-def load_cons(from_pkl=True, only_correct=True):
+def load_cons(from_pkl=True, only_correct=True, ROI=None):
     mngs.general.fix_seeds(random=random)
 
     global PHASE2DUR_DICT, PHASE2START_SEC
@@ -109,16 +134,44 @@ def load_cons(from_pkl=True, only_correct=True):
         "Maintenance": 3,
         "Retrieval": 6,
     }
-    rips_df = utils.load_rips(from_pkl=from_pkl, only_correct=only_correct)
+    # if from_pkl and (ROI is not None):
+    #     try:
+    #         return mngs.io.load(f"./tmp/cons_df/common_average_2.0_SD_{ROI}.pkl")
+    #     except Exception as e:
+    #         print(e)
+
+    rips_df = utils.load_rips(from_pkl=from_pkl, only_correct=only_correct, ROI=ROI)
     trials_uq = rips_df[["subject", "session", "trial_number"]].drop_duplicates()
-    controls = define_controls(trials_uq, rips_df)
-    controls["firing_pattern"] = [
-        _determine_firing_patterns(controls.iloc[ii]) for ii in range(len(controls))
-    ]
+
+    cons = define_cons(trials_uq, rips_df)
+    print("extracting firing patterns...")
+    # 3338
+    # single positional indexer is out-of-bound
+    # print(cons.iloc[3337])
+    # print(cons.iloc[3338])
+    # print(cons.iloc[3339])        
+
+    _determine_firing_patterns(cons.iloc[0])    
+    
+    try:
+        cons["firing_pattern"] = [
+            _determine_firing_patterns(cons.iloc[ii]) for ii in tqdm(range(len(cons)))
+        ] # fixme
+        # single positional indexer is out-of-bounds
+    except Exception as e:
+        print(e)
+        import ipdb; ipdb.set_trace()
     if only_correct:
-        controls = controls[controls.correct == True]
-    return controls
+        cons = cons[cons.correct == True]
+
+    if from_pkl and (ROI is not None):
+        try:
+            mngs.io.save(cons, f"./tmp/cons_df/common_average_2.0_SD_{ROI}.pkl")
+        except Exception as e:
+            print(e)
+        
+    return cons
 
 
 if __name__ == "__main__":
-    controls = load_cons()
+    cons = load_cons(ROI="AHR") # "AHL"

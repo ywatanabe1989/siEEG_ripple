@@ -1,13 +1,13 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-# Time-stamp: "2022-12-02 11:04:44 (ywatanabe)"
+# Time-stamp: "2022-12-25 15:03:12 (ywatanabe)"
 
 from glob import glob
 import mngs
 import pandas as pd
 import sys
 sys.path.append(".")
-from eeg_ieeg_ripple_clf import utils
+from siEEG_ripple import utils
 
 ROIs = mngs.io.load("./config/ripple_detectable_ROI.yaml")
 PHASES = mngs.io.load("./config/global.yaml")["PHASES"]
@@ -15,13 +15,13 @@ DURS_OF_PHASES = mngs.io.load("./config/global.yaml")["DURS_OF_PHASES"]
 SESSION_THRES = mngs.io.load("./config/global.yaml")["SESSION_THRES"]
 
 
-def load_trials(subs=list(ROIs.keys()), add_n_ripples=False, from_pkl=True):
+def load_trials(subs=list(ROIs.keys()), add_n_ripples=False, from_pkl=False, only_correct=False):
     if from_pkl:
         return mngs.io.load("./tmp/trials.pkl")
     
     dfs = []
     for sub in subs:
-        sub = f"{sub:02d}"
+        sub = f"{int(sub):02d}"
         sessions = [dir[-2:] for dir in glob(f"./data/Sub_{sub}/Session_??")]
         for session in sessions:
             trials_info = mngs.io.load(
@@ -37,8 +37,9 @@ def load_trials(subs=list(ROIs.keys()), add_n_ripples=False, from_pkl=True):
         rips_df = utils.load_rips()
         dfs = _add_n_ripples(dfs, rips_df)
 
-    # only correct trials
-    dfs = dfs[dfs.correct == True]
+    if only_correct:
+        # only correct trials
+        dfs = dfs[dfs.correct == True]
 
     # sessions
     dfs = dfs[dfs.session.astype(int) <= SESSION_THRES]
@@ -56,8 +57,8 @@ def _add_n_ripples(trials_df, rips_df):
 
     for i_trial, trial in trials_df.iterrows():
         for phase in PHASES:
-            indi_subject = rips_df.subject == float(trial.subject)
-            indi_session = rips_df.session == float(trial.session)
+            indi_subject = rips_df.subject.astype(int) == int(trial.subject)
+            indi_session = rips_df.session.astype(int) == int(trial.session)
             indi_trial_number = rips_df.trial_number == trial.trial_number # here
             indi_phase = rips_df.phase == phase
             
@@ -68,5 +69,7 @@ def _add_n_ripples(trials_df, rips_df):
     return trials_df
 
 if __name__ == "__main__":
-    trials_df = load_trials(add_n_ripples=True, from_pkl=False)
+    # trials_df = load_trials(add_n_ripples=True, from_pkl=False)
+    trials_df = load_trials(add_n_ripples=True)    
     mngs.io.save(trials_df, "./tmp/trials.pkl")    
+

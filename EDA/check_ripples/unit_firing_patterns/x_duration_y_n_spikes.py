@@ -12,7 +12,7 @@ import matplotlib.pyplot as plt
 import sys
 
 sys.path.append(".")
-from eeg_ieeg_ripple_clf import utils
+from siEEG_ripple import utils
 import seaborn as sns
 import scipy
 

@@ -1,14 +1,25 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-# Time-stamp: "2022-12-09 19:48:38 (ywatanabe)"
+# Time-stamp: "2022-12-23 12:09:28 (ywatanabe)"
+
+import numpy as np
 
 def calc_iou(a, b):
     """
     Calculate Intersection over Union
     a = [0, 10]
     b = [0, 3]
+    b = [None, None]
     calc_iou(a, b) # 0.3
     """
+    
+    try:
+        a = float(a[0]), float(a[1])
+        b = float(b[0]), float(b[1])
+    except Exception as e:
+        # print(e)
+        return np.nan
+    
     (a_s, a_e) = a
     (b_s, b_e) = b
 

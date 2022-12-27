@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-# Time-stamp: "2022-12-07 14:45:26 (ywatanabe)"
+# Time-stamp: "2022-12-25 17:17:42 (ywatanabe)"
 
 import re
 from glob import glob
@@ -10,7 +10,7 @@ import numpy as np
 from natsort import natsorted
 import matplotlib
 
-# matplotlib.use("Agg")
+matplotlib.use("TkAgg")
 import matplotlib.pyplot as plt
 import torch
 import seaborn as sns
@@ -21,7 +21,7 @@ import warnings
 import sys
 
 sys.path.append(".")
-from eeg_ieeg_ripple_clf import utils
+from siEEG_ripple import utils
 import seaborn as sns
 import scipy
 import pingouin
@@ -88,7 +88,7 @@ def plot_hist_set_size_and_amplitude_by_phase(rips_df):
             common_norm=False,
             ax=ax,
             kde=True,
-            legend=False,            
+            legend=True,            
             )
         ax.set_xlabel("")
         ax.set_xscale("log")        
@@ -114,7 +114,7 @@ def plot_box_x_set_size_y_var_ax_phase(rips_df, phase, var):
     ax.set_title(phase)
     ax.set_xlabel(f"# of letters in {phase}")
     ylabel = "Ripple duration [ms]" if var == "duration_ms" else None
-    ylabel = "Ripple peak amplitude[SD of baseline]" if var == "duration_ms" else ylabel
+    ylabel = "Ripple peak amplitude[SD of baseline]" if var == "ripple_peak_amplitude_sd" else ylabel
     ax.set_ylabel(ylabel)    
     return fig
 
@@ -158,6 +158,12 @@ if __name__ == "__main__":
     rips_df = utils.load_rips()
     trials_df = utils.load_trials(add_n_ripples=True)
 
+    # Remove subject #03 and #09
+    # rips_df = rips_df[rips_df.subject != "03"]
+    # trials_df = trials_df[trials_df.subject != "03"]    
+    # rips_df = rips_df[rips_df.subject != "09"]
+    # trials_df = trials_df[trials_df.subject != "09"]    
+
     # Plots
     # duration
     fig = plot_violin_set_size_and_duration_by_phase(rips_df)
@@ -167,6 +173,7 @@ if __name__ == "__main__":
     fig = plot_hist_set_size_and_duration_by_phase(rips_df)
     mngs.io.save(fig, "./tmp/figs/hist/set_size_and_duration_by_phase.png")
 
+    fig = plot_box_x_set_size_y_duration_ax_phase(rips_df, phase="Fixation")    
     fig = plot_box_x_set_size_y_duration_ax_phase(rips_df, phase="Encoding")
     mngs.io.save(fig, "./tmp/figs/box/set_size_and_duration_by_Encoding.png")    
 
@@ -179,6 +186,7 @@ if __name__ == "__main__":
     fig = plot_hist_set_size_and_amplitude_by_phase(rips_df)
     mngs.io.save(fig, "./tmp/figs/hist/set_size_and_amplitude_by_phase.png")
 
+    fig = plot_box_x_set_size_y_amplitude_ax_phase(rips_df, phase="Encoding")    
     fig = plot_box_x_set_size_y_amplitude_ax_phase(rips_df, phase="Retrieval")
     mngs.io.save(fig, "./tmp/figs/box/set_size_and_amplitude_by_Retrieval.png")    
 

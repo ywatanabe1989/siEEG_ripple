@@ -21,7 +21,7 @@ import warnings
 import sys
 
 sys.path.append(".")
-from eeg_ieeg_ripple_clf import utils
+from siEEG_ripple import utils
 
 
 def plot_traces_spike_times_and_sync(rips_df, sub, session, i_trial, sd, iEEG_ROI):

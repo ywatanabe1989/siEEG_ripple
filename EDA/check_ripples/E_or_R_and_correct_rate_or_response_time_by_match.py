@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-# Time-stamp: "2022-11-30 14:50:02 (ywatanabe)"
+# Time-stamp: "2022-12-24 12:03:59 (ywatanabe)"
 
 import re
 from glob import glob
@@ -10,7 +10,7 @@ import numpy as np
 from natsort import natsorted
 import matplotlib
 
-# matplotlib.use("Agg")
+matplotlib.use("TkAgg")
 import matplotlib.pyplot as plt
 import torch
 import seaborn as sns
@@ -21,7 +21,7 @@ import warnings
 import sys
 
 sys.path.append(".")
-from eeg_ieeg_ripple_clf import utils
+from siEEG_ripple import utils
 import seaborn as sns
 import pingouin
     
@@ -42,7 +42,6 @@ def plot_bar_E_or_R_and_correct_rate_by_match(trials_df):
     # ax.axhline(y=100)
     ax.set_ylim(0, 100)
     ax.set_ylabel("Correct rate [%]")
-    import ipdb; ipdb.set_trace()
     return fig
 
 def test_E_or_R_and_correct_rate_by_match(trials_df):
@@ -109,7 +108,7 @@ if __name__ == "__main__":
     PHASES = mngs.io.load("./config/global.yaml")["PHASES"]
 
     # Loads
-    rips_df = utils.load_rips()
+    # rips_df = utils.load_rips()
     trials_df = utils.load_trials(add_n_ripples=True)
     trials_df = add_E_or_R(trials_df)
     
