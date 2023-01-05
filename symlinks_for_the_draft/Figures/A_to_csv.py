@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-# Time-stamp: "2022-12-04 13:57:16 (ywatanabe)"
+# Time-stamp: "2023-01-04 09:29:45 (ywatanabe)"
 
 import mngs
 import sys
 sys.path.append(".")
-from eeg_ieeg_ripple_clf import utils
+from siEEG_ripple import utils
 import numpy as np
 import torch
 from bisect import bisect_left 
@@ -17,7 +17,7 @@ ROIs = mngs.io.load("./config/ripple_detectable_ROI.yaml")
 LOW_HZ, HIGH_HZ = 80, 140
 sub = "06"
 roi = ROIs[int(sub)]
-session = "01"
+session = "02"
 i_trial = 5 - 1
 
 # Loads

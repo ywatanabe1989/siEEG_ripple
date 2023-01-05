@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-# Time-stamp: "2022-12-26 11:29:55 (ywatanabe)"
+# Time-stamp: "2022-12-31 11:25:08 (ywatanabe)"
 
 import mngs
 import pandas as pd
@@ -59,11 +59,6 @@ def load_rips_rois_in_config(sd=2, from_pkl=False, only_correct=False):
 
     rips_df = []
     for sub, roi in ROIs.items():
-        # rips_df_roi = mngs.io.load(
-        #     f"./tmp/rips_df/common_average_2.0_SD_{roi}.csv"
-        #     # f"./tmp/rips_df/common_average_2.0_SD_{roi}.pkl"
-        # ).rename(columns={"Unnamed: 0": "trial_number"})
-
         rips_df_roi = mngs.io.load(
             f"./tmp/rips_df/common_average_2.0_SD_{roi}.pkl"
             # f"./tmp/rips_df/common_average_2.0_SD_{roi}.pkl"
@@ -109,16 +104,16 @@ def load_rips_rois_in_config(sd=2, from_pkl=False, only_correct=False):
     # etc
     rips_df["n"] = 1
 
+    # edge effect
+    rips_df["center_time"] = (rips_df.end_time + rips_df.start_time) / 2
+    rips_df = rips_df[(0.1 < rips_df.center_time) * (rips_df.center_time < 7.9)]
+    
     # correct
     if only_correct:
         rips_df = rips_df[rips_df.correct == True]
 
     # session
     rips_df = rips_df[rips_df.session.astype(int) <= SESSION_THRES]
-
-    # edge effect
-    rips_df["center_time"] = (rips_df.end_time + rips_df.start_time) / 2
-    rips_df = rips_df[(0.1 < rips_df.center_time) * (rips_df.center_time < 7.9)]
 
     # IO balance
     # rips_df["IO_balance"] = rips_df["population_burst_rate"] / rips_df["ripple_amplitude_sd"]
@@ -164,3 +159,5 @@ if __name__ == "__main__":
 
     # rips_df = load_rips(from_pkl=False, only_correct=False, ROI="AHR")
     rips_df = load_rips(from_pkl=False)
+
+    rips_df[rips_df.subject == "01"]

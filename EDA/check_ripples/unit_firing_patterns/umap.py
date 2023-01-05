@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-# Time-stamp: "2022-12-13 16:41:30 (ywatanabe)"
+# Time-stamp: "2023-01-04 11:42:27 (ywatanabe)"
 
 import sys
 import pandas as pd
@@ -55,19 +55,19 @@ def reduce_dim(X, method, y=None):
     # Dimentionality reduction
     if method == "PCA":
         # PCA
-        _pca = PCA(n_components=2, random_state=0)
+        _pca = PCA(n_components=2, random_state=42)
         X_reduced_pca = _pca.fit_transform(X)
         return X_reduced_pca
 
     if method == "t-SNE":
         # t-SNE
-        _tsne = TSNE(n_components=2, random_state=0)
+        _tsne = TSNE(n_components=2, random_state=42)
         X_reduced_tsne = _tsne.fit_transform(X)
         return X_reduced_tsne
 
     if method == "UMAP":
         # UMAP
-        _umap = umap.UMAP(n_components=2, random_state=0, metric="cosine")
+        _umap = umap.UMAP(n_components=2, random_state=42, metric="cosine")
         X_reduced_umap = _umap.fit_transform(X, y)
         return X_reduced_umap
 
@@ -76,12 +76,18 @@ def plot(subject, session, only_ripples=False):
     eves = extract_events(rips, cons, subject, session, only_ripples=only_ripples)
 
     X = np.vstack(eves["firing_pattern"])
-    y = to_id(eves["phase"])
+    # y = to_id(eves["phase"])
+    y = to_id(eves["Ripple_or_Control"])
 
     # X_reduced = reduce_dim(X, "t-SNE", y=y)
-    X_reduced = reduce_dim(X, "t-SNE", y=y)
+    X_reduced = reduce_dim(X, "UMAP", y=y)
     eves["y"] = X_reduced[:, 0]
     eves["x"] = X_reduced[:, 1]
+    import ipdb; ipdb.set_trace()
+    """
+    mngs.io.save(eves[["Ripple_or_Control", "x", "y"]],
+    "./tmp/figs/scatter/ripple_detectable_ROIs/Subject_06_Session_02.csv")
+    """    
 
     # plots
     cols = ["Ripple_or_Control", "phase", "match", "set_size", "correct"]
@@ -101,11 +107,15 @@ def plot(subject, session, only_ripples=False):
 rips = utils.load_rips(from_pkl=False, only_correct=False)
 cons = utils.load_cons(from_pkl=False, only_correct=False)
 
-subject = "02"
-session = "01"
 
 
 for i_row, row in rips[["subject", "session"]].drop_duplicates().iterrows():
+    """
+    subject = "06"
+    session = "02"
+    
+    fig = plot(subject, session, only_ripples=False)
+    """
     fig = plot(row.subject, row.session, only_ripples=False)
     mngs.io.save(
         fig,

@@ -1,1 +1,1 @@
-/home/ywatanabe/proj/eeg_ieeg_ripple_clf/EDA/check_ripples/duration_or_amplitude_2.py
+/home/ywatanabe/proj/siEEG_ripple/EDA/check_ripples/duration_or_amplitude_2.py
