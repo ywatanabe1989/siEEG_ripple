@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-# Time-stamp: "2022-12-25 15:03:12 (ywatanabe)"
+# Time-stamp: "2023-01-29 21:39:59 (ywatanabe)"
 
 from glob import glob
 import mngs
@@ -34,7 +34,7 @@ def load_trials(subs=list(ROIs.keys()), add_n_ripples=False, from_pkl=False, onl
     del dfs["index"], dfs["Unnamed: 0"]
 
     if add_n_ripples:
-        rips_df = utils.load_rips()
+        rips_df = utils.rips.load_rips()
         dfs = _add_n_ripples(dfs, rips_df)
 
     if only_correct:

@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-# Time-stamp: "2022-12-23 11:21:01 (ywatanabe)"
+# Time-stamp: "2023-01-28 16:40:27 (ywatanabe)"
 
 import sys
 
@@ -69,20 +69,28 @@ def detect_ripples(i_sub_str, i_session_str, sd, iEEG_ROI):
     """
     global iEEG, iEEG_ripple_band_passed, SAMP_RATE_iEEG
     SAMP_RATE_iEEG = 2000
+    """
+    i_sub_str = "01"
+    i_session_str = "01"
+    sd=2.0
+    iEEG_ROI = "AHL"
+    """
 
     trials_info = mngs.io.load(
         f"./data/Sub_{i_sub_str}/Session_{i_session_str}/trials_info.csv"
     )
-    trials_info["set_size"]
+    # trials_info["set_size"]
     trials_info["correct"] = trials_info["correct"].replace({0: False, 1: True})
 
     sync_z_session = mngs.io.load(
         f"./data/Sub_{i_sub_str}/Session_{i_session_str}/sync_z/{iEEG_ROI}.npy"
     )
 
+    # koko
     iEEG, iEEG_common_ave = utils.load_iEEG(
         i_sub_str, i_session_str, iEEG_ROI, return_common_averaged_signal=True
     )
+    # iEEG.shape # (50, 8, 16000)
 
     if iEEG.shape[1] == 0: # no channels
         return pd.DataFrame(columns=["start_time", "end_time"],
@@ -99,6 +107,7 @@ def detect_ripples(i_sub_str, i_session_str, sd, iEEG_ROI):
                 high_hz=HIGH_HZ,
             )
         )
+        # iEEG_ripple_band_passed.shape # (50, 8, 16000)
         iEEG_ripple_band_passed_common = np.array(
             mngs.dsp.bandpass(
                 torch.tensor(np.array(iEEG_common_ave).astype(np.float32)),
@@ -176,8 +185,9 @@ def detect_ripples(i_sub_str, i_session_str, sd, iEEG_ROI):
             rip_df["trial_number"] = i_trial + 1
 
             # append iEEG traces
+            import ipdb; ipdb.set_trace()
             iEEG_traces = []
-            for i_rip, rip in rip_df.reset_index().iterrows():
+            for i_rip, rip in rip_df.reset_index().iterrows(): # rip_df = rips_df.iloc[i_trial]
                 
                 start_pts = int(rip["start_time"] * SAMP_RATE_iEEG)
                 end_pts = int(rip["end_time"] * SAMP_RATE_iEEG)
@@ -189,7 +199,7 @@ def detect_ripples(i_sub_str, i_session_str, sd, iEEG_ROI):
 
             # append ripple band filtered iEEG traces
             ripple_band_iEEG_traces = []
-            for i_rip, rip in rip_df.reset_index().iterrows():
+            for i_rip, rip in rip_df.reset_index().iterrows(): # rip_df = rips_df.iloc[i_trial]
                 start_pts = int(rip["start_time"] * SAMP_RATE_iEEG)
                 end_pts = int(rip["end_time"] * SAMP_RATE_iEEG)
                 ripple_band_iEEG_traces.append(

@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-# Time-stamp: "2022-11-16 13:24:39 (ywatanabe)"
+# Time-stamp: "2023-01-25 20:10:31 (ywatanabe)"
 
 import mngs
 import seaborn as sns
@@ -45,10 +45,11 @@ df_correct_rate = (
     .reset_index()
 )
 del df_correct_rate["index"]
+
 df_correct_rate["mean"], df_correct_rate["std"] = np.nan, np.nan
 for i_row, row in df_correct_rate.iterrows():
     match = row["match"]
-    set_size = row["set_size"]
+    set_size = row["setx_size"]
 
     mean, std = calc_mean_and_std_correct_rate(dfs, match, set_size)
 

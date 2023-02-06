@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-# Time-stamp: "2022-12-31 11:25:08 (ywatanabe)"
+# Time-stamp: "2023-01-31 17:41:25 (ywatanabe)"
 
 import mngs
 import pandas as pd
@@ -124,16 +124,14 @@ def load_rips_rois_in_config(sd=2, from_pkl=False, only_correct=False):
 
 def _determine_firing_patterns(rip):
     sub = f"{int(rip.subject):02d}"
-
     session = f"{int(rip.session):02d}"
-
     roi = rip.ROI
-
     i_trial = int(rip.trial_number) - 1
 
     spike_times = mngs.io.load(
         f"./data/Sub_{sub}/Session_{session}/spike_times_{roi}.pkl"
     )[i_trial].replace({"": np.nan})
+    
     if rip.start_time is not None:
         spike_pattern = spike_times[
             ((rip.start_time - 6 < spike_times) * (spike_times < rip.end_time - 6))
@@ -160,4 +158,17 @@ if __name__ == "__main__":
     # rips_df = load_rips(from_pkl=False, only_correct=False, ROI="AHR")
     rips_df = load_rips(from_pkl=False)
 
-    rips_df[rips_df.subject == "01"]
+    import matplotlib
+    matplotlib.use("TkAgg")
+    import matplotlib.pyplot as plt
+    import seaborn as sns
+    fig, ax = plt.subplots()
+    sns.boxplot(
+        data=rips_df,
+        x="set_size",
+        y="n_firings",
+        # showfliers=False,
+        ax=ax,
+        )
+    ax.set_yscale("log")
+    plt.show()

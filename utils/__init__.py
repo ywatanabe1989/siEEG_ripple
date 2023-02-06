@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# Time-stamp: "2022-12-24 12:13:03 (ywatanabe)"
+# Time-stamp: "2023-02-04 11:37:39 (ywatanabe)"
 
 # from ._base_step import base_step
 from ._base_step import base_step
@@ -20,8 +20,6 @@ from ._MultiTaskLoss import MultiTaskLoss
 # from ._plot_topomap import plot_topomap
 # from ._plot_topomap_bands import plot_topomap_bands
 from ._load_iEEG import load_iEEG
-from ._load_rips import load_rips
-from ._load_cons import load_cons
 from ._load_trials import load_trials
 # from ._load_dist import load_dist
 from ._load_sim import load_sim
@@ -30,3 +28,6 @@ from ._perm import perm
 from . import sim
 from ._calc_iou import calc_iou
 
+from ._define_phase_time import define_phase_time
+# from ._ripples import get_i_bins, discard_initial_ripples, discard_last_ripples, load_rips_df_with_traj, get_vec_from_rips_df, add_coordinates
+from . import rips

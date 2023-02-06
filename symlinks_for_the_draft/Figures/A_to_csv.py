@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-# Time-stamp: "2023-01-04 09:29:45 (ywatanabe)"
+# Time-stamp: "2023-02-02 12:35:05 (ywatanabe)"
 
 import mngs
 import sys
@@ -55,21 +55,37 @@ sync_z = mngs.io.load(f"./data/Sub_{sub}/Session_{session}/sync_z/{roi}.npy")[
     i_trial
 ]
 
-rips_df = mngs.io.load(f"./tmp/rips_df/common_average_2.0_SD_{roi}.csv")
+rips_df = utils.rips.load_rips()
 rips_df = rips_df[
-        (rips_df["subject"] == int(sub))
-        * (rips_df["session"] == int(session))
+        (rips_df["subject"] == f"{int(sub):02d}")
+        * (rips_df["session"] == f"{int(session):02d}")
         * (rips_df["trial_number"] == int(i_trial + 1))
     ]
-rips_digi = np.zeros(len(time), dtype=int)
-for i_rip, rip in rips_df.iterrows():
-    ss = int((rip.start_time) * SAMP_RATE_iEEG)
-    ee = int((rip.end_time) * SAMP_RATE_iEEG)
-    rips_digi[ss:ee] = 1
 
+cons_df = utils.rips.load_cons_across_trials()
+cons_df = cons_df[
+        (cons_df["subject"] == f"{int(sub):02d}")
+        * (cons_df["session"] == f"{int(session):02d}")
+        * (cons_df["trial_number"] == int(i_trial + 1))
+    ]
+
+
+    
+def get_rips_digi(rips_df):
+    # rips_df = mngs.io.load(f"./tmp/rips_df/common_average_2.0_SD_{roi}.csv")
+    rips_digi = np.zeros(len(time), dtype=int)
+    for i_rip, rip in rips_df.iterrows():
+        ss = int((rip.start_time) * SAMP_RATE_iEEG)
+        ee = int((rip.end_time) * SAMP_RATE_iEEG)
+        rips_digi[ss:ee] = 1
+    return rips_digi
+
+rips_digi = get_rips_digi(rips_df)
+cons_digi = get_rips_digi(cons_df)
 
 # Saves
 mngs.io.save(pd.DataFrame(rips_digi).set_index(time), "./tmp/figs/A/ripple_time.csv")
+mngs.io.save(pd.DataFrame(cons_digi).set_index(time), "./tmp/figs/A/control_time.csv")
 mngs.io.save(pd.DataFrame(np.array(iEEG)).T.set_index(time), "./tmp/figs/A/raw_iEEG.csv")
 mngs.io.save(pd.DataFrame(np.array(iEEG_ripple_band)).T.set_index(time), "./tmp/figs/A/ripple_band_iEEG.csv")
 mngs.io.save(pd.DataFrame(np.array(spike_times_digi)).T.set_index(time), "./tmp/figs/A/unit_spike_times.csv")
