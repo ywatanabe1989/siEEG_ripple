@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-# Time-stamp: "2023-01-27 10:07:22 (ywatanabe)"
+# Time-stamp: "2023-02-11 14:17:16 (ywatanabe)"
 
 
 import matplotlib
@@ -75,7 +75,7 @@ def plot_speed(rips_df, is_control=False, set_size=None, match=None):
             rips_df_phase = rips_df[rips_df.phase == phase]
 
             centers_ms = []
-            for delta_bin in range(-39, 39):
+            for delta_bin in range(-12, 13):
                 col1 = f"{delta_bin-1}"
                 col1_str = f"{int((delta_bin-1)*BIN_SIZE.magnitude)}"
                 col2 = f"{delta_bin}"
@@ -167,7 +167,7 @@ def plot_speed(rips_df, is_control=False, set_size=None, match=None):
         out_df,
         f"./tmp/figs/hist/traj_speed/{match_str}/all_{events_str}{set_size_str}.csv",
     )
-    return fig
+    return fig, out_df
 
 
 
@@ -197,6 +197,17 @@ if __name__ == "__main__":
     )
 
     # Plots
+    fig, out_df_rips = plot_speed(
+        rips_df,
+        is_control=False,
+    )  # fig 4
+    fig, out_df_cons = plot_speed(
+        cons_df,
+        is_control=True,
+    )  # fig 4
+
+
+    
     for is_control in [False, True]:
         events_df = cons_df if is_control else rips_df
         for set_size in [None, 4, 6, 8]:
@@ -205,7 +216,7 @@ if __name__ == "__main__":
                 set_size = None
                 match = None
                 """
-                fig = plot_speed(
+                fig, out_df = plot_speed(
                     events_df,
                     is_control=is_control,
                     set_size=set_size,

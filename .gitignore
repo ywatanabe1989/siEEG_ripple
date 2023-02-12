@@ -6,13 +6,15 @@
 *.csv
 *.mp4
 *.tiff
+*.tif
 *.wav
 *.png
 *.pth
 *.tar.gz
 
+
 ## for development
-*.old*
+# *.old*
 .log
 
 ## data
