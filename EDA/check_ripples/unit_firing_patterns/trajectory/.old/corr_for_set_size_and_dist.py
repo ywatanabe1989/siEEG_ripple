@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-# Time-stamp: "2023-02-11 16:24:15 (ywatanabe)"
+# Time-stamp: "2023-02-16 16:43:26 (ywatanabe)"
 
 import mngs
 import pandas as pd
@@ -18,7 +18,7 @@ import scipy
 import statsmodels as sm
     
 ## Functions
-def calc_corr(col):
+def calc_corr(dfs, col):
     X = np.array(dfs["count"]).reshape(-1, 1)
 
     # y = np.log10(dfs[col])
@@ -182,9 +182,11 @@ if __name__ == "__main__":
 
     # shuffled data
     shuffled_corrs_all = pd.DataFrame()
+    _dfs = dfs[dfs.match == 1]
     for phase_combi in ["FE", "FM", "FR", "EM", "ER", "MR"]:
-        corr, shuffled_corrs = calc_corr(phase_combi)
-        print(phase_combi, corr, mngs.gen.describe(shuffled_corrs, method="median"))
+        print(phase_combi)
+        corr, shuffled_corrs = calc_corr(_dfs, phase_combi)
+        # print(phase_combi, corr, mngs.gen.describe(shuffled_corrs, method="median"))
 
         pc = np.array([phase_combi for _ in range(len(shuffled_corrs) + 1)])
         corrs = np.hstack([shuffled_corrs, np.array(corr)])

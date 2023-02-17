@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-# Time-stamp: "2023-01-27 08:51:03 (ywatanabe)"
+# Time-stamp: "2023-02-16 16:34:43 (ywatanabe)"
 
 """
 ./tmp/figs/time_dependent_dist
@@ -28,7 +28,7 @@ import random
 from scipy.stats import brunnermunzel, ttest_ind
 from scipy.linalg import norm
 import sys
-
+import quantities as pq
 sys.path.append(".")
 import utils
 
@@ -113,11 +113,11 @@ def plot_speed(rips_df, is_control=False, set_size=None, match=None):
             centers_ms = []
             for delta_bin in range(-39, 39):
                 col1 = f"{delta_bin-1}"
-                col1_str = f"{int((delta_bin-1)*bin_size.magnitude)}"
+                col1_str = f"{int((delta_bin-1)*BIN_SIZE.magnitude)}"
                 col2 = f"{delta_bin}"
-                col2_str = f"{int((delta_bin)*bin_size.magnitude)}"
+                col2_str = f"{int((delta_bin)*BIN_SIZE.magnitude)}"
 
-                centers_ms.append(int((delta_bin - 0.5) * bin_size.magnitude))
+                centers_ms.append(int((delta_bin - 0.5) * BIN_SIZE.magnitude))
 
                 # gets vectors
                 v = np.vstack(rips_df_phase[col2]) - np.vstack(rips_df_phase[col1])
@@ -236,9 +236,9 @@ def plot_positions(rips_df, is_control=False, set_size=None, match=None):
 
             for delta_bin in range(-39, 39):
                 col1 = f"{delta_bin}"
-                col1_str = f"{int((delta_bin)*bin_size.magnitude)}"
+                col1_str = f"{int((delta_bin)*BIN_SIZE.magnitude)}"
 
-                centers_ms.append(int(delta_bin * bin_size.magnitude))
+                centers_ms.append(int(delta_bin * BIN_SIZE.magnitude))
 
                 # gets trajectory
                 vv = np.vstack(rips_df_phase[col1])
@@ -332,63 +332,96 @@ def plot_positions(rips_df, is_control=False, set_size=None, match=None):
 #     return rips_df
 
 
-def compair_speed_of_rips_and_cons(rips_df, cons_df):
+def compair_dist_of_rips_and_cons(rips_df, cons_df):
     width_ms = 500
-    width_bins = width_ms / bin_size.magnitude
+    width_bins = width_ms / BIN_SIZE.magnitude
     start = -int(width_bins / 2)
     end = int(width_bins / 2)
 
-    speeds_rips, speeds_cons = [], []
+    dists_rips, dists_cons = [], []
     for i_bin in range(start, end):
-        v_rips = np.vstack(rips_df[f"{i_bin}"]) - np.vstack(rips_df[f"{i_bin-1}"])
-        v_cons = np.vstack(cons_df[f"{i_bin}"]) - np.vstack(cons_df[f"{i_bin-1}"])
 
-        speed_rips = [mngs.linalg.nannorm(v_rips[ii]) for ii in range(len(v_rips))]
-        speed_cons = [mngs.linalg.nannorm(v_cons[ii]) for ii in range(len(v_cons))]
+        try:
+            dist_rips = rips_df[f"{i_bin}"].apply(mngs.linalg.nannorm)
+            dist_cons = cons_df[f"{i_bin}"].apply(mngs.linalg.nannorm)
+        except Exception as e:
+            print(e)
+            import ipdb; ipdb.set_trace()
+        
+        # v_rips = np.vstack(rips_df[f"{i_bin}"]) - np.vstack(rips_df[f"{i_bin-1}"])
+        # v_cons = np.vstack(cons_df[f"{i_bin}"]) - np.vstack(cons_df[f"{i_bin-1}"])
 
-        speeds_rips.append(
-            speed_rips
+        # dist_rips = [mngs.linalg.nannorm(v_rips[ii]) for ii in range(len(v_rips))]
+        # dist_cons = [mngs.linalg.nannorm(v_cons[ii]) for ii in range(len(v_cons))]
+
+        dists_rips.append(
+            dist_rips
         )
-        speeds_cons.append(
-            speed_cons
+        dists_cons.append(
+            dist_cons
         )
-    speeds_rips = np.vstack(speeds_rips)
-    speeds_cons = np.vstack(speeds_cons)
+    dists_rips = np.vstack(dists_rips)
+    dists_cons = np.vstack(dists_cons)
 
     df = {}
     for phase in PHASES:
-        speeds_rips_phase = np.hstack(speeds_rips[:,rips_df.phase == phase])
-        speeds_cons_phase = np.hstack(speeds_cons[:,cons_df.phase == phase])
-        nan_indi = np.isnan(speeds_rips_phase) + np.isnan(speeds_cons_phase)
-        df[f"SWR_{phase}"] = speeds_rips_phase
-        df[f"Control_{phase}"] = speeds_cons_phase        
-        speeds_rips_phase = speeds_rips_phase[~nan_indi]
-        speeds_cons_phase = speeds_cons_phase[~nan_indi]
-        speeds_rips_phase.sum()
-        speeds_cons_phase.sum()
+        dists_rips_phase = np.hstack(dists_rips[:,rips_df.phase == phase])
+        dists_cons_phase = np.hstack(dists_cons[:,cons_df.phase == phase])
+        nan_indi = np.isnan(dists_rips_phase) + np.isnan(dists_cons_phase)
+        df[f"SWR_{phase}"] = dists_rips_phase
+        df[f"Control_{phase}"] = dists_cons_phase        
+        dists_rips_phase = dists_rips_phase[~nan_indi]
+        dists_cons_phase = dists_cons_phase[~nan_indi]
+        dists_rips_phase.sum()
+        dists_cons_phase.sum()
         starts, pval = brunnermunzel(
-            speeds_rips_phase,
-            speeds_cons_phase,
+            dists_rips_phase,
+            dists_cons_phase,
         )
         print(phase, pval)
 
-    mngs.io.save(mngs.general.force_dataframe(df), "./tmp/figs/box/speed_comparison_rips_and_cons.csv")
+    mngs.io.save(mngs.general.force_dataframe(df), "./tmp/figs/box/dist_comparison_rips_and_cons.csv")
+    return df
 
 
 if __name__ == "__main__":
     import mngs
     import numpy as np
 
-    # phase
-    PHASES = mngs.io.load("./config/global.yaml")["PHASES"]
-    DURS_OF_PHASES = np.array(mngs.io.load("./config/global.yaml")["DURS_OF_PHASES"])
-    bin_size = 50 * pq.ms
-    starts, ends, PHASE_START_END_DICT, colors = define_phase_time()
-    matplotlib.use("Agg")
+    # Parameters
+    (
+        PHASES,
+        PHASES_BINS_DICT,
+        GS_BINS_DICT,
+        COLORS_DICT,
+        BIN_SIZE,
+    ) = utils.define_phase_time()
+    
+    # # phase
+    # PHASES = mngs.io.load("./config/global.yaml")["PHASES"]
+    # DURS_OF_PHASES = np.array(mngs.io.load("./config/global.yaml")["DURS_OF_PHASES"])
+    # BIN_SIZE = 50 * pq.ms
+    # starts, ends, PHASE_START_END_DICT, colors = define_phase_time()
+    # matplotlib.use("Agg")
 
     ROIs = mngs.io.load("./config/ripple_detectable_ROI.yaml")
-    rips_df = add_coordinates(load_rips_df_with_traj(bin_size, is_control=False))
-    cons_df = add_coordinates(load_rips_df_with_traj(bin_size, is_control=True))
+    rips_df = utils.rips.add_coordinates(
+        utils.rips.load_rips_df_with_traj(BIN_SIZE, is_control=False)
+    )
+    cons_df = utils.rips.add_coordinates(
+        utils.rips.load_rips_df_with_traj(BIN_SIZE, is_control=True)
+    )
+    
+    # rips_df = add_coordinates(load_rips_df_with_traj(BIN_SIZE, is_control=False))
+    # cons_df = add_coordinates(load_rips_df_with_traj(BIN_SIZE, is_control=True))
+
+    df = compair_dist_of_rips_and_cons(rips_df, cons_df)
+    
+    for phase in PHASES:
+        w, p, dof, effsize = mngs.stats.brunner_munzel_test(df[f"Control_{phase}"], df[f"SWR_{phase}"])
+        print(p)
+
+    
 
     # indi = []
     # for subject, roi in ROIs.items():
@@ -403,12 +436,12 @@ if __name__ == "__main__":
 
     # plot_pre_post_positions_2(rips_df, cons_df)
 
-    # rips_df = load_rips_df_with_traj(bin_size, is_control=False)
-    # cons_df = load_rips_df_with_traj(bin_size, is_control=True)
+    # rips_df = load_rips_df_with_traj(BIN_SIZE, is_control=False)
+    # cons_df = load_rips_df_with_traj(BIN_SIZE, is_control=True)
     for is_control in [False, True]:
         events_df = cons_df if is_control else rips_df
         # rips_df = add_coordinates(
-        #     load_rips_df_with_traj(bin_size, is_control=is_control)
+        #     load_rips_df_with_traj(BIN_SIZE, is_control=is_control)
         # )
         # plot_pre_post_positions(rips_df, is_control=is_control)
         # for set_size in [None, 4, 6, 8]:
@@ -430,14 +463,14 @@ if __name__ == "__main__":
                     set_size=set_size,
                     match=match,
                 )  # fig 5
-                plt.close() 
+                plt.close()
                 plt.close()
 
     # plt.show()
 
     # plt.show()
 
-    # # trajs_all = calc_trajs_all(bin_size)
+    # # trajs_all = calc_trajs_all(BIN_SIZE)
     # # mngs.io.save(trajs_all, "./tmp/trajs_all.npy")
     # trajs_all = mngs.io.load("./tmp/trajs_all.npy")  # 493
     # trajs_rip = np.vstack(

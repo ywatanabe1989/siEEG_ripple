@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-# Time-stamp: "2023-02-07 08:28:24 (ywatanabe)"
+# Time-stamp: "2023-02-16 07:34:03 (ywatanabe)"
 
 import sys
 from bisect import bisect_right
@@ -204,3 +204,21 @@ def add_coordinates(rips_df):
         )
 
     return rips_df
+
+def to_digi_rips(rips_df, subject, session, roi):
+    rips_df_session = rips_df[(rips_df.subject == subject) * (rips_df.session == session)]
+    rips_df_session = rips_df_session\
+        [["subject", "session", "trial_number", "start_time", "center_time", "end_time", "set_size", "match"]]
+
+    # ripples digi
+    n_trials = len(mngs.io.load(f"./data/Sub_{subject}/Session_{session}/trials_info.csv"))
+    bin_s = 50 / 1000
+    n_bins = int(8 / bin_s)
+    rips_digi = np.zeros([n_trials, n_bins], dtype=int)
+    for i_trial in range(n_trials):
+        rips_df_trial = rips_df_session[rips_df_session.trial_number == i_trial+1]
+        for i_rip, (_, rip) in enumerate(rips_df_trial.iterrows()):
+            start_bin = int(rip.start_time / bin_s)
+            end_bin = int(rip.end_time / bin_s)
+            rips_digi[i_trial, start_bin:end_bin] = 1
+    return rips_digi

@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-# Time-stamp: "2023-01-25 23:24:20 (ywatanabe)"
+# Time-stamp: "2023-02-17 11:37:58 (ywatanabe)"
 
 import mngs
 import pandas as pd
@@ -13,9 +13,29 @@ import matplotlib
 
 matplotlib.use("TkAgg")
 import matplotlib.pyplot as plt
+from itertools import combinations
+import scipy
+import statsmodels as sm
+import scikit_posthocs as sp
 
 ## Functions
-def calc_corr(col):
+def load_data(match):
+    # to df    
+    dfs = pd.DataFrame()
+    count = 0
+    for set_size in [4, 6, 8]:
+        lpath = (
+            f"./tmp/g_dist_z_by_session/Hipp._{set_size}_match_{match}_raw_dists.csv"
+        )
+        df = mngs.io.load(lpath)
+        df["set_size"] = set_size
+        df["match"] = match
+        df["count"] = count
+        count += 1
+        dfs = pd.concat([dfs, df])
+    return dfs
+
+def calc_corr(dfs, col):
     X = np.array(dfs["count"]).reshape(-1, 1)
 
     # y = np.log10(dfs[col])
@@ -45,34 +65,51 @@ def calc_corr(col):
 
     return corr, np.array(shuffled_corrs).squeeze()
 
-if __name__ == "__main__":
-    
-    mngs.general.fix_seeds(42, np=np)
+def test_kw_and_bm(dfs):
+    # Kruskal-Wallis
+    for col in dfs.columns[1:7]:
+        print(col)
 
-    # count: 0 -> set_size 4, Match_IN
-    # count: 1 -> set_size 4, Mismatch_OUT
-    # count: 2 -> set_size 6, Match_IN
-    # count: 3 -> set_size 6, Mismatch_OUT
-    # count: 4 -> set_size 8, Match_IN
-    # count: 5 -> set_size 8, Mismatch_OUT
-    dfs = pd.DataFrame()
-    count = 0
-    for set_size in [4, 6, 8]:
-        for match in [1, 2]:
-            lpath = (
-                f"./tmp/g_dist_z_by_session/Hipp._{set_size}_match_{match}_raw_dists.csv"
-            )
-            df = mngs.io.load(lpath)
-            df["set_size"] = set_size
-            df["match"] = match
-            df["count"] = count
-            count += 1
-            dfs = pd.concat([dfs, df])
+        df_col = dfs[[col, "set_size", "match"]]
 
-    # to df
+        df_col_ss_m = {}
+        for set_size in [4, 6, 8]:
+            df_col_ss_m[f"set_size_{set_size}_match_{match}"] = \
+                df_col[(df_col.set_size == set_size) * (df_col.match == match)]
+        # dict_keys(['set_size_4_match_1', 'set_size_6_match_1', 'set_size_8_match_1'])
+                
+        stats, pval_kw = scipy.stats.kruskal(*[_df.iloc[:,0] for _df in df_col_ss_m.values()])
+        print(f"Kruskal Wallis ss m: {round(pval_kw, 3)}")
+
+
+        # # Post-hoc Conover
+        # fdf = {}
+        # for _col, _df in df_col_ss_m.items():
+        #     fdf[_col] = _df.iloc[:,0]
+        # fdf = np.array(mngs.gen.force_dataframe(fdf).replace({'': np.nan})).T
+        # print(f"Posthoc Conover: {sp.posthoc_conover(fdf)}")
+
+        nn_pair = len(list(combinations(df_col_ss_m.values(), 2)))
+        for df1, df2 in combinations(df_col_ss_m.values(), 2):
+            
+            # print(df1.set_size.iloc[0], df1.match.iloc[0], df2.set_size.iloc[0], df2.match.iloc[0])
+            print(df1.set_size.iloc[0], df2.set_size.iloc[0])
+
+            # print(mngs.gen.describe(np.array(df1.iloc[:,0]), method="median"))
+            # print(mngs.gen.describe(np.array(df2.iloc[:,0]), method="median"))           
+            w, pval_bm, dof, effsize = mngs.stats.brunner_munzel_test(df1.iloc[:,0], df2.iloc[:,0])
+            pval_bm *= nn_pair # Bonferroni correction
+            
+            print(f"Brunner-Munzel (corrected): {pval_bm}")
+            print()
+        import ipdb; ipdb.set_trace()
+
+def corr_test(dfs):
     shuffled_corrs_all = pd.DataFrame()
     for phase_combi in ["FE", "FM", "FR", "EM", "ER", "MR"]:
-        corr, shuffled_corrs = calc_corr(phase_combi)
+        print(phase_combi)
+        corr, shuffled_corrs = calc_corr(dfs, phase_combi)
+        # print(phase_combi, corr, mngs.gen.describe(shuffled_corrs, method="median"))
 
         pc = np.array([phase_combi for _ in range(len(shuffled_corrs) + 1)])
         corrs = np.hstack([shuffled_corrs, np.array(corr)])
@@ -95,7 +132,9 @@ if __name__ == "__main__":
     _df = pd.DataFrame(shuffled_corrs_all.iloc[-1]).T
     _df["phase_combi"], _df["is_shuffled"], _df["corrs"], _df["hue"] = None, None, np.nan, 1
     shuffled_corrs_all = pd.concat([shuffled_corrs_all, _df])
+    return shuffled_corrs_all
 
+def plot_shuffled_corrs(shuffled_corrs_all):
     # plots
     fig, ax = plt.subplots()
     sns.violinplot(
@@ -119,7 +158,20 @@ if __name__ == "__main__":
         color=mngs.plt.colors.to_RGBA("red", alpha=1),
     )
     plt.legend([], [], frameon=False)
-    ax.set_ylim(-0.15, 0.15)
+    ylim_val = .21
+    ax.set_ylim(-ylim_val, ylim_val)
     # ax.set_ylim(-0.001, 0.014)
-    mngs.io.save(fig, "./tmp/figs/violin/linear_regression_corr.tif")
+    mngs.io.save(fig, "./tmp/figs/violin/corr_between_set_size_and_dist.tif")
     plt.show()
+
+if __name__ == "__main__":
+    
+    mngs.general.fix_seeds(42, np=np)
+    match = 1
+
+    dfs = load_data(match)
+
+    test_kw_and_bm(dfs)
+    shuffled_corrs_all = corr_test(dfs)
+
+    plot_shuffled_corrs(shuffled_corrs_all)

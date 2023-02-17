@@ -1,12 +1,21 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-# Time-stamp: "2023-01-27 09:04:05 (ywatanabe)"
+# Time-stamp: "2023-02-16 08:24:31 (ywatanabe)"
 
 import quantities as pq
 import numpy as np
 import mngs
 
 def define_phase_time():
+    """
+    (
+        PHASES,
+        PHASES_BINS_DICT,
+        GS_BINS_DICT,
+        COLORS_DICT,
+        BIN_SIZE,
+    ) = utils.define_phase_time()
+    """
     # Parameters
     bin_size = 50 * pq.ms
     width_ms = 500
