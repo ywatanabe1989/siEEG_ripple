@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-# Time-stamp: "2023-02-20 10:04:23 (ywatanabe)"
+# Time-stamp: "2023-02-20 16:35:34 (ywatanabe)"
 """
 Plots peri-SWR distance from O as a function of time from probe [s].
 """
@@ -75,92 +75,12 @@ if __name__ == "__main__":
     # Trajectories during SWR+/SWR-
     dists_rips = calc_dist_from_O(rips_df)
     dists_cons = calc_dist_from_O(cons_df)    
-    # dists_rips[dists_rips == 0] = np.nan
-    # dists_cons[dists_cons == 0] = np.nan    
-
-    # dists_rips_smoothed = dists_rips
-    # dists_cons_smoothed = dists_cons
 
     ns_rips = np.nansum(~np.isnan(dists_rips_smoothed), axis=0)
     ns_cons = np.nansum(~np.isnan(dists_cons_smoothed), axis=0)    
-    # truncate = .3
-    # sigma = 1
-    # dists_rips_smoothed = np.vstack(
-    #     [
-    #         gaussian_filter1d(dists_rips[:, i_bin], sigma, truncate=truncate)
-    #         for i_bin in range(dists_rips.shape[-1])
-    #     ]
-    # ).T
-    # dists_cons_smoothed = np.vstack(
-    #     [
-    #         gaussian_filter1d(dists_cons[:, i_bin], sigma, truncate=truncate)            
-    #         for i_bin in range(dists_cons.shape[-1])
-    #     ]
-    # ).T
-
-
-
-    # Stats
-    # # phases
-    # dists = {}
-    # ps = []
-    # effs = []
-    # for phase, (phase_bin_start, phase_bin_end) in PHASES_BINS_DICT.items():
-    #     d1 = dists_cons[:, phase_bin_start:phase_bin_end]
-    #     d2 = dists_rips[:, phase_bin_start:phase_bin_end]        
-
-    #     d1 = d1[~np.isnan(d1)]
-    #     d2 = d2[~np.isnan(d2)]
-
-    #     dists[f"{phase}_cons"] = d1
-    #     dists[f"{phase}_rips"] = d2        
-
-    #     w, p, dof, eff = mngs.stats.brunner_munzel_test(d1, d2)
-        
-    #     ps.append(p)
-    #     effs.append(eff)
-    # print(np.array(ps).round(3)) # [0.004 0.    0.    0.   ]
-    # print(np.array(effs).round(3)) # [0.004 0.    0.    0.   ]    
-    # # dists = mngs.gen.force_dataframe(dists)
-    # fig, ax = plt.subplots()
-    # for i_col, col in enumerate(dists.keys()):
-    #     ax.boxplot(
-    #         dists[col],
-    #         positions=[i_col],
-    #         )
-    # plt.show()
-
-    # # gs
-    # gs = {}
-    # ps = []
-    # effs = []
-    # for phase, (phase_bin_start, phase_bin_end) in GS_BINS_DICT.items():
-    #     d1 = dists_cons[:, phase_bin_start:phase_bin_end]        
-    #     d2 = dists_rips[:, phase_bin_start:phase_bin_end]
-
-    #     d1 = d1[~np.isnan(d1)]
-    #     d2 = d2[~np.isnan(d2)]
-
-    #     gs[f"{phase}_cons"] = d1        
-    #     gs[f"{phase}_rips"] = d2
-
-    #     w, p, dof, eff = mngs.stats.brunner_munzel_test(d1, d2)
-        
-    #     ps.append(p)
-    #     effs.append(eff)
-    # ps = np.array(ps)
-    # effs = np.array(effs)    
-    # print(ps.round(3)) # [0.03  0.    0.001 0.003]
-    # print(effs.round(3)) # [0.435 0.294 0.388 0.367]
-    # # df = mngs.gen.force_dataframe(gs)
-    # # import seaborn as sns
-    # fig, ax = plt.subplots()
-    # for i_xx, key in enumerate(gs.keys()):
-    #     ax.boxplot(gs[key], positions=[i_xx])
-    # plt.show()
     
     
-    # bins
+    # BM test per bin
     ps = []
     effs = []
     for i_bin in range(dists_rips.shape[-1]):
@@ -189,7 +109,7 @@ if __name__ == "__main__":
     mngs.io.save(fig, "./tmp/figs/line/dist_from_O/SWR+_vs._SWR-.png")
     
 
-
+    # to csv
     df = pd.DataFrame({
         "Time_s": xx,
         "SWR+ under": np.nanmean(dists_rips, axis=0) - np.nanstd(dists_rips, axis=0),
