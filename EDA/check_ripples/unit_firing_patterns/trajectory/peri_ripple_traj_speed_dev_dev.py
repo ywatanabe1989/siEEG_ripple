@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-# Time-stamp: "2023-02-11 15:59:45 (ywatanabe)"
+# Time-stamp: "2023-02-20 10:42:24 (ywatanabe)"
 
 """
 ./tmp/figs/time_dependent_dist
@@ -113,11 +113,11 @@ def plot_speed(rips_df, is_control=False, set_size=None, match=None):
             centers_ms = []
             for delta_bin in range(-39, 39):
                 col1 = f"{delta_bin-1}"
-                col1_str = f"{int((delta_bin-1)*bin_size.magnitude)}"
+                col1_str = f"{int((delta_bin-1)*BIN_SIZE.magnitude)}"
                 col2 = f"{delta_bin}"
-                col2_str = f"{int((delta_bin)*bin_size.magnitude)}"
+                col2_str = f"{int((delta_bin)*BIN_SIZE.magnitude)}"
 
-                centers_ms.append(int((delta_bin - 0.5) * bin_size.magnitude))
+                centers_ms.append(int((delta_bin - 0.5) * BIN_SIZE.magnitude))
 
                 # gets vectors
                 v = np.vstack(rips_df_phase[col2]) - np.vstack(rips_df_phase[col1])
@@ -236,9 +236,9 @@ def plot_positions(rips_df, is_control=False, set_size=None, match=None):
 
             for delta_bin in range(-39, 39):
                 col1 = f"{delta_bin}"
-                col1_str = f"{int((delta_bin)*bin_size.magnitude)}"
+                col1_str = f"{int((delta_bin)*BIN_SIZE.magnitude)}"
 
-                centers_ms.append(int(delta_bin * bin_size.magnitude))
+                centers_ms.append(int(delta_bin * BIN_SIZE.magnitude))
 
                 # gets trajectory
                 vv = np.vstack(rips_df_phase[col1])
@@ -334,7 +334,7 @@ def plot_positions(rips_df, is_control=False, set_size=None, match=None):
 
 def compair_speed_of_rips_and_cons(rips_df, cons_df):
     width_ms = 500
-    width_bins = width_ms / bin_size.magnitude
+    width_bins = width_ms / BIN_SIZE.magnitude
     start = -int(width_bins / 2)
     end = int(width_bins / 2)
 
@@ -392,7 +392,7 @@ if __name__ == "__main__":
     # # phase
     # PHASES = mngs.io.load("./config/global.yaml")["PHASES"]
     # DURS_OF_PHASES = np.array(mngs.io.load("./config/global.yaml")["DURS_OF_PHASES"])
-    # bin_size = 50 * pq.ms
+    # BIN_SIZE = 50 * pq.ms
     # starts, ends, PHASE_START_END_DICT, colors = define_phase_time()
     # matplotlib.use("Agg")
 
@@ -404,8 +404,8 @@ if __name__ == "__main__":
         utils.rips.load_rips_df_with_traj(BIN_SIZE, is_control=True)
     )
     
-    # rips_df = add_coordinates(load_rips_df_with_traj(bin_size, is_control=False))
-    # cons_df = add_coordinates(load_rips_df_with_traj(bin_size, is_control=True))
+    # rips_df = add_coordinates(load_rips_df_with_traj(BIN_SIZE, is_control=False))
+    # cons_df = add_coordinates(load_rips_df_with_traj(BIN_SIZE, is_control=True))
 
     df = compair_speed_of_rips_and_cons(rips_df, cons_df)
     for phase in PHASES:
@@ -427,12 +427,12 @@ if __name__ == "__main__":
 
     # plot_pre_post_positions_2(rips_df, cons_df)
 
-    # rips_df = load_rips_df_with_traj(bin_size, is_control=False)
-    # cons_df = load_rips_df_with_traj(bin_size, is_control=True)
+    # rips_df = load_rips_df_with_traj(BIN_SIZE, is_control=False)
+    # cons_df = load_rips_df_with_traj(BIN_SIZE, is_control=True)
     for is_control in [False, True]:
         events_df = cons_df if is_control else rips_df
         # rips_df = add_coordinates(
-        #     load_rips_df_with_traj(bin_size, is_control=is_control)
+        #     load_rips_df_with_traj(BIN_SIZE, is_control=is_control)
         # )
         # plot_pre_post_positions(rips_df, is_control=is_control)
         # for set_size in [None, 4, 6, 8]:
@@ -461,7 +461,7 @@ if __name__ == "__main__":
 
     # plt.show()
 
-    # # trajs_all = calc_trajs_all(bin_size)
+    # # trajs_all = calc_trajs_all(BIN_SIZE)
     # # mngs.io.save(trajs_all, "./tmp/trajs_all.npy")
     # trajs_all = mngs.io.load("./tmp/trajs_all.npy")  # 493
     # trajs_rip = np.vstack(

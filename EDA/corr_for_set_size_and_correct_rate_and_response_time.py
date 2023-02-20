@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-# Time-stamp: "2023-02-17 12:20:15 (ywatanabe)"
+# Time-stamp: "2023-02-18 10:54:23 (ywatanabe)"
 
 import mngs
 import seaborn as sns
@@ -130,36 +130,42 @@ def plot_violin(corr_correct, corr_shuffled_correct, corr_response_time, corr_sh
         color="red",
         s=100,    
         )
-    ax.set_ylim(-.25,.25)
+    ylim_val = 0.31
+    ax.set_ylim(-ylim_val,ylim_val)
     ax.legend_ = None
 
-    mngs.io.save(fig, "./tmp/figs/task_difficulty/task_difficulty.tif")
     plt.show()
+    return fig
 
 
 if __name__ == "__main__":
-    match = 1
-    dfs = load_data(match)
-    
-    df_correct = main("correct")
-    df_response_time = main("response_time")
+    for match in [1,2]:
 
-    mngs.io.save(df_correct, "./tmp/figs/task_difficulty/correct_rate.csv")
-    mngs.io.save(df_response_time, "./tmp/figs/task_difficulty/response_time.csv")
+        dfs = load_data(match)
 
-    df_correct_with_task_difficulty = add_task_difficulty(df_correct)
-    df_response_time_with_task_difficulty = add_task_difficulty(df_response_time)
+        df_correct = main("correct")
+        df_response_time = main("response_time")
 
-    corr_correct, corr_shuffled_correct = calc_corr(df_correct_with_task_difficulty)
-    corr_response_time, corr_shuffled_response_time = calc_corr(
-        df_response_time_with_task_difficulty
-    )
+        mngs.io.save(df_correct, f"./tmp/figs/task_difficulty/correct_rate_match_{match}.csv")
+        mngs.io.save(df_response_time, f"./tmp/figs/task_difficulty/response_time_match_{match}.csv")
 
-    rank_rate_correct = bisect_right(sorted(corr_shuffled_correct), corr_correct) / len(
-        corr_shuffled_correct
-    )
-    rank_rate_response_time = bisect_right(
-        sorted(corr_shuffled_response_time), corr_response_time
-    ) / len(corr_shuffled_response_time)
+        df_correct_with_task_difficulty = add_task_difficulty(df_correct)
+        df_response_time_with_task_difficulty = add_task_difficulty(df_response_time)
 
-    plot_violin(corr_correct, corr_shuffled_correct, corr_response_time, corr_shuffled_response_time)
+        corr_correct, corr_shuffled_correct = calc_corr(df_correct_with_task_difficulty)
+        corr_response_time, corr_shuffled_response_time = calc_corr(
+            df_response_time_with_task_difficulty
+        )
+
+        rank_rate_correct = bisect_right(sorted(corr_shuffled_correct), corr_correct) / len(
+            corr_shuffled_correct
+        )
+        print(f"rank_rate_correct: {rank_rate_correct}")                
+        rank_rate_response_time = bisect_right(
+            sorted(corr_shuffled_response_time), corr_response_time
+        ) / len(corr_shuffled_response_time)
+        print(f"rank_rate_response_time: {rank_rate_response_time}")                
+
+
+        fig = plot_violin(corr_correct, corr_shuffled_correct, corr_response_time, corr_shuffled_response_time)
+        mngs.io.save(fig, f"./tmp/figs/task_difficulty/task_difficulty_match_{match}.tif")        

@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-# Time-stamp: "2023-02-17 11:37:58 (ywatanabe)"
+# Time-stamp: "2023-02-18 09:26:49 (ywatanabe)"
 
 import mngs
 import pandas as pd
@@ -102,7 +102,7 @@ def test_kw_and_bm(dfs):
             
             print(f"Brunner-Munzel (corrected): {pval_bm}")
             print()
-        import ipdb; ipdb.set_trace()
+        # import ipdb; ipdb.set_trace()
 
 def corr_test(dfs):
     shuffled_corrs_all = pd.DataFrame()
@@ -161,17 +161,19 @@ def plot_shuffled_corrs(shuffled_corrs_all):
     ylim_val = .21
     ax.set_ylim(-ylim_val, ylim_val)
     # ax.set_ylim(-0.001, 0.014)
-    mngs.io.save(fig, "./tmp/figs/violin/corr_between_set_size_and_dist.tif")
     plt.show()
+    return fig
 
 if __name__ == "__main__":
     
     mngs.general.fix_seeds(42, np=np)
-    match = 1
 
-    dfs = load_data(match)
+    for match in [1,2]:
 
-    test_kw_and_bm(dfs)
-    shuffled_corrs_all = corr_test(dfs)
+        dfs = load_data(match)
 
-    plot_shuffled_corrs(shuffled_corrs_all)
+        test_kw_and_bm(dfs)
+        shuffled_corrs_all = corr_test(dfs)
+
+        fig = plot_shuffled_corrs(shuffled_corrs_all)
+        mngs.io.save(fig, f"./tmp/figs/violin/corr_between_set_size_and_dist_match_{match}.tif")        
