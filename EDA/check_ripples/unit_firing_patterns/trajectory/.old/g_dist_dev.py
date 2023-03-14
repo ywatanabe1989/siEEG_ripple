@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-# Time-stamp: "2023-01-24 14:44:18 (ywatanabe)"
+# Time-stamp: "2023-03-05 14:47:12 (ywatanabe)"
 
 from elephant.gpfa import GPFA
 import quantities as pq
@@ -28,6 +28,7 @@ def describe(df):
     IQR = df.describe().T["75%"].iloc[0] - df.describe().T["25%"].iloc[0]
     # print(med, IQR)
     return med, IQR
+
 
 def to_spiketrains(spike_times_all_trials):
     spike_trains_all_trials = []
@@ -127,12 +128,18 @@ def calc_g_dist(z_by, match, set_size):
                 with warnings.catch_warnings():
                     warnings.simplefilter("ignore", RuntimeWarning)
                     g_phases = {
-                        "Fixation": np.nanmedian(trajs[:, :, starts[0] : ends[0]], axis=-1),
-                        "Encoding": np.nanmedian(trajs[:, :, starts[1] : ends[1]], axis=-1),
+                        "Fixation": np.nanmedian(
+                            trajs[:, :, starts[0] : ends[0]], axis=-1
+                        ),
+                        "Encoding": np.nanmedian(
+                            trajs[:, :, starts[1] : ends[1]], axis=-1
+                        ),
                         "Maintenance": np.nanmedian(
                             trajs[:, :, starts[2] : ends[2]], axis=-1
                         ),
-                        "Retrieval": np.nanmedian(trajs[:, :, starts[3] : ends[3]], axis=-1),
+                        "Retrieval": np.nanmedian(
+                            trajs[:, :, starts[3] : ends[3]], axis=-1
+                        ),
                     }
 
                 # # override g_phases["Retrieval"] for response_time
@@ -184,114 +191,119 @@ def calc_g_dist(z_by, match, set_size):
 
     return dfs, info_df
 
+def get_indi_MTL(info_df, MTL_region):
+
+    if MTL_region == "Hipp.":
+        return mngs.general.search(
+        ["AHL", "AHR", "PHL", "PHR"], info_df.T.ROI, as_bool=True
+    )[0]
+
+    if MTL_region == "EC":
+        return mngs.general.search(
+        ["ECL", "ECR"], info_df.T.ROI, as_bool=True
+    )[0]
+
+    if MTL_region == "Amy.":
+        return mngs.general.search(
+        ["AL", "AR"], info_df.T.ROI, as_bool=True
+    )[0]
+
+def extract_g_phases(dfs, info_df, MTL_region):
+    # g_phases
+    g_phases = pd.concat(
+        [
+            mngs.general.force_dataframe(dfs[ii])
+            for ii in range(len(dfs))
+        ]
+    )[get_indi_MTL(info_df, MTL_region)]
+    nan_indi = (
+        np.stack(
+            [np.isnan(np.vstack(g_phases[phase])) for phase in PHASES]
+        )
+        .any(axis=0)
+        .any(axis=-1)
+    )
+    g_phases = g_phases[~nan_indi]
+    return g_phases
+
+def calc_dist_between_gs(g_phases):
+    # raw data for hist plot
+    data = {}
+    for p1, p2 in combinations(PHASES, 2):
+        data[f"{p1[0]}{p2[0]}"] = norm(
+            np.stack(g_phases[p1] - g_phases[p2]).astype(float),
+            axis=-1,
+        )
+    out_df_2 = mngs.general.force_dataframe(data)
+    spath = f"./tmp/g_dist_z_{z_by}/{MTL_region}_{set_size}_match_{match}_raw_dists.csv"
+    mngs.io.save(
+        out_df_2,
+        spath,
+    )
+    return out_df_2
+
+def test_bm(g_phases):
+    # stats
+    count = 0
+    pval = 1
+    is_significant = False
+    for ii, (p1, p2) in enumerate(combinations(PHASES, 2)):
+        comp_1_str = f"{p1[0]}-{p2[0]}"
+        for jj, (p3, p4) in enumerate(combinations(PHASES, 2)):
+            comp_2_str = f"{p3[0]}-{p4[0]}"
+            if ii < jj:
+                count += 1
+                stats, pval = brunnermunzel(
+                    norm(
+                        np.stack(g_phases[p1] - g_phases[p2]).astype(
+                            float
+                        ),
+                        axis=-1,
+                    ),
+                    norm(
+                        np.stack(g_phases[p3] - g_phases[p4]).astype(
+                            float
+                        ),
+                        axis=-1,
+                    ),
+                )
+                pval *= 15
+                if pval < 0.1:
+                    # if True:
+                    print(
+                        f"{p1[0]}-{p2[0]}, {p3[0]}-{p4[0]}",
+                        pval.round(3),
+                    )
+                    is_significant = True
+    if is_significant:
+        pass
+
 
 if __name__ == "__main__":
     from glob import glob
     import re
     from natsort import natsorted
 
+    z_by = "by_session"
+    
     for match in [None, 1, 2]:
         for set_size in [None, 4, 6, 8]:
-            for z_by in ["by_trial", "by_session"]:
-                dfs, info_df = calc_g_dist(z_by, match, set_size)
-                # indices
-                indi_hipp = mngs.general.search(
-                    ["AHL", "AHR", "PHL", "PHR"], info_df.T.ROI, as_bool=True
-                )[0]
-                indi_ec = mngs.general.search(
-                    ["ECL", "ECR"], info_df.T.ROI, as_bool=True
-                )[0]
-                indi_amy = mngs.general.search(
-                    ["AL", "AR"], info_df.T.ROI, as_bool=True
-                )[0]
+            """
+            match = 1
+            set_size = None
+            """                
+            dfs, info_df = calc_g_dist(z_by, match, set_size)
+            len(dfs[0]["Fixation"]) # 20
 
-                for roi_str, indi_roi in zip(
-                    ["Hipp.", "EC", "Amy."], [indi_hipp, indi_ec, indi_amy]
-                ):
-                    g_phases = pd.concat(
-                        [
-                            mngs.general.force_dataframe(dfs[ii])
-                            for ii in range(len(dfs))
-                        ]
-                    )
-                    g_phases = g_phases[indi_roi]
-
-                    nan_indi = (
-                        np.stack(
-                            [np.isnan(np.vstack(g_phases[phase])) for phase in PHASES]
-                        )
-                        .any(axis=0)
-                        .any(axis=-1)
-                    )
-                    g_phases = g_phases[~nan_indi]
-
-                    df_mm = pd.DataFrame(index=PHASES, columns=PHASES)
-                    df_ss = pd.DataFrame(index=PHASES, columns=PHASES)
-                    for p1, p2 in product(PHASES, PHASES):
-                        dists = norm(
-                            np.stack(g_phases[p1] - g_phases[p2]), axis=-1
-                        ).round(3)
-                        mm, iqr = describe(dists)
-                        df_mm.loc[p1, p2] = mm.round(3)
-                        df_ss.loc[p1, p2] = iqr.round(3)
-
-                    out_df = pd.concat([df_mm, df_ss], axis=1)
-                    spath = (
-                        f"./tmp/g_dist_z_{z_by}/{roi_str}_{set_size}_match_{match}.csv"
-                    )
-                    mngs.io.save(
-                        out_df,
-                        spath,
-                    )
-
-                    # raw data for hist plot
-                    data = {}
-                    for p1, p2 in combinations(PHASES, 2):
-                        data[f"{p1[0]}{p2[0]}"] = norm(
-                            np.stack(g_phases[p1] - g_phases[p2]).astype(float),
-                            axis=-1,
-                        )
-                    out_df_2 = mngs.general.force_dataframe(data)
-                    spath = f"./tmp/g_dist_z_{z_by}/{roi_str}_{set_size}_match_{match}_raw_dists.csv"
-                    mngs.io.save(
-                        out_df_2,
-                        spath,
-                    )
-
-                    # stats
-                    count = 0
-                    pval = 1
-                    is_significant = False
-                    for ii, (p1, p2) in enumerate(combinations(PHASES, 2)):
-                        comp_1_str = f"{p1[0]}-{p2[0]}"
-                        for jj, (p3, p4) in enumerate(combinations(PHASES, 2)):
-                            comp_2_str = f"{p3[0]}-{p4[0]}"
-                            if ii < jj:
-                                count += 1
-                                stats, pval = brunnermunzel(
-                                    norm(
-                                        np.stack(g_phases[p1] - g_phases[p2]).astype(
-                                            float
-                                        ),
-                                        axis=-1,
-                                    ),
-                                    norm(
-                                        np.stack(g_phases[p3] - g_phases[p4]).astype(
-                                            float
-                                        ),
-                                        axis=-1,
-                                    ),
-                                )
-                                pval *= 15
-                                if pval < 0.1:
-                                    # if True:
-                                    print(
-                                        f"{p1[0]}-{p2[0]}, {p3[0]}-{p4[0]}",
-                                        pval.round(3),
-                                    )
-                                    is_significant = True
-                    if is_significant:
-                        pass
+            for MTL_region in zip(
+                ["Hipp.", "EC", "Amy."]
+            ):
+                """
+                MTL_region = "Hipp."
+                """                
+                g_phases = extract_g_phases(dfs, info_df, MTL_region)
+                dists_between_gs = calc_dist_between_gs(g_phases)
+                test_bm(g_phases)
 
 
 """
@@ -314,3 +326,12 @@ Saved to: ./tmp/g_dist_z_by_trial/Hipp._None_match_2.csv
 F-M, F-R 0.003
 F-R, E-M 0.0
 """
+z_by = "by_session"
+MTL_region = "Hipp."
+match = 1
+set_size = 4
+for set_size in [4, 6, 8]:
+    data = mngs.io.load(
+        f"./tmp/g_dist_z_{z_by}/{MTL_region}_{set_size}_match_{match}_raw_dists.csv"
+    )
+    print(describe(np.log10(data["ER"]), "median"))

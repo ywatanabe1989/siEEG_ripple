@@ -1,12 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-# Time-stamp: "2023-02-20 12:37:20 (ywatanabe)"
-
-"""
-./tmp/figs/time_dependent_dist
-./tmp/figs/hist/traj_dist
-./tmp/figs/hist/traj_pos
-"""
+# Time-stamp: "2023-02-27 08:13:11 (ywatanabe)"
 
 import matplotlib
 
@@ -106,6 +100,7 @@ def plot_dist(rips_df, is_control=False, set_size=None, match=None):
             dists_i_bin = rips_df_phase[f"{i_bin}"].apply(mngs.linalg.nannorm)
 
             mm, iqr = mngs.gen.describe(np.array(dists_i_bin))
+            import ipdb; ipdb.set_trace()
 
             samp_m[phase].append(mm)
             samp_s[phase].append(iqr)            
@@ -172,6 +167,11 @@ if __name__ == "__main__":
     for phase in PHASES:
         w, p, dof, effsize = mngs.stats.brunner_munzel_test(df[f"Control_{phase}"], df[f"SWR_{phase}"])
         print(p)
+
+    for phase in PHASES:
+        print(mngs.gen.describe(df[f"Control_{phase}"], "median"))
+        print(mngs.gen.describe(df[f"SWR_{phase}"], "median"))
+                          
 
     
 

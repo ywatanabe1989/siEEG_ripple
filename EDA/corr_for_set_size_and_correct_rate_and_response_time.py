@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-# Time-stamp: "2023-02-18 10:54:23 (ywatanabe)"
+# Time-stamp: "2023-02-26 14:44:57 (ywatanabe)"
 
 import mngs
 import seaborn as sns
@@ -153,9 +153,14 @@ if __name__ == "__main__":
         df_response_time_with_task_difficulty = add_task_difficulty(df_response_time)
 
         corr_correct, corr_shuffled_correct = calc_corr(df_correct_with_task_difficulty)
+        out_correct = {"observed": corr_correct, "surrogate": corr_shuffled_correct}
+        mngs.io.save(out_correct, f"./tmp/figs/corr/match_{match}/01_correct_rate.pkl")
         corr_response_time, corr_shuffled_response_time = calc_corr(
             df_response_time_with_task_difficulty
         )
+        out_response_time = {"observed": corr_response_time, "surrogate": corr_shuffled_response_time}
+        mngs.io.save(out_response_time, f"./tmp/figs/corr/match_{match}/02_response_time_rate.pkl")        
+        
 
         rank_rate_correct = bisect_right(sorted(corr_shuffled_correct), corr_correct) / len(
             corr_shuffled_correct

@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-# Time-stamp: "2023-02-02 19:57:36 (ywatanabe)"
+# Time-stamp: "2023-02-23 17:17:30 (ywatanabe)"
 
 import matplotlib
 
@@ -69,7 +69,10 @@ def main(
                 gpfa_cv, spike_trains, cv=3, n_jobs=-1, verbose=True
             )
             log_likelihoods_mm.append(np.mean(cv_log_likelihoods))
-            log_likelihoods_ss.append(np.std(cv_log_likelihoods))
+            # sd = 
+            # se = sd / len(cv_log_likelihoods)
+            # ci = 1.96 * se
+            log_likelihoods_ss.append(np.std(cv_log_likelihoods)) # sd; fixme
         except:
             log_likelihoods_mm.append(np.nan)
             log_likelihoods_ss.append(np.nan)            
@@ -117,6 +120,7 @@ if __name__ == "__main__":
             print(e)
 
         mngs.io.save(df, "./tmp/figs/line/GPFA_log_likelihoods/all.pkl")
+        
 
     df = mngs.io.load("./tmp/figs/line/GPFA_log_likelihoods/all.pkl")
 
@@ -125,16 +129,27 @@ if __name__ == "__main__":
     # np.vstack([np.array(row).astype(float) for i_row, row in enumerate(df["log-likelihoods_mm"])])
     mm = np.nanmean(np.vstack(df["log-likelihoods_mm"]), axis=0)
     ss = np.nanstd(np.vstack(df["log-likelihoods_mm"]), axis=0)
+    nn = np.sum(~np.isnan(np.vstack(df["log-likelihoods_mm"])), axis=0)
+    ci = 1.96 * ss/nn
+
+    # sd = 2 # fixme
+    # se = sd / len(cv_log_likelihoods)
+    # ci = 1.96 * se
+    
     # is_nan = np.isnan(np.vstack(df["log-likelihoods_mm"])).any(axis=-1)
     # ss = ss / (~is_nan).sum()
 
+    plt.errorbar(x=np.arange(len(mm)), y=mm, yerr=ci)
+    
     plt.errorbar(x=np.arange(len(mm)), y=mm, yerr=ss/5)
     plt.show()
 
     out_df = pd.DataFrame({
         "dim": np.arange(len(mm)),
+        "under": mm - ci,
         "mean": mm,
-        "std/5": ss/5,
+        "upper": mm + ci,
+        # "std/5": ss/5,
     })
     mngs.io.save(out_df, "./tmp/figs/line/GPFA_log_likelihoods_all.csv")
     # data = np.vstack(df["log-likelihoods_mm"])

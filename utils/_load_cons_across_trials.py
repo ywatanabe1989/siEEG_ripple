@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-# Time-stamp: "2023-01-31 17:46:29 (ywatanabe)"
+# Time-stamp: "2023-03-01 16:25:30 (ywatanabe)"
 
 import sys
 
@@ -10,9 +10,9 @@ import random
 import mngs
 import pandas as pd
 import numpy as np
-from utils._load_rips import _determine_firing_patterns
+from utils._load_rips import _determine_firing_patterns, load_rips
 from tqdm import tqdm
-from ._load_rips import load_rips
+# from ._load_rips import load_rips
 
 
 def load_cons_across_trials(
@@ -39,8 +39,7 @@ def load_cons_across_trials(
     ).reset_index()
     del rips_df["index"]
 
-    rips_df = rips_df[
-        [
+    columns = [
             "trial_number",
             "start_time",
             "end_time",
@@ -52,7 +51,9 @@ def load_cons_across_trials(
             "session",
             "ROI",
         ]
-    ]
+    if extracts_firing_patterns:
+        columns += ["firing_pattern"]
+    rips_df = rips_df[columns]
 
     cons = rips_df.copy()
 
@@ -67,7 +68,7 @@ def load_cons_across_trials(
 
     cons = pd.concat([cons, shuffled_rips_all], axis=1)
 
-    trials_uq = rips_df[["subject", "session", "trial_number"]].drop_duplicates()
+    # trials_uq = rips_df[["subject", "session", "trial_number"]].drop_duplicates()
 
     if only_correct:
         cons = cons[cons.correct == True]
@@ -83,4 +84,17 @@ def load_cons_across_trials(
 
 
 if __name__ == "__main__":
-    cons = load_cons_across_trials(ROI="AHR")  # "AHL"
+    # cons = load_cons_across_trials(ROI="AHR")  # "AHL"
+
+    # rips_df = load_rips(
+    #     from_pkl=False,
+    #     only_correct=False,
+    #     extracts_firing_patterns=False,
+    # ).reset_index()
+
+    cons = load_cons_across_trials(extracts_firing_patterns=True)
+
+    rips_df["center_time"] = (rips_df.start_time + rips_df.end_time) / 2
+    sorted(rips_df.center_time.astype(float)) == sorted(cons.center_time) # True
+
+    utils.rips.mk_events_mask(rips_df, "01", "01", "AHL", 0)

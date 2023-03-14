@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-# Time-stamp: "2023-02-07 12:17:52 (ywatanabe)"
+# Time-stamp: "2023-02-27 07:49:07 (ywatanabe)"
 
 import mngs
 import sys
@@ -22,8 +22,14 @@ dur_df = mngs.general.force_dataframe({
 })
 mngs.gen.describe(np.array(dur_df["SWR"]), method="median")
 mngs.gen.describe(np.array(dur_df["Control"]), method="median")
-mngs.io.save(dur_df, "./tmp/figs/hist/ripple_duration.csv")
+# mngs.io.save(dur_df, "./tmp/figs/hist/ripple_duration.csv")
+# dur_df = mngs.io.load("./tmp/figs/hist/ripple_duration.csv")
+# mngs.gen.describe(np.array(dur_df["SWR"]), "median")
+# mngs.gen.describe(np.array(dur_df["Control"]), "median")
 mngs.io.save(np.log10(dur_df), "./tmp/figs/hist/log10_ripple_duration.csv")
+
+
+
 
 amp_df = mngs.general.force_dataframe({
     "SWR": rips_df["ripple_peak_amplitude_sd"],
@@ -33,5 +39,8 @@ w, pval_bm, dof, effsize = mngs.stats.brunner_munzel_test(amp_df["SWR"], amp_df[
 mngs.gen.describe(np.array(amp_df["SWR"]), method="median")
 mngs.gen.describe(np.array(amp_df["Control"]), method="median")
 mngs.io.save(amp_df, "./tmp/figs/hist/ripple_amplitude.csv")
+# amp_df = mngs.io.load("./tmp/figs/hist/ripple_amplitude.csv")
+# mngs.gen.describe(np.array(amp_df["SWR"]), "median")
+# mngs.gen.describe(np.array(amp_df["Control"]), "median")
 mngs.io.save(np.log10(amp_df), "./tmp/figs/hist/log10_ripple_amplitude.csv")
 

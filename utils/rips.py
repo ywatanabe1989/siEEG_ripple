@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-# Time-stamp: "2023-02-20 09:27:22 (ywatanabe)"
+# Time-stamp: "2023-03-02 10:39:53 (ywatanabe)"
 
 import sys
 from bisect import bisect_right
@@ -74,12 +74,17 @@ def get_4_8_directions(trajs, trials_df):
     return vF_4_8, vE_4_8, vM_4_8, vR_4_8
 
 
-def load_rips_df_with_traj(bin_size, is_control=False):
+def load_rips_df_with_traj(bin_size, is_control=False, is_within_control=False):
     if not is_control:
         rips_df = load_rips(from_pkl=False, only_correct=False)
     if is_control:
-        # cons_df = load_cons(from_pkl=False, only_correct=False)
         cons_df = load_cons_across_trials(from_pkl=False, only_correct=False)
+        cons_df["center_time"] = (
+            (cons_df["end_time"] + cons_df["start_time"]) / 2
+        ).astype(float)
+        rips_df = cons_df
+    if is_within_control:
+        cons_df = load_cons(from_pkl=False, only_correct=False)
         cons_df["center_time"] = (
             (cons_df["end_time"] + cons_df["start_time"]) / 2
         ).astype(float)
@@ -205,39 +210,37 @@ def add_coordinates(rips_df):
 
     return rips_df
 
-def mk_rips_mask(rips_df, subject, session, roi, time_from_rip):
-    assert time_from_rip in [0, 250, 500]
+def mk_events_mask(events_df, subject, session, roi, time_from_event):
+    assert time_from_event in [0, 250, 500]
     
-    rips_df_session = rips_df[(rips_df.subject == subject) * (rips_df.session == session)]
-    rips_df_session = rips_df_session\
+    events_df_session = events_df[(events_df.subject == subject) * (events_df.session == session)]
+    events_df_session = events_df_session\
         [["subject", "session", "trial_number", "start_time", "center_time", "end_time", "set_size", "match"]]
 
-    # ripples digi
+    # eventples digi
     n_trials = len(mngs.io.load(f"./data/Sub_{subject}/Session_{session}/trials_info.csv"))
     bin_s = 50 / 1000
     n_bins = int(8 / bin_s)
-    rips_digi = np.nan*np.zeros([n_trials, n_bins], dtype=int)
+    events_digi = np.zeros([n_trials, n_bins], dtype=int) # (47, 160)
     for i_trial in range(n_trials):
-        rips_df_trial = rips_df_session[rips_df_session.trial_number == i_trial+1]
-        for i_rip, (_, rip) in enumerate(rips_df_trial.iterrows()):
-            # start_bin = int(rip.start_time / bin_s)
-            # end_bin = int(rip.end_time / bin_s)
-            # rips_digi[i_trial, start_bin:end_bin] = 1
-            center_bin = int(rip.center_time / bin_s)
-            
-            start_bin = center_bin - 10
-            end_bin = center_bin + 11
-            rips_digi[i_trial, start_bin:end_bin] = 500
-            
-            start_bin = center_bin - 5
-            end_bin = center_bin + 6
-            rips_digi[i_trial, start_bin:end_bin] = 250
+        events_df_trial = events_df_session[events_df_session.trial_number == i_trial+1]
 
-            rips_digi[i_trial, center_bin] = 0
+        for i_event, (_, event) in enumerate(events_df_trial.iterrows()):
 
-    rips_digi[np.isnan(rips_digi)] = 1000
-    rips_digi[rips_digi > time_from_rip] = 1000
-    rips_digi[(0 <= rips_digi) * (rips_digi <= time_from_rip)] = 1
-    rips_digi[(2 <= rips_digi)] = 0
+            center_bin = int(float(event.center_time) / bin_s)
+
+            if time_from_event == 500:
+                events_digi[i_trial, center_bin-10:center_bin+11] += 1
+            if time_from_event == 250:
+                events_digi[i_trial, center_bin-5:center_bin+6] += 1
+            if time_from_event == 0:
+                events_digi[i_trial, center_bin] += 1
             
-    return rips_digi.astype(bool)
+    return events_digi#.astype(bool)
+
+if __name__ == "__main__":
+    rips_df = utils.rips.load_rips()
+    cons_df = utils.rips.load_cons_across_trials()
+    
+    rips_df["center_time"] = (rips_df.start_time + rips_df.end_time).astype(float) / 2
+    assert np.all(sorted(rips_df.center_time) == sorted(cons_df.center_time))

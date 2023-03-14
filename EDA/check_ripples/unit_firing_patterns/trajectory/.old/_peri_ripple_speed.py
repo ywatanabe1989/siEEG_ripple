@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-# Time-stamp: "2023-02-20 10:42:24 (ywatanabe)"
+# Time-stamp: "2023-02-28 12:23:19 (ywatanabe)"
 
 """
 ./tmp/figs/time_dependent_dist
@@ -364,9 +364,9 @@ def compair_speed_of_rips_and_cons(rips_df, cons_df):
         df[f"Control_{phase}"] = speeds_cons_phase        
         speeds_rips_phase = speeds_rips_phase[~nan_indi]
         speeds_cons_phase = speeds_cons_phase[~nan_indi]
-        speeds_rips_phase.sum()
-        speeds_cons_phase.sum()
-        starts, pval = brunnermunzel(
+        # speeds_rips_phase.sum()
+        # speeds_cons_phase.sum()
+        stats, pval = brunnermunzel(
             speeds_rips_phase,
             speeds_cons_phase,
         )
@@ -412,6 +412,10 @@ if __name__ == "__main__":
         w, p, dof, effsize = mngs.stats.brunner_munzel_test(df[f"Control_{phase}"], df[f"SWR_{phase}"])
         print(p)
 
+    for phase in PHASES:
+        print(mngs.gen.describe(df[f"Control_{phase}"], "median"))
+        print(mngs.gen.describe(df[f"SWR_{phase}"], "median"))
+                          
     
 
     # indi = []

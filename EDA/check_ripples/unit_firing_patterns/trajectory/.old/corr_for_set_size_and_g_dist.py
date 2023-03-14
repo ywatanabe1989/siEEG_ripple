@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-# Time-stamp: "2023-02-18 09:26:49 (ywatanabe)"
+# Time-stamp: "2023-03-05 14:58:34 (ywatanabe)"
 
 import mngs
 import pandas as pd
@@ -38,9 +38,9 @@ def load_data(match):
 def calc_corr(dfs, col):
     X = np.array(dfs["count"]).reshape(-1, 1)
 
-    # y = np.log10(dfs[col])
+    y = np.log10(dfs[col])
 
-    y = dfs[col]
+    # y = dfs[col]
 
     corr = np.corrcoef(X.squeeze(), y)[0, 1]  # fixme
 
@@ -66,49 +66,44 @@ def calc_corr(dfs, col):
     return corr, np.array(shuffled_corrs).squeeze()
 
 def test_kw_and_bm(dfs):
-    # Kruskal-Wallis
+
     for col in dfs.columns[1:7]:
+        
         print(col)
+
 
         df_col = dfs[[col, "set_size", "match"]]
 
+        # Kruskal-Wallis                
         df_col_ss_m = {}
         for set_size in [4, 6, 8]:
             df_col_ss_m[f"set_size_{set_size}_match_{match}"] = \
                 df_col[(df_col.set_size == set_size) * (df_col.match == match)]
-        # dict_keys(['set_size_4_match_1', 'set_size_6_match_1', 'set_size_8_match_1'])
-                
-        stats, pval_kw = scipy.stats.kruskal(*[_df.iloc[:,0] for _df in df_col_ss_m.values()])
-        print(f"Kruskal Wallis ss m: {round(pval_kw, 3)}")
+
+        stats, pval_kw = scipy.stats.kruskal(*[_df.iloc[:,0] for _df in df_col_ss_m.values()])        
+        if pval_kw < 0.05:
+            print(f"Kruskal Wallis ss m: {round(pval_kw, 3)}")
 
 
-        # # Post-hoc Conover
-        # fdf = {}
-        # for _col, _df in df_col_ss_m.items():
-        #     fdf[_col] = _df.iloc[:,0]
-        # fdf = np.array(mngs.gen.force_dataframe(fdf).replace({'': np.nan})).T
-        # print(f"Posthoc Conover: {sp.posthoc_conover(fdf)}")
+        # Post-hoc Conover
 
         nn_pair = len(list(combinations(df_col_ss_m.values(), 2)))
         for df1, df2 in combinations(df_col_ss_m.values(), 2):
-            
-            # print(df1.set_size.iloc[0], df1.match.iloc[0], df2.set_size.iloc[0], df2.match.iloc[0])
             print(df1.set_size.iloc[0], df2.set_size.iloc[0])
-
-            # print(mngs.gen.describe(np.array(df1.iloc[:,0]), method="median"))
-            # print(mngs.gen.describe(np.array(df2.iloc[:,0]), method="median"))           
             w, pval_bm, dof, effsize = mngs.stats.brunner_munzel_test(df1.iloc[:,0], df2.iloc[:,0])
             pval_bm *= nn_pair # Bonferroni correction
-            
-            print(f"Brunner-Munzel (corrected): {pval_bm}")
-            print()
+            if pval_bm < 0.05:
+                print(f"Brunner-Munzel (corrected): {pval_bm}")
+                print()
         # import ipdb; ipdb.set_trace()
 
-def corr_test(dfs):
+def corr_test(dfs, match):
     shuffled_corrs_all = pd.DataFrame()
-    for phase_combi in ["FE", "FM", "FR", "EM", "ER", "MR"]:
+    for i_pc, phase_combi in enumerate(["FE", "FM", "FR", "EM", "ER", "MR"]):
         print(phase_combi)
-        corr, shuffled_corrs = calc_corr(dfs, phase_combi)
+        corr, shuffled_corrs = calc_corr(dfs, phase_combi) # fixme
+        out = {"observed": corr, "surrogate": shuffled_corrs}
+        mngs.io.save(out, f"./tmp/figs/corr/match_{match}/{i_pc+3}_{phase_combi}.pkl")
         # print(phase_combi, corr, mngs.gen.describe(shuffled_corrs, method="median"))
 
         pc = np.array([phase_combi for _ in range(len(shuffled_corrs) + 1)])
@@ -173,7 +168,7 @@ if __name__ == "__main__":
         dfs = load_data(match)
 
         test_kw_and_bm(dfs)
-        shuffled_corrs_all = corr_test(dfs)
+        shuffled_corrs_all = corr_test(dfs, match)
 
         fig = plot_shuffled_corrs(shuffled_corrs_all)
         mngs.io.save(fig, f"./tmp/figs/violin/corr_between_set_size_and_dist_match_{match}.tif")        

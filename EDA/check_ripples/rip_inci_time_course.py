@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-# Time-stamp: "2023-02-05 19:40:53 (ywatanabe)"
+# Time-stamp: "2023-02-23 17:37:13 (ywatanabe)"
 
 import sys
 sys.path.append(".")
@@ -46,6 +46,7 @@ ns_cons = np.array([get_a_line(cons_df[cons_df.subject_session == ss].center_tim
                     for ss in cons_df.subject_session.unique()])
 
 xx = np.linspace(0,8,160)
+nn_rips = ns_rips != 0
 yy_rips, ss_rips = ns_rips.mean(axis=0), ns_rips.std(axis=0)
 yy_cons, ss_cons = ns_cons.mean(axis=0), ns_cons.std(axis=0)
 

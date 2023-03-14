@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-# Time-stamp: "2023-01-31 17:41:25 (ywatanabe)"
+# Time-stamp: "2023-03-01 17:09:01 (ywatanabe)"
 
 import mngs
 import pandas as pd
@@ -29,6 +29,12 @@ def load_rips(
         out = load_rips_rois_in_config(
             sd=sd, from_pkl=from_pkl, only_correct=only_correct
         )
+        
+    # elif ROI is None:
+    #     rips_df_roi = pd.concat([mngs.io.load(
+    #         f"./tmp/rips_df/common_average_2.0_SD_{ROI}.pkl"
+    #     ) for roi in ["AHL", "AHR", "PHL", "PHR"]]).reset_index()
+
     else:
         rips_df_roi = mngs.io.load(
             f"./tmp/rips_df/common_average_2.0_SD_{ROI}.pkl"

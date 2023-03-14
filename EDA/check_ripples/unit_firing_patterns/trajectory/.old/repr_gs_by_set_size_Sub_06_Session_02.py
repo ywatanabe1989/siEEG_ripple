@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-# Time-stamp: "2023-02-17 17:52:05 (ywatanabe)"
+# Time-stamp: "2023-02-23 08:55:20 (ywatanabe)"
 
 import mngs
 import numpy as np
@@ -35,14 +35,26 @@ def collect_gs(med_traj):
 traj = mngs.io.load("./data/Sub_06/Session_02/traj_z_by_session_AHL.npy")
 trials_df = mngs.io.load("./data/Sub_06/Session_02/trials_info.csv")
 
+match = 1
+gs_all = {}
+for set_size in [4,6,8]:
+    traj_ss = traj[(trials_df.set_size == set_size) * (trials_df.match == match)]
+    med_traj_ss = np.median(traj_ss, axis=0)
+    # med_traj_ss = 
+    gs_ss = collect_gs(med_traj_ss)
+    gs_ss = {k+f"_{set_size}":v for k,v in gs_ss.items()}
+    gs_all.update(gs_ss)
 
-for match in [1,2]:
-    traj_match = traj[trials_df.match == match]
-    med_traj_match = np.median(traj_match, axis=0)
-    gs_match = collect_gs(med_traj_match)
+# mngs.io.save(pd.DataFrame(med_traj).T, f"./tmp/figs/scatter/repr_med_traj_by_set_size_Subject_06_Session_02.csv")
+mngs.io.save(pd.DataFrame(pd.Series(gs_all)).T, f"./tmp/figs/scatter/repr_med_traj_gs_by_set_size_match_{match}_Subject_06_Session_02.csv")
 
-    mngs.io.save(pd.DataFrame(med_traj_match).T, f"./tmp/figs/scatter/repr_med_traj_match_{match}.csv")
-    mngs.io.save(pd.DataFrame(pd.Series(gs_match)).T, f"./tmp/figs/scatter/repr_med_traj_gs_match_{match}.csv")
+# for match in [1,2]:
+#     traj_match = traj[trials_df.match == match]
+#     med_traj_match = np.median(traj_match, axis=0)
+#     gs_match = collect_gs(med_traj_match)
+
+#     mngs.io.save(pd.DataFrame(med_traj_match).T, f"./tmp/figs/scatter/repr_med_traj_match_{match}.csv")
+#     mngs.io.save(pd.DataFrame(pd.Series(gs_match)).T, f"./tmp/figs/scatter/repr_med_traj_gs_match_{match}.csv")
 
 
 

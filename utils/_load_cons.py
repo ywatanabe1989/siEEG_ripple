@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-# Time-stamp: "2023-01-31 17:40:11 (ywatanabe)"
+# Time-stamp: "2023-03-01 16:36:46 (ywatanabe)"
 
 import sys
 
@@ -168,9 +168,8 @@ def load_cons(from_pkl=True, only_correct=True, ROI=None, extracts_firing_patter
             # single positional indexer is out-of-bounds
         except Exception as e:
             print(e)
-            import ipdb
+            import ipdb; ipdb.set_trace()
 
-        ipdb.set_trace()
     if only_correct:
         cons = cons[cons.correct == True]
 
@@ -251,5 +250,5 @@ def load_cons(from_pkl=True, only_correct=True, ROI=None, extracts_firing_patter
 # ]
 
 if __name__ == "__main__":
-    rips = utils.rips.load_rips(ROI="AHR")
-    cons = load_cons(ROI="AHR")  # "AHL"
+    # rips = utils.rips.load_rips(ROI="AHR")
+    cons = load_cons(ROI="AHR", extracts_firing_patterns=True)  # "AHL"

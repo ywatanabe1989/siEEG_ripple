@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-# Time-stamp: "2023-02-20 14:35:40 (ywatanabe)"
+# Time-stamp: "2023-02-24 11:32:40 (ywatanabe)"
 
 import mngs
 import matplotlib
@@ -15,6 +15,7 @@ import pandas as pd
 from pprint import pprint
 import random
 
+
 def get_rois(MTL_region):
     if MTL_region == "Hipp.":
         return ["AHL", "AHR", "PHL", "PHR"]
@@ -22,33 +23,45 @@ def get_rois(MTL_region):
         return ["ECL", "ECR"]
     if MTL_region == "Amy.":
         return ["AL", "AR"]
-    
+
+
 def collect_traj(MTL_region):
-    subjects = ["01", "02", "03", "04", "05", "06", "07", "08", "09"]
+    ROIs = mngs.io.load("./config/ripple_detectable_ROI.yaml")
     trajs = []
-    for subject in subjects:
+    for subject, _ in ROIs.items():
+        subject = f"{subject:02d}"
+        # print(subject)
+        # subjects = ["01", "02", "03", "04", "05", "06", "07", "08", "09"]
+        # for subject in subjects:
         for session in ["01", "02"]:
             for roi in get_rois(MTL_region):
                 try:
-                    traj = mngs.io.load(f"./data/Sub_{subject}/Session_{session}/traj_z_by_session_{roi}.npy")
+                    traj = mngs.io.load(
+                        f"./data/Sub_{subject}/Session_{session}/traj_z_by_session_{roi}.npy"
+                    )
                     trajs.append(traj)
                 except Exception as e:
                     print(e)
     return np.vstack(trajs)
 
+
 def calc_dist(traj_MTL_region):
     norm_nonnan_MTL_region = {}
-    for i_bin in range(traj_MTL_region.shape[-1]): # i_bin = 0
+    for i_bin in range(traj_MTL_region.shape[-1]):  # i_bin = 0
         traj_MTL_region_i_bin = traj_MTL_region[..., i_bin]
-        norm_MTL_region_i_bin = norm(traj_MTL_region_i_bin[~np.isnan(traj_MTL_region_i_bin).any(axis=1)], axis=-1)
+        norm_MTL_region_i_bin = norm(
+            traj_MTL_region_i_bin[~np.isnan(traj_MTL_region_i_bin).any(axis=1)], axis=-1
+        )
         norm_nonnan_MTL_region[i_bin] = norm_MTL_region_i_bin
     return mngs.gen.force_dataframe(norm_nonnan_MTL_region)
 
+
+# Coordinate
 traj_Hipp = collect_traj("Hipp.")
 traj_EC = collect_traj("EC")
 traj_Amy = collect_traj("Amy.")
 
-
+# Distance
 dist_Hipp = calc_dist(traj_Hipp)
 dist_EC = calc_dist(traj_EC)
 dist_Amy = calc_dist(traj_Amy)
@@ -57,6 +70,13 @@ mm_Hipp, ss_Hipp = dist_Hipp.mean(axis=0), dist_Hipp.std(axis=0)
 mm_EC, ss_EC = dist_EC.mean(axis=0), dist_EC.std(axis=0)
 mm_Amy, ss_Amy = dist_Amy.mean(axis=0), dist_Amy.std(axis=0)
 
+n_Hipp = dist_Hipp.shape[0]
+n_EC = dist_EC.shape[0]
+n_Amy = dist_Amy.shape[0]
+
+ci_Hipp = 1.96 * ss_Hipp/n_Hipp
+ci_EC = 1.96 * ss_EC/n_EC
+ci_Amy = 1.96 * ss_Amy/n_Amy
 
 
 # mngs.linalg.nannorm(, axis=1)
@@ -72,18 +92,20 @@ mm_Amy, ss_Amy = dist_Amy.mean(axis=0), dist_Amy.std(axis=0)
 # mm_EC, ss_EC = norm_EC.mean(axis=0), norm_EC.std(axis=0)
 # mm_Amy, ss_Amy = norm_Amy.mean(axis=0), norm_Amy.std(axis=0)
 
-df = pd.DataFrame({
-    "under_Hipp.": mm_Hipp - ss_Hipp,
-    "mean_Hipp.": mm_Hipp,
-    "upper_Hipp.": mm_Hipp + ss_Hipp,
-    "under_EC": mm_EC - ss_EC,
-    "mean_EC": mm_EC,
-    "upper_EC": mm_EC + ss_EC,
-    "under_Amy.": mm_Amy - ss_Amy,
-    "mean_Amy.": mm_Amy,
-    "upper_Amy.": mm_Amy + ss_Amy,
-})
-mngs.io.save(df, "./tmp/figs/line/repr_traj.csv")
+df = pd.DataFrame(
+    {
+        "under_Hipp.": mm_Hipp - ci_Hipp,
+        "mean_Hipp.": mm_Hipp,
+        "upper_Hipp.": mm_Hipp + ci_Hipp,
+        "under_EC": mm_EC - ci_EC,
+        "mean_EC": mm_EC,
+        "upper_EC": mm_EC + ci_EC,
+        "under_Amy.": mm_Amy - ci_Amy,
+        "mean_Amy.": mm_Amy,
+        "upper_Amy.": mm_Amy + ci_Amy,
+    }
+)
+mngs.io.save(df, "./tmp/figs/line/repr_dist_from_O_ripple_detectable_subjects.csv")
 # plt.plot(norm(np.median(traj_Hipp, axis=0), axis=0))
 
 # ROIs = mngs.io.load("./config/ripple_detectable_ROI.yaml")
@@ -106,7 +128,6 @@ mngs.io.save(df, "./tmp/figs/line/repr_traj.csv")
 # )
 
 
-
 # # plt.plot(traj_Hipp[5].T)
 # # plt.show()
 
@@ -124,7 +145,7 @@ mngs.io.save(df, "./tmp/figs/line/repr_traj.csv")
 #             for i_dim in range(3)]
 #     ).transpose(1,0,2)
 
-# # np.nanmedian(traj    
+# # np.nanmedian(traj
 # # scipy.ndimage.gaussian_filter1d(    , sigma=3)
 # PHASES = ["Fixation", "Encoding", "Maintenance", "Retrieval"]
 # starts = [0, 20, 60, 120]
@@ -149,7 +170,7 @@ mngs.io.save(df, "./tmp/figs/line/repr_traj.csv")
 #                 color=cc,
 #                 linestyle=linestyles[i_dim],
 #             )
-#             out_dict[f"xx_{traj_str}_{pp}_Factor_{i_dim}"] = xx[ss:ee]            
+#             out_dict[f"xx_{traj_str}_{pp}_Factor_{i_dim}"] = xx[ss:ee]
 #             out_dict[f"yy_{traj_str}_{pp}_Factor_{i_dim}"] = yy[ss:ee]
 #     ax.set_ylabel(traj_str)
 #     # ax.legend(loc="upper right")
@@ -184,4 +205,3 @@ mngs.io.save(df, "./tmp/figs/line/repr_traj.csv")
 # # 8
 # # 11
 # # 12
-
