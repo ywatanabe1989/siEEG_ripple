@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-# Time-stamp: "2023-03-02 13:54:43 (ywatanabe)"
+# Time-stamp: "2023-03-17 18:55:34 (ywatanabe)"
 
 import sympy
 import numpy as np
@@ -35,5 +35,6 @@ def three_line_lengths_to_coords(aa, bb, cc):
     return O, A, B
 
 
-O, A, B = solve_h(2, np.sqrt(3), 1)
-print(O, A, B)
+if __name__ == "__main__":
+    O, A, B = three_line_lengths_to_coords(2, np.sqrt(3), 1)
+    print(O, A, B)

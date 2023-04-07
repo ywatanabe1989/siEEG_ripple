@@ -38,7 +38,20 @@ IoU_RIPPLE_THRES:
   # 0.1
   # 0
 
+# SWR_BINS:
+#   "pre":
+#     [-10, -3]
+#   "mid":
+#     [-3, 4]
+#   "post":
+#     [4, 11]  
 
-  
-  
+SWR_BINS:
+  "pre":
+    [-16, -5]
+  "mid":
+    [-5, 6]
+  "post":
+    [6, 17]  
+    
   

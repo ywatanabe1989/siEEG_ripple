@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-# Time-stamp: "2023-03-12 12:55:13 (ywatanabe)"
+# Time-stamp: "2023-03-14 14:45:49 (ywatanabe)"
 
 import mngs
 import pandas as pd
@@ -22,12 +22,7 @@ def print_ranks(fpaths):
         if mid_rank < rank:
             rank = (len(data["surrogate"]) - rank) // 2            
         pval = rank / len(data["surrogate"])
-
         mark = mngs.stats.to_asterisks(pval)        
-
-        # if not only_significant:
-        #     print(round(corr_obs, 2), round(pval, 3), mark)        
-        # if only_significant and (pval < 0.05):
         print(round(data["observed"], 2), round(pval, 3), mark)                
         
 
@@ -37,11 +32,9 @@ def to_df(fpaths):
     for fpath in fpaths:
         fname = fpath.split("/")[-1].split(".")[0]
         data = mngs.io.load(fpath)
-        # print(bisect_right(sorted(np.array(data["surrogate"])), data["observed"]))
         df_obs = pd.DataFrame(
             pd.Series({"correlation": data["observed"]}, name="correlation")
         )
-        print(float(df_obs.round(3).iloc[0]))
         df_sur = pd.DataFrame({"correlation": np.array(data["surrogate"]).squeeze()})
         _df = pd.concat([df_obs, df_sur])
         _df["is_obs"] = [True] + [False for _ in range(len(df_sur))]
@@ -55,7 +48,6 @@ def plot_violin(df, ylim=0.3):
     n_violins = len(df["variable"].unique()) - 1
     width = 6.4 / 4 * n_violins
     fig, ax = plt.subplots(figsize=(width, 4.8))  # 6.4*4
-
     sns.violinplot(
         data=df[df.is_obs == False],
         x="variable",
@@ -68,14 +60,27 @@ def plot_violin(df, ylim=0.3):
         ax=ax,
         width=.5,
     )
-    for _, row_obs in df[df.is_obs == True].iterrows():
-        ax.scatter(
-            x=row_obs["variable"],
-            y=row_obs["correlation"],
-            color="red",
-            s=100,
-        )
-        # ax.legend(visible=False)
+
+    for i_var, var in enumerate(df["variable"].unique()):
+        corr_obs = df[(df.variable == var) * (df.is_obs == 1)].correlation
+        if corr_obs.shape != (0,):
+            corr_obs = corr_obs.iloc[0]
+
+            ax.scatter(
+                x=var,
+                y=corr_obs,
+                color="red",
+                s=100,
+            )
+        
+    # for _, row_obs in df[df.is_obs == True].iterrows():
+    #     ax.scatter(
+    #         x=row_obs["variable"],
+    #         y=row_obs["correlation"],
+    #         color="red",
+    #         s=100,
+    #     )
+    #     # ax.legend(visible=False)
     plt.legend().remove()
     # ylim = 0.22
     ax.set_ylim(-ylim, ylim)
@@ -93,7 +98,7 @@ def main(dir):
     fig = plot_violin(df, ylim=.6)
     # plt.show()
 
-    mngs.io.save(fig, dir + "violin.tif")
+    mngs.io.save(fig, dir.replace("/corr/", "/corr/figs/") + "violin.tif")
 
 if __name__ == "__main__":
     import matplotlib
@@ -106,7 +111,7 @@ if __name__ == "__main__":
     from natsort import natsorted
 
     for var in ["dist_from_O", "speed"]:
-        for match in [1,2]:
+        for match in [None, 1,2]:
             dir = f"./tmp/figs/corr/peri_SWR_{var}/match_{match}/"
             main(dir)
-            import ipdb; ipdb.set_trace()
+

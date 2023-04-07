@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-# Time-stamp: "2023-04-06 07:50:26 (ywatanabe)"
+# Time-stamp: "2023-04-05 21:48:52 (ywatanabe)"
 
 import matplotlib
 import mngs
@@ -19,7 +19,7 @@ from natsort import natsorted
 
 
 # Functions
-def to_spiketrains(spike_times_all_trials, without_retrieval_phase=False):
+def to_spiketrains(spike_times_all_trials):
     spike_trains_all_trials = []
     for st_trial in spike_times_all_trials:
 
@@ -27,13 +27,7 @@ def to_spiketrains(spike_times_all_trials, without_retrieval_phase=False):
         for col, col_df in st_trial.iteritems():
 
             spike_times = col_df[col_df != ""]
-            if without_retrieval_phase:
-                spike_times = spike_times[spike_times < 0]
-                train = neo.SpikeTrain(list(spike_times) * pq.s, t_start=-6.0, t_stop=0)
-            else:
-                train = neo.SpikeTrain(
-                    list(spike_times) * pq.s, t_start=-6.0, t_stop=2.0
-                )
+            train = neo.SpikeTrain(list(spike_times) * pq.s, t_start=-6.0, t_stop=2.0)
             spike_trains_trial.append(train)
 
         spike_trains_all_trials.append(spike_trains_trial)
@@ -41,7 +35,7 @@ def to_spiketrains(spike_times_all_trials, without_retrieval_phase=False):
     return spike_trains_all_trials
 
 
-def main(match, without_retrieval_phase=False):
+def main(match):
     # Parameters
     bin_size = 50 * pq.ms
 
@@ -62,10 +56,8 @@ def main(match, without_retrieval_phase=False):
             lpath_spike_times = (
                 f"./data/Sub_{subject}/Session_{session}/spike_times_{roi}.pkl"
             )
-            spike_trains = to_spiketrains(
-                mngs.io.load(lpath_spike_times),
-                without_retrieval_phase=without_retrieval_phase,
-            )
+            spike_trains = to_spiketrains(mngs.io.load(lpath_spike_times))
+            import ipdb; ipdb.set_trace()
 
             if match is not None:
                 trials_info = mngs.io.load(
@@ -84,8 +76,6 @@ def main(match, without_retrieval_phase=False):
                 .replace(".pkl", ".npy")
                 .replace(".npy", f"_match_{match}.npy")
             )
-            if without_retrieval_phase:
-                spath_trajs = spath_trajs.replace(".npy", "_wo_R.npy")
             mngs.io.save(trajs, spath_trajs)
 
         except Exception as e:
@@ -93,9 +83,5 @@ def main(match, without_retrieval_phase=False):
 
 
 if __name__ == "__main__":
-    main(match=None, without_retrieval_phase=True)    
-    # for match in [1, 2]:
-    #     main(match, without_retrieval_phase=False)
-
-    # import mngs
-    # mngs.io.load("./data/Sub_01/Session_01/traj_AHL_match_None_wo_R.npy")
+    for match in [1, 2]:
+        main(match)

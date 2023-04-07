@@ -1,11 +1,12 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-# Time-stamp: "2023-03-01 17:09:01 (ywatanabe)"
+# Time-stamp: "2023-03-22 13:40:35 (ywatanabe)"
 
 import mngs
 import pandas as pd
 import numpy as np
 import warnings
+from ._add_geSWR_grSWR import add_geSWR_grSWR
 from tqdm import tqdm
 
 ROIs = mngs.io.load("./config/ripple_detectable_ROI.yaml")
@@ -53,6 +54,7 @@ def load_rips(
             _determine_firing_patterns(out.iloc[ii]) for ii in tqdm(range(len(out)))
         ]
 
+    out = add_geSWR_grSWR(out)
     return out
 
 def calc_unit_participation_rate(row):
@@ -163,6 +165,7 @@ if __name__ == "__main__":
 
     # rips_df = load_rips(from_pkl=False, only_correct=False, ROI="AHR")
     rips_df = load_rips(from_pkl=False)
+    
 
     import matplotlib
     matplotlib.use("TkAgg")

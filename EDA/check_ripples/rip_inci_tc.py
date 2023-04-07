@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-# Time-stamp: "2023-02-24 10:29:08 (ywatanabe)"
+# Time-stamp: "2023-03-15 15:54:03 (ywatanabe)"
 
 import sys
 
@@ -68,6 +68,9 @@ def calc_inci_ci(event_df):
     under = mm - ci
     middle = mm
     upper = mm + ci
+    # under = mm - sd
+    # middle = mm
+    # upper = mm + sd
 
     # under = gaussian_filter1d(under, truncate=1, sigma=4, mode="constant")
     # middle = gaussian_filter1d(middle, truncate=1, sigma=4, mode="constant")
@@ -92,23 +95,46 @@ if __name__ == "__main__":
     cons_digi = calc_inci_ci(cons_df) # 986
     """    
 
+    
+    # fig, axes = plt.subplots(ncols=2, sharex=True, sharey=True)
+    # for i_match, match in enumerate([1,2]):
+    #     ax = axes[i_match]
+    #     for i_set_size, set_size in enumerate([4,6,8]):
+    #         rips_df_s = rips_df[(rips_df.set_size == set_size)*(rips_df.match == match)*(rips_df.correct==True)]
+    #         # cons_df_s = cons_df[cons_df.set_size == set_size]
+
+    #         # Calculates SWR incidence
+    #         under_rip, middle_rip, upper_rip = calc_inci_ci(rips_df_s)
+    #         # under_con, middle_con, upper_con = calc_inci_ci(cons_df_s)
+
+    #         # Plots
+    #         t_sec = 8
+    #         xx_s = np.linspace(0, t_sec, 160)
+
+    #         c = ["orange", "red", "pink"][i_set_size]
+    #         ax.plot(xx_s, under_rip, color=c)
+    #         ax.plot(xx_s, middle_rip, label=set_size, color=c)
+    #         ax.plot(xx_s, upper_rip, color=c)
+    #         ax.legend()
+    # plt.show()
+
+    # koko
+    fig, ax = plt.subplots()
+
     # Calculates SWR incidence
     under_rip, middle_rip, upper_rip = calc_inci_ci(rips_df)
     under_con, middle_con, upper_con = calc_inci_ci(cons_df)
 
-
     # Plots
     t_sec = 8
     xx_s = np.linspace(0, t_sec, 160)
-    fig, ax = plt.subplots()
+
     ax.plot(xx_s, under_rip)
     ax.plot(xx_s, middle_rip)
     ax.plot(xx_s, upper_rip)
-    plt.plot()
-
-
-
-
+    ax.legend()
+    plt.show()
+    
 
     bs_samples = np.array(
         [random.sample(sorted(middle_rip.tolist()), 1) for _ in range(1000)]

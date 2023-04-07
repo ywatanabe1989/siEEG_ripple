@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-# Time-stamp: "2023-03-05 14:47:12 (ywatanabe)"
+# Time-stamp: "2023-03-15 12:34:08 (ywatanabe)"
 
 from elephant.gpfa import GPFA
 import quantities as pq
@@ -87,7 +87,7 @@ def get_subject_session_roi(lpath):
     return subject, session, roi
 
 
-def calc_g_dist(z_by, match, set_size):
+def calc_g_dist(z_by, match, set_size, replace_SWR_periods_with_mean=False):
 
     # Loads
     LPATHs = natsorted(glob("./data/Sub_*/Session_*/spike_times_*.pkl"))
@@ -111,7 +111,7 @@ def calc_g_dist(z_by, match, set_size):
                 # by match
                 if match is not None:
                     trajs = trajs[trials_df.match == match]
-                    trials_df = trials_df[trials_df.match == match]
+n                    trials_df = trials_df[trials_df.match == match]
 
                 # by correct
                 if False:
@@ -122,6 +122,10 @@ def calc_g_dist(z_by, match, set_size):
                 if set_size is not None:
                     trajs = trajs[trials_df.set_size == set_size]
                     trials_df = trials_df[trials_df.set_size == set_size]
+
+                if replace_SWR_periods_with_mean:
+                    import ipdb; ipdb.set_trace()
+                    pass
 
                 PHASES, starts, ends, colors = define_phase_time()
 
@@ -292,7 +296,7 @@ if __name__ == "__main__":
             match = 1
             set_size = None
             """                
-            dfs, info_df = calc_g_dist(z_by, match, set_size)
+            dfs, info_df = calc_g_dist(z_by, match, set_size, override_SWR_periods_with_mean=True)
             len(dfs[0]["Fixation"]) # 20
 
             for MTL_region in zip(

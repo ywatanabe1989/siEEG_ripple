@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-# Time-stamp: "2023-03-13 12:13:46 (ywatanabe)"
+# Time-stamp: "2023-03-14 14:03:00 (ywatanabe)"
 
 """
 ./tmp/figs/time_dependent_dist
@@ -32,6 +32,7 @@ import quantities as pq
 
 sys.path.append(".")
 import utils
+
 
 # Functions
 def collect_dist():
@@ -177,27 +178,31 @@ def corr_test(cons_df_m, rips_df_m):
     count = 0
     for phase in PHASES:
         print(phase)
+        
         # Control
         indi = cons_df_m.phase == phase
         pval_cons, corr_obs_cons, corrs_shuffled_cons = mngs.stats.corr_test(
             np.log10(cons_df_m["dist"][indi]), cons_df_m["set_size"][indi]
         )
-        out = {"observed": corr_obs_cons, "surrogate": corrs_shuffled_cons}
         count += 1
+        spath = f"./tmp/figs/corr/peri_SWR_dist_from_O/match_{match}/{count}_by_phase_and_set_size_SWR-.pkl"
+        spath = spath.replace(".pkl", f"corr_{round(corr_obs_cons,2)}_pval_{round(pval_cons,3)}.pkl")
         mngs.io.save(
-            out,
-            f"./tmp/figs/corr/peri_SWR_dist_from_O/match_{match}/{count}_by_phase_and_set_size_SWR-.pkl",
+            {"observed": corr_obs_cons, "surrogate": corrs_shuffled_cons},
+            spath,
         )
+        
         # SWR            
         indi = rips_df_m.phase == phase
         pval_rips, corr_obs_rips, corrs_shuffled_rips = mngs.stats.corr_test(
             np.log10(rips_df_m["dist"][indi]), rips_df_m["set_size"][indi]
         )
-        out = {"observed": corr_obs_rips, "surrogate": corrs_shuffled_rips}
         count += 1
+        spath = f"./tmp/figs/corr/peri_SWR_dist_from_O/match_{match}/{count}_by_phase_and_set_size_SWR+.pkl"
+        spath = spath.replace(".pkl", f"corr_{round(corr_obs_rips,2)}_pval_{round(pval_rips,3)}.pkl")        
         mngs.io.save(
-            out,
-            f"./tmp/figs/corr/peri_SWR_dist_from_O/match_{match}/{count}_by_phase_and_set_size_SWR+.pkl",
+            {"observed": corr_obs_rips, "surrogate": corrs_shuffled_rips},
+            spath,
         )
         print()
 
@@ -243,6 +248,9 @@ if __name__ == "__main__":
     import mngs
     import numpy as np
 
+    # Fixes seeds
+    mngs.gen.fix_seeds(42, np=np)
+    
     # Parameters
     (
         PHASES,
@@ -263,9 +271,13 @@ if __name__ == "__main__":
     rips_df = calc_dist_from_O_of_SWR(rips_df)
     cons_df = calc_dist_from_O_of_SWR(cons_df)
 
-    for match in [1, 2]:
-        rips_df_m = rips_df[rips_df.match == match]
-        cons_df_m = cons_df[cons_df.match == match]
+    for match in [None, 1, 2]:
+        if match is not None:
+            rips_df_m = rips_df[rips_df.match == match]
+            cons_df_m = cons_df[cons_df.match == match]
+        else:
+            rips_df_m = rips_df
+            cons_df_m = cons_df            
 
         # for boxplot in sigmaplot, peri-SWR distance from O by phase and set size
         df_m = sort_peri_SWR_dist_from_O(cons_df_m, rips_df_m)
@@ -276,6 +288,8 @@ if __name__ == "__main__":
 
         mngs.gen.fix_seeds(42, np=np)
         corr_test(cons_df_m, rips_df_m)
+
+
 
         # plots set-size dependancy
         fig = plot(cons_df_m, rips_df_m)

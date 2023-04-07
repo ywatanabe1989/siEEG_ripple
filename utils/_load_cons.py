@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-# Time-stamp: "2023-03-01 16:36:46 (ywatanabe)"
+# Time-stamp: "2023-03-22 13:39:56 (ywatanabe)"
 
 import sys
 
@@ -12,7 +12,7 @@ import pandas as pd
 import numpy as np
 from utils._load_rips import _determine_firing_patterns
 from tqdm import tqdm
-
+from ._add_geSWR_grSWR import add_geSWR_grSWR
 
 def randomly_define_control_events(rips):
     def randomly_define_a_control_event(rip):
@@ -121,7 +121,9 @@ def define_cons(trials_uq, rips_df):
     return cons
 
 
-def load_cons(from_pkl=True, only_correct=True, ROI=None, extracts_firing_patterns=False):
+def load_cons(
+    from_pkl=True, only_correct=True, ROI=None, extracts_firing_patterns=False
+):
     mngs.general.fix_seeds(random=random)
 
     global PHASE2DUR_DICT, PHASE2START_SEC
@@ -150,7 +152,7 @@ def load_cons(from_pkl=True, only_correct=True, ROI=None, extracts_firing_patter
         # ii = 100
         # _determine_firing_patterns(cons.iloc[ii])
         # ii = 3234
-        # _determine_firing_patterns(cons.iloc[ii])    
+        # _determine_firing_patterns(cons.iloc[ii])
         # ii = 3235
         # _determine_firing_patterns(cons.iloc[ii])
         # ii = 3236
@@ -163,12 +165,15 @@ def load_cons(from_pkl=True, only_correct=True, ROI=None, extracts_firing_patter
         # fixme
         try:
             cons["firing_pattern"] = [
-                _determine_firing_patterns(cons.iloc[ii]) for ii in tqdm(range(len(cons)))
+                _determine_firing_patterns(cons.iloc[ii])
+                for ii in tqdm(range(len(cons)))
             ]  # fixme
             # single positional indexer is out-of-bounds
         except Exception as e:
             print(e)
-            import ipdb; ipdb.set_trace()
+            import ipdb
+
+            ipdb.set_trace()
 
     if only_correct:
         cons = cons[cons.correct == True]
@@ -181,6 +186,7 @@ def load_cons(from_pkl=True, only_correct=True, ROI=None, extracts_firing_patter
 
     cons["center_time"] = ((cons["end_time"] + cons["start_time"]) / 2).astype(float)
 
+    cons = add_geSWR_grSWR(cons)
     return cons
 
 

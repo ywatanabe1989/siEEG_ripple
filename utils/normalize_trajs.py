@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-# Time-stamp: "2023-01-22 14:44:40 (ywatanabe)"
+# Time-stamp: "2023-04-06 07:57:01 (ywatanabe)"
 
 from glob import glob
 
@@ -64,7 +64,7 @@ def main(lpath_traj, by):
 if __name__ == "__main__":
     import re
 
-    LPATHs_traj = glob(f"./data/Sub_0?/Session_0?/traj_*.npy")
+    LPATHs_traj = glob(f"./data/Sub_0?/Session_0?/traj.npy")
 
     by = ["by_trial", "by_session"]
 

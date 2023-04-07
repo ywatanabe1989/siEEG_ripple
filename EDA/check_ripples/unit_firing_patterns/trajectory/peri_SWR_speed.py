@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-# Time-stamp: "2023-03-13 12:13:43 (ywatanabe)"
+# Time-stamp: "2023-03-14 14:03:47 (ywatanabe)"
 
 """
 ./tmp/figs/time_dependent_dist
@@ -176,13 +176,14 @@ def compair_speed_rips_and_cons(rips_df, cons_df, direction=None):
     df = mngs.general.force_dataframe(df)
     return df, df_ss
 
+
 def print_stats(df):
     for phase in PHASES:
         print(phase)
         d1 = df[f"Control_{phase}"]
         d2 = df[f"SWR_{phase}"]
         d1 = d1.replace({"": np.nan})
-        d2 = d2.replace({"": np.nan})        
+        d2 = d2.replace({"": np.nan})
         print(f"n_SWR-: {(~np.isnan(d1)).sum()}")
         mm, ss = mngs.gen.describe(d1, "median")
         print(f"median: {round(mm, 3)}; IQR: {round(ss, 3)}")
@@ -190,7 +191,7 @@ def print_stats(df):
         print(f"n_SWR+: {(~np.isnan(d2)).sum()}")
         mm, ss = mngs.gen.describe(d2, "median")
         print(f"median: {round(mm, 3)}; IQR: {round(ss, 3)}")
-        print()        
+        print()
 
 
 def calc_speed_of_SWR(event_df):
@@ -250,9 +251,13 @@ def corr_test(cons_df_m, rips_df_m):
         )
         out = {"observed": corr_obs_cons, "surrogate": corrs_shuffled_cons}
         count += 1
+        spath = f"./tmp/figs/corr/peri_SWR_speed/match_{match}/{count}_by_phase_and_set_size_SWR-.pkl"
+        spath = spath.replace(
+            ".pkl", f"corr_{round(corr_obs_cons,2)}_pval_{round(pval_cons,3)}.pkl"
+        )
         mngs.io.save(
             out,
-            f"./tmp/figs/corr/peri_SWR_speed/match_{match}/{count}_by_phase_and_set_size_SWR-.pkl",
+            spath,
         )
         # SWR
         indi = rips_df_m.phase == phase
@@ -261,9 +266,13 @@ def corr_test(cons_df_m, rips_df_m):
         )
         out = {"observed": corr_obs_rips, "surrogate": corrs_shuffled_rips}
         count += 1
+        spath = f"./tmp/figs/corr/peri_SWR_speed/match_{match}/{count}_by_phase_and_set_size_SWR+.pkl"
+        spath = spath.replace(
+            ".pkl", f"corr_{round(corr_obs_rips,2)}_pval_{round(pval_rips,3)}.pkl"
+        )
         mngs.io.save(
             out,
-            f"./tmp/figs/corr/peri_SWR_speed/match_{match}/{count}_by_phase_and_set_size_SWR+.pkl",
+            spath,
         )
         print()
 
@@ -329,9 +338,13 @@ def sort_peri_SWR_speed_from_SWR_center(rips_df_m, cons_df_m):
     df = pd.concat(dfs, axis=1)
     return df
 
+
 if __name__ == "__main__":
     import mngs
     import numpy as np
+
+    # Fixes seeds
+    mngs.gen.fix_seeds(42, np=np)
 
     # Parameters
     (
@@ -352,10 +365,13 @@ if __name__ == "__main__":
     rips_df = calc_speed_of_SWR(rips_df)
     cons_df = calc_speed_of_SWR(cons_df)
 
-    match = 1
-    for match in [1, 2]:
-        rips_df_m = rips_df[rips_df.match == match]
-        cons_df_m = cons_df[cons_df.match == match]
+    for match in [None, 1, 2]:
+        if match is not None:
+            rips_df_m = rips_df[rips_df.match == match]
+            cons_df_m = cons_df[cons_df.match == match]
+        else:
+            rips_df_m = rips_df
+            cons_df_m = cons_df
 
         # for boxplot in sigmaplot, peri-SWR distance from O by phase and set size
         df_m = sort_peri_SWR_speed(cons_df_m, rips_df_m)
@@ -379,7 +395,7 @@ if __name__ == "__main__":
             df,
             f"./tmp/figs/box/peri_SWR_speed/match_{match}/speed_comparison_rips_and_cons.csv",
         )
-        
+
         df_ml, df_ml_ss = compair_speed_rips_and_cons(
             rips_df_m, cons_df_m, direction="memory_load_direction"
         )
@@ -397,7 +413,6 @@ if __name__ == "__main__":
             mngs.gen.force_dataframe(out_df),
             "./tmp/figs/box/set_size_dependent_peri_SWR_speed.csv",
         )
-
 
         count = 17
         _df, _df_ss = df, df_ss
@@ -472,7 +487,7 @@ if __name__ == "__main__":
             print(rank)
 
         print_stats(df)
-            
+
         # for phase in PHASES:
         #     print(phase)
         #     d1 = df[f"Control_{phase}"]
@@ -490,7 +505,6 @@ if __name__ == "__main__":
         #         showfliers=False,
         #     )
         # plt.show()
-
 
         df = sort_peri_SWR_speed_from_SWR_center(rips_df_m, cons_df_m)
         mngs.io.save(df, f"./tmp/figs/line/peri_SWR_speed/match_{match}.csv")

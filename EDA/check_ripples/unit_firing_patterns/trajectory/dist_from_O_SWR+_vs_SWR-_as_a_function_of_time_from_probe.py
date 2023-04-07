@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-# Time-stamp: "2023-03-09 11:08:40 (ywatanabe)"
+# Time-stamp: "2023-03-15 12:24:17 (ywatanabe)"
 """
 Plots peri-SWR distance from O as a function of time from probe [s].
 """
@@ -14,7 +14,7 @@ from scipy.stats import zscore
 import pandas as pd
 
 
-def calc_dist_from_O(event_df):
+def calc_dist_from_P(event_df, base_phase=None):
     dists_rips = []
     for subject, roi in ROIs.items():
         subject = f"{subject:02d}"
@@ -22,6 +22,13 @@ def calc_dist_from_O(event_df):
             traj_session = mngs.io.load(
                 f"./data/Sub_{subject}/Session_{session}/traj_z_by_session_{roi}.npy"
             )
+            if base_phase is not None:
+                coords_gP = np.nanmedian(
+                    traj_session[:, :, GS_BINS_DICT[base_phase][0] : GS_BINS_DICT[base_phase][1]],
+                    axis=-1,
+                    keepdims=True,
+                )
+                traj_session -= coords_gP
             rips_mask = utils.rips.mk_events_mask(
                 event_df, subject, session, roi, 250
             )  # (49, 160)
@@ -35,9 +42,9 @@ def calc_dist_from_O(event_df):
     return dists_rips
 
 
-def plot(xx, dists_rips, dists_cons, is_sign, effs):
+def plot(xx, dists_rips, dists_cons, is_sign, effs, base_phase):
     fig, ax = plt.subplots()
-    ax.plot(xx, np.array(effs) * 10, label="effs")
+    # ax.plot(xx, np.array(effs) * 10, label="effs")
     ax = mngs.plt.ax_fill_between(
         ax, xx, np.nanmean(dists_rips, axis=0), np.nanstd(dists_rips, axis=0), "SWR+"
     )
@@ -47,7 +54,7 @@ def plot(xx, dists_rips, dists_cons, is_sign, effs):
     ax.scatter(xx[is_sign], 4 * np.ones(is_sign.sum()))
     ax.legend()
     [ax.axvline(x=_x, linestyle="--", color="gray") for _x in [-5, -3, 0, 2]]
-    ax.set_ylabel("Peri-SWR distance from O [a.u.]")
+    ax.set_ylabel(f"Peri-SWR distance from {base_phase} [a.u.]")
     ax.set_xlabel("Time from probe [s]")
     return fig
 
@@ -64,6 +71,19 @@ if __name__ == "__main__":
     ROIs = mngs.io.load("./config/ripple_detectable_ROI.yaml")
     rips_df = utils.rips.load_rips()
     cons_df = utils.rips.load_cons_across_trials()
+
+    base_phase = None
+    rips_df_m = rips_df
+    cons_df_m = cons_df    
+    ###
+    # match = 1
+    # set_size = 8
+    # rips_df_m = rips_df[(rips_df.match == match)*(rips_df.set_size == set_size)]
+    # cons_df_m = cons_df[(cons_df.match == match)*(cons_df.set_size == set_size)]
+    # )
+    # *(rips_df.set_size == set_size)###
+    ##*(cons_df.set_size == set_size#
+    
     (
         PHASES,
         PHASES_BINS_DICT,
@@ -72,9 +92,9 @@ if __name__ == "__main__":
         BIN_SIZE,
     ) = utils.define_phase_time()
 
-    # Distance from O during SWR+/SWR-
-    dists_rips = calc_dist_from_O(rips_df)
-    dists_cons = calc_dist_from_O(cons_df)
+    # Distance from P (O, F, E, M, or R) during SWR+/SWR-
+    dists_rips = calc_dist_from_P(rips_df_m, base_phase)
+    dists_cons = calc_dist_from_P(cons_df_m, base_phase)
 
     dists_rips_smoothed = dists_rips
     dists_cons_smoothed = dists_cons
@@ -112,9 +132,9 @@ if __name__ == "__main__":
 
     # Plots
     xx = np.linspace(0, 8, 160) - 6
-    fig = plot(xx, dists_rips_smoothed, dists_cons_smoothed, is_sign, effs)  # ns_rips)
+    fig = plot(xx, dists_rips_smoothed, dists_cons_smoothed, is_sign, effs, base_phase)  # ns_rips)
     plt.show()
-    mngs.io.save(fig, "./tmp/figs/line/dist_from_O/SWR+_vs._SWR-.png")
+    mngs.io.save(fig, f"./tmp/figs/line/dist_from_P_tc/SWR+_vs._SWR-_from_{base_phase}.png")
 
     # to csv
     df = pd.DataFrame(
@@ -129,4 +149,4 @@ if __name__ == "__main__":
             "is_sign": is_sign * 4,
         }
     )
-    mngs.io.save(df, "./tmp/figs/line/dist_from_O/SWR+_vs._SWR-.csv")
+    mngs.io.save(df, f"./tmp/figs/line/dist_from_P_tc/SWR+_vs._SWR-_from_{base_phase}.csv")

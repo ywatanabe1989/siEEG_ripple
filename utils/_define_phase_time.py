@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-# Time-stamp: "2023-02-16 08:24:31 (ywatanabe)"
+# Time-stamp: "2023-03-22 21:50:13 (ywatanabe)"
 
 import quantities as pq
 import numpy as np
@@ -45,6 +45,15 @@ def define_phase_time():
 
         colors_dict[phase] = mngs.plt.colors.to_RGBA(["gray", "blue", "green", "red"][i_phase], alpha=1.)
 
+    # gs_start_end_dict = {
+    #     "Fixation": (5, 15),
+    #     "Encoding": (35, 45),
+    #     "Maintenance": (85, 95),
+    #     # "Retrieval": (135, 145),
+    #     "Retrieval": (120, 130),
+    #     # "Retrieval": (145, 155),                        
+    # }
+    gs_start_end_dict = phases_starts_ends_dict
     return PHASES, phases_starts_ends_dict, gs_start_end_dict, colors_dict, bin_size
 
 
