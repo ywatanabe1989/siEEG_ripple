@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-# Time-stamp: "2023-02-26 14:44:57 (ywatanabe)"
+# Time-stamp: "2023-04-12 10:39:30 (ywatanabe)"
 
 import mngs
 import seaborn as sns
@@ -19,8 +19,8 @@ import seaborn as sns
 def main(correct_rate_or_response_time):
     df = mngs.gen.force_dataframe(
         {
-            f"set_size_{set_size}_match_{match}": dfs[
-                (dfs.set_size == set_size) * (dfs.match == match)
+            f"set_size_{set_size}": dfs[
+                (dfs.set_size == set_size)
             ][correct_rate_or_response_time]
             for set_size in [4, 6, 8]
         }
@@ -36,13 +36,13 @@ def main(correct_rate_or_response_time):
     for col1, col2 in combinations(df.columns, 2):
         print(col1, col2)
         w, p, dof, eff = mngs.stats.brunner_munzel_test(df[col1], df[col2])
-        print(round(p * n_pairs, 3))
+        print(f"p adjusted: {round(p * n_pairs, 3)}")
         print()
     return df
 
 
 
-def load_data(match):
+def load_data():
     # Counts the number of trials
     subs = natsorted(
         [re.findall("Sub_\w{2}", sub_dir)[0][4:] for sub_dir in glob("./data/Sub_??/")]
@@ -58,10 +58,10 @@ def load_data(match):
             trials_info["session"] = session
             dfs.append(trials_info)
     dfs = pd.concat(dfs).reset_index()[
-        ["subject", "session", "set_size", "match", "correct", "response_time"]
+        ["subject", "session", "set_size", "correct", "response_time"]
     ]
     # dfs["n"] = 1
-    dfs = dfs[dfs.match == match]
+    # dfs = dfs[dfs.match == match]
     return dfs
 
 
@@ -70,7 +70,7 @@ def add_task_difficulty(df):
     df_corr = pd.DataFrame()
     for set_size in [4, 6, 8]:
         count += 1
-        data = df[f"set_size_{set_size}_match_{match}"]
+        data = df[f"set_size_{set_size}"]
         data = data[~data.isna()]
         _df_corr = pd.DataFrame({"data": data})
         _df_corr["task_difficulty"] = count
@@ -139,38 +139,38 @@ def plot_violin(corr_correct, corr_shuffled_correct, corr_response_time, corr_sh
 
 
 if __name__ == "__main__":
-    for match in [1,2]:
+    dfs = load_data()
 
-        dfs = load_data(match)
+    df_correct = main("correct")
+    df_response_time = main("response_time")
 
-        df_correct = main("correct")
-        df_response_time = main("response_time")
+    mngs.io.save(df_correct, f"./res/figs/task_difficulty/correct_rate.csv")
+    mngs.io.save(df_response_time, f"./res/figs/task_difficulty/response_time.csv")
 
-        mngs.io.save(df_correct, f"./tmp/figs/task_difficulty/correct_rate_match_{match}.csv")
-        mngs.io.save(df_response_time, f"./tmp/figs/task_difficulty/response_time_match_{match}.csv")
+    df_correct_with_task_difficulty = add_task_difficulty(df_correct)
+    df_response_time_with_task_difficulty = add_task_difficulty(df_response_time)
 
-        df_correct_with_task_difficulty = add_task_difficulty(df_correct)
-        df_response_time_with_task_difficulty = add_task_difficulty(df_response_time)
-
-        corr_correct, corr_shuffled_correct = calc_corr(df_correct_with_task_difficulty)
-        out_correct = {"observed": corr_correct, "surrogate": corr_shuffled_correct}
-        mngs.io.save(out_correct, f"./tmp/figs/corr/match_{match}/01_correct_rate.pkl")
-        corr_response_time, corr_shuffled_response_time = calc_corr(
-            df_response_time_with_task_difficulty
-        )
-        out_response_time = {"observed": corr_response_time, "surrogate": corr_shuffled_response_time}
-        mngs.io.save(out_response_time, f"./tmp/figs/corr/match_{match}/02_response_time_rate.pkl")        
-        
-
-        rank_rate_correct = bisect_right(sorted(corr_shuffled_correct), corr_correct) / len(
-            corr_shuffled_correct
-        )
-        print(f"rank_rate_correct: {rank_rate_correct}")                
-        rank_rate_response_time = bisect_right(
-            sorted(corr_shuffled_response_time), corr_response_time
-        ) / len(corr_shuffled_response_time)
-        print(f"rank_rate_response_time: {rank_rate_response_time}")                
+    # correct
+    corr_correct, corr_shuffled_correct = calc_corr(df_correct_with_task_difficulty)
+    out_correct = {"observed": corr_correct, "surrogate": corr_shuffled_correct}
+    mngs.io.save(out_correct, f"./res/figs/corr/01_correct_rate.pkl")
+    # response_time
+    corr_response_time, corr_shuffled_response_time = calc_corr(
+        df_response_time_with_task_difficulty
+    )
+    out_response_time = {"observed": corr_response_time, "surrogate": corr_shuffled_response_time}
+    mngs.io.save(out_response_time, f"./res/figs/corr/02_response_time_rate.pkl")        
 
 
-        fig = plot_violin(corr_correct, corr_shuffled_correct, corr_response_time, corr_shuffled_response_time)
-        mngs.io.save(fig, f"./tmp/figs/task_difficulty/task_difficulty_match_{match}.tif")        
+    # rank_rate_correct = bisect_right(sorted(corr_shuffled_correct), corr_correct) / len(
+    #     corr_shuffled_correct
+    # )
+    # print(f"rank_rate_correct: {rank_rate_correct}")                
+    # rank_rate_response_time = bisect_right(
+    #     sorted(corr_shuffled_response_time), corr_response_time
+    # ) / len(corr_shuffled_response_time)
+    # print(f"rank_rate_response_time: {rank_rate_response_time}")                
+
+
+    # fig = plot_violin(corr_correct, corr_shuffled_correct, corr_response_time, corr_shuffled_response_time)
+    # mngs.io.save(fig, f"./res/figs/task_difficulty/task_difficulty_match_{match}.tif")        

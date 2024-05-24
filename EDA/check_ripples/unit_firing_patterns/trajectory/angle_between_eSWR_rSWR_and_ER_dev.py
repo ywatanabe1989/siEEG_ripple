@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-# Time-stamp: "2023-03-22 22:06:48 (ywatanabe)"
+# Time-stamp: "2023-04-11 15:16:49 (ywatanabe)"
 
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
@@ -93,39 +93,74 @@ from scipy import stats
 
 
 def main():
-    for match in [1, 2]:
-        for i_rads, rads_str in enumerate(["ER-eSWR", "ER-rSWR", "eSWR-rSWR"]):
-            # fig, ax = plt.subplots(subplot_kw=dict(projection="polar"))
-            fig, ax = plt.subplots()
-            data = []
-            colors = []
-            for set_size in [4, 6, 8]:  # 4, 6,
-                rads_ER_eSWR, rads_ER_rSWR, rads_eSWR_rSWR = calc_rads(
-                    rips_df[(rips_df.match == match) * (rips_df.set_size == set_size)]
+    for event_str, events_df in zip(["SWR-", "SWR+"], [cons_df, rips_df]):
+        for match in [1, 2]:
+            for i_rads, rads_str in enumerate(["ER-eSWR", "ER-rSWR", "eSWR-rSWR"]):
+                # fig, ax = plt.subplots(subplot_kw=dict(projection="polar"))
+                fig, ax = plt.subplots()
+                data = []
+                colors = []
+                xx = np.linspace(-1, 1, 17)
+                xx = (xx + (xx[1] - xx[0])/2)[:-1]
+                kde_out = pd.DataFrame()
+                for set_size in [4, 6, 8]:
+                    rads_ER_eSWR, rads_ER_rSWR, rads_eSWR_rSWR = calc_rads(
+                        events_df[(events_df.match == match) * (events_df.set_size == set_size)]
+                    )
+                    rads = np.array([rads_ER_eSWR, rads_ER_rSWR, rads_eSWR_rSWR][i_rads])
+                    data.append(rads)
+
+                    color = mngs.plt.colors.to_RGBA(
+                        {4: "light_blue", 6: "purple", 8: "navy"}[set_size]
+                    )
+                    colors.append(color)
+
+                    kde = stats.gaussian_kde(rads[~np.isnan(rads)])
+
+                    ax.plot(xx, kde(xx), color=color)
+
+                    kde_out_new = pd.DataFrame({
+                        "xx":xx,                                    
+                        "kde":kde(xx),
+                        "set_size": set_size,
+                        })
+                    kde_out = pd.concat([kde_out, kde_out_new])
+
+                    # mngs.plt.ax_circular_hist(ax, rads, color=mngs.plt.colors.to_RGBA(color))
+                    # ax.hist(rads, bins=16, range=(0, np.pi), alpha=.5,
+                    # color=mngs.plt.colors.to_RGBA(color), density=True)
+                    # ax.hist(rads, bins=16, range=(-1, 1), alpha=.5,
+                    # color=mngs.plt.colors.to_RGBA(color), density=True)
+
+
+                out = {ss:dd for ss,dd in zip([4,6,8], data)}
+                out["all"] = np.hstack(data)
+                out = mngs.gen.force_dataframe(out)
+                mngs.io.save(
+                    out,
+                    f"./tmp/figs/box/eSWR_vs_rSWR_vs_ER_new/{event_str}/match_{match}/{rads_str}.csv",
                 )
-                rads = np.array([rads_ER_eSWR, rads_ER_rSWR, rads_eSWR_rSWR][i_rads])
-                data.append(rads)
 
-                color = mngs.plt.colors.to_RGBA(
-                    {4: "light_blue", 6: "purple", 8: "navy"}[set_size]
+                ns, bins, patches = ax.hist(
+                    data, bins=16, range=(-1, 1), alpha=0.5, color=colors, density=True
                 )
-                colors.append(color)
+                ns_all, bins, patches = ax.hist(
+                    np.hstack(data), bins=16, range=(-1, 1), alpha=0.5, color="black", density=True
+                )
+                kde_all = stats.gaussian_kde(np.hstack(data)[~np.isnan(np.hstack(data))])
+                kde_out["kde_all"] = np.hstack([kde_all(xx) for _ in range(3)])
+                kde_out["count"] = np.hstack(ns)
+                kde_out["count_all"] = np.hstack([ns_all for _ in range(3)])
+                mngs.io.save(
+                    kde_out,
+                    f"./tmp/figs/polar/eSWR_vs_rSWR_vs_ER_new/{event_str}/match_{match}/{rads_str}.csv",
+                )
 
-                density = stats.gaussian_kde(rads[~np.isnan(rads)])
-                xx = np.arange(-1, 1, 0.1)
-                ax.plot(xx, density(xx), color=color)
-
-                # mngs.plt.ax_circular_hist(ax, rads, color=mngs.plt.colors.to_RGBA(color))
-                # ax.hist(rads, bins=16, range=(0, np.pi), alpha=.5, color=mngs.plt.colors.to_RGBA(color), density=True)
-                # ax.hist(rads, bins=16, range=(-1, 1), alpha=.5, color=mngs.plt.colors.to_RGBA(color), density=True)
-            ax.hist(
-                data, bins=16, range=(-1, 1), alpha=0.5, color=colors, density=True
-            )  # fixme
-
-            ax.set_title(f"{rads_str} match {match}")
-            mngs.io.save(
-                fig, f"./tmp/figs/polar/eSWR_vs_rSWR_vs_ER/match_{match}/{rads_str}.tif"
-            )
+                ax.set_title(f"{rads_str} match {match}")
+                mngs.io.save(
+                    fig,
+                    f"./tmp/figs/polar/eSWR_vs_rSWR_vs_ER_new/{event_str}/match_{match}/{rads_str}.tif",
+                )
     plt.show()
 
 
@@ -151,8 +186,8 @@ if __name__ == "__main__":
     rips_df = utils.rips.add_coordinates(
         utils.rips.load_rips_df_with_traj(BIN_SIZE, is_control=False)
     )
-    # cons_df = utils.rips.add_coordinates(
-    #     utils.rips.load_rips_df_with_traj(BIN_SIZE, is_control=True)
-    # )
+    cons_df = utils.rips.add_coordinates(
+        utils.rips.load_rips_df_with_traj(BIN_SIZE, is_control=True)
+    )
 
     main()

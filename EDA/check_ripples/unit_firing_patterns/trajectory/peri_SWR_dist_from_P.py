@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-# Time-stamp: "2023-03-20 17:07:42 (ywatanabe)"
+# Time-stamp: "2023-04-10 13:08:46 (ywatanabe)"
 
 """
 ./tmp/figs/time_dependent_dist
@@ -35,7 +35,7 @@ import utils
 from itertools import product
 
 # Functions
-def collect_dist_from_P(phase_base):  # OK
+def collect_dist_from_P(phase_base):
     dists_all = []
     for subject, roi in ROIs.items():
         subject = f"{subject:02d}"
@@ -43,13 +43,16 @@ def collect_dist_from_P(phase_base):  # OK
             traj_session = mngs.io.load(
                 f"./data/Sub_{subject}/Session_{session}/traj_z_by_session_{roi}.npy"
             )
-            gP = np.nanmedian(
-                traj_session.transpose(1, 0, 2)[
-                    :, :, GS_BINS_DICT[phase_base][0] : GS_BINS_DICT[phase_base][1]
-                ].reshape(3, -1),
-                axis=-1,
-                keepdims=True,
-            )[np.newaxis]
+            if phase_base != "None":
+                gP = np.nanmedian(
+                    traj_session.transpose(1, 0, 2)[
+                        :, :, GS_BINS_DICT[phase_base][0] : GS_BINS_DICT[phase_base][1]
+                    ].reshape(3, -1),
+                    axis=-1,
+                    keepdims=True,
+                )[np.newaxis]
+            else:
+                gP = np.zeros_like(traj_session)
             dist_session = norm(traj_session - gP, axis=1)
             df = pd.DataFrame(dist_session)
             df["subject"] = subject
@@ -59,7 +62,7 @@ def collect_dist_from_P(phase_base):  # OK
     return pd.concat(dists_all)
 
 
-def add_peri_swr_dist_from_P(dists_from_P, base_phase, events_df):  # OK
+def add_peri_swr_dist_from_P(dists_from_P, base_phase, events_df):
     start_bin = -20
     end_bin = 21
 
@@ -94,9 +97,9 @@ def add_peri_swr_dist_from_P(dists_from_P, base_phase, events_df):  # OK
     return events_df
 
 
-def plot(phase_base, phase_tgt, rips_df_from_P, cons_df_from_P):  # OK
-    start_bin = mngs.io.load("./config/global.yaml")["SWR_BINS"]["pre"][0]  # -21
-    end_bin = mngs.io.load("./config/global.yaml")["SWR_BINS"]["post"][1]  # 20
+def plot(phase_base, phase_tgt, rips_df_from_P, cons_df_from_P):
+    start_bin = mngs.io.load("./config/global.yaml")["SWR_BINS"]["pre"][0]
+    end_bin = mngs.io.load("./config/global.yaml")["SWR_BINS"]["post"][1]
 
     fig, axes = plt.subplots(ncols=4, sharex=True, sharey=True)
 
@@ -152,7 +155,7 @@ def plot(phase_base, phase_tgt, rips_df_from_P, cons_df_from_P):  # OK
             )
             mngs.io.save(
                 df,
-                f"./tmp/figs/line/peri-SWR_distance_from_P/raw/match_{match}/"
+                f"./tmp/figs/line/peri-SWR_distance_from_P_new/raw/match_{match}/"
                 f"{phase_tgt[0].lower()}SWR/{phase_tgt[0].lower()}{event_str}_from_g{phase_base[0]}.csv",
             )
             
@@ -161,7 +164,8 @@ def plot(phase_base, phase_tgt, rips_df_from_P, cons_df_from_P):  # OK
     return fig
 
 
-def collect_dists_for_pre_mid_or_post_SWR(events_df, period, base_phase):  # OK
+def collect_dists_for_pre_mid_or_post_SWR(events_df, period, base_phase):
+    import ipdb; ipdb.set_trace()
     dists = []
     for tgt_bin in range(SWR_BINS[period][0], SWR_BINS[period][1] + 1):
         dists.append(events_df[f"dist_from_{base_phase[0]}_{tgt_bin}"])
@@ -172,7 +176,7 @@ def to_pre_mid_post_xSWR_from_P_df(rips_df, cons_df):
     out = {}
     ER_PHASES = ["Encoding", "Retrieval"]
     for match in [1, 2]:
-        for phase_tgt, phase_base in product(ER_PHASES, ER_PHASES):
+        for phase_tgt, phase_base in product(ER_PHASES, ER_PHASES+["None"]):
 
             rips_df_mp = rips_df[
                 (rips_df.match == match) * (rips_df.phase == phase_tgt)
@@ -226,10 +230,10 @@ if __name__ == "__main__":
     # )
 
     df = to_pre_mid_post_xSWR_from_P_df(rips_df, cons_df)
-    mngs.io.save(df, "./tmp/figs/box/peri_SWR_dist_from_P.csv")
+    mngs.io.save(df, "./tmp/figs/box/peri_SWR_dist_from_P_new/data.csv")
 
     ER_PHASES = ["Encoding", "Retrieval"]
-    for phase_base, phase_tgt in product(ER_PHASES, ER_PHASES):
+    for phase_base, phase_tgt in product(ER_PHASES+["None"], ER_PHASES):
         print(phase_base, phase_tgt)
         dists_from_P = collect_dist_from_P(phase_base)
 
@@ -241,6 +245,6 @@ if __name__ == "__main__":
         )  # , cons_df_w_m)
         mngs.io.save(
             fig,
-            f"./tmp/figs/line/peri-SWR_distance_from_P/"
+            f"./tmp/figs/line/peri-SWR_distance_from_P_new/"
             f"{phase_tgt[0].lower()}SWR/{phase_tgt[0].lower()}SWR_from_g{phase_base[0]}.png",
         )

@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-# Time-stamp: "2023-03-20 12:37:37 (ywatanabe)"
+# Time-stamp: "2023-04-18 20:34:10 (ywatanabe)"
 
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
@@ -30,9 +30,7 @@ def load_gE_gR(subject, session, roi):
     return gE, gR
 
 
-def get_ER_based_coords(
-    events_df, subject, session, roi, tgt_bin
-):
+def get_ER_based_coords(events_df, subject, session, roi, tgt_bin):
     gE, gR = load_gE_gR(subject, session, roi)
 
     events_df_s = events_df[
@@ -71,29 +69,30 @@ def get_ER_based_coords(
     except Exception as e:
         # print(e)
         ER_based_coords = np.array([np.nan, np.nan]).reshape(1, -1)
-        R_coords = np.array([np.nan, np.nan, np.nan]).reshape(1, -1)        
+        R_coords = np.array([np.nan, np.nan, np.nan]).reshape(1, -1)
     return ER_based_coords, R_coords
+
 
 def get_ER_based_coords_all(event_df, period):
     SWR_BINS = mngs.io.load("./config/global.yaml")["SWR_BINS"]
     start_bin, end_bin = SWR_BINS[period]
     ER_based_coords_all = []
-    R_coords_all = []    
+    R_coords_all = []
     for tgt_bin in np.arange(start_bin, end_bin):
         ER_based_coords_bin = []
-        R_coords_bin = []        
+        R_coords_bin = []
         for subject, roi in ROIs.items():
             subject = f"{subject:02d}"
             for session in ["01", "02"]:
                 _ER_based_coords_bin, _R_coords_bin = get_ER_based_coords(
-                        event_df,
-                        subject,
-                        session,
-                        roi,
-                        tgt_bin,
-                    )
+                    event_df,
+                    subject,
+                    session,
+                    roi,
+                    tgt_bin,
+                )
                 ER_based_coords_bin.append(_ER_based_coords_bin)
-                R_coords_bin.append(_R_coords_bin)                
+                R_coords_bin.append(_R_coords_bin)
                 # ER_based_coords_bin.append(
                 #     get_ER_based_coords(
                 #         event_df,
@@ -113,7 +112,7 @@ def get_ER_based_coords_all(event_df, period):
                 #     )[1]
                 # )
         ER_based_coords_all.append(np.vstack(ER_based_coords_bin))
-        R_coords_all.append(np.vstack(R_coords_bin))        
+        R_coords_all.append(np.vstack(R_coords_bin))
     ER_based_coords_all = np.stack(ER_based_coords_all, axis=0)
     ER_based_coords_all = np.nanmean(ER_based_coords_all, axis=0)
     R_coords_all = np.stack(R_coords_all, axis=0)
@@ -135,9 +134,7 @@ def plot_scatter(ER_based_coords):
         ax.scatter(
             ER_based_coords["pre_x"],
             ER_based_coords["pre_y"],
-            color=mngs.plt.colors.to_RGBA(
-                "gray"
-            ),
+            color=mngs.plt.colors.to_RGBA("gray"),
             s=ss,
             marker="x",
             alpha=0.5,
@@ -164,50 +161,63 @@ def plot_scatter(ER_based_coords):
     return fig
 
 
-
-
 def main():
-    for i_swr_phase, swr_phase in enumerate(["Encoding", "Retrieval"]):
-        for match in [1, 2]:
-            fig, ax = plt.subplots(subplot_kw=dict(projection="polar"))
-            for set_size in [4, 6, 8]:
-                rips_df_msp = rips_df[
-                    (rips_df.match == match)
-                    * (rips_df.set_size == set_size)
-                    * (rips_df.phase == swr_phase)
-                    * (rips_df.correct == True)
-                ]
+    for event_str, events_df in zip(["SWR-", "SWR+"], [cons_df, rips_df]):
+        for i_swr_phase, swr_phase in enumerate(["Encoding", "Retrieval"]):
+            for match in [1, 2]:
+                fig, ax = plt.subplots(subplot_kw=dict(projection="polar"))
+                ER_based_coords_all_set_sizes = []
+                # R_coords_all_set_sizes = []
+                for set_size in [4, 6, 8]:
+                    events_df_msp = events_df[
+                        (events_df.match == match)
+                        * (events_df.set_size == set_size)
+                        * (events_df.phase == swr_phase)
+                        * (events_df.correct == True)
+                    ]
 
-                ER_based_coords = []
-                R_coords = []
-                for i_period, period in enumerate(["pre", "mid", "post"]):
-                    _ER_based_coords, _R_coords = get_ER_based_coords_all(
-                        rips_df_msp,
-                        period,
+                    ER_based_coords = []
+                    R_coords = []
+                    for i_period, period in enumerate(["pre", "mid", "post"]):
+                        _ER_based_coords, _R_coords = get_ER_based_coords_all(
+                            events_df_msp,
+                            period,
+                        )
+                        ER_based_coords.append(_ER_based_coords)
+                        R_coords.append(_R_coords)
+                    ER_based_coords = pd.concat(ER_based_coords, axis=1)
+                    R_coords = pd.concat(R_coords, axis=1)
+
+                    # # adjust the ER center as O
+                    # for i_period, period in enumerate(["pre", "mid", "post"]):
+                    #     ER_based_coords[f"{period}_x"] -= R_coords[f"{period}_x"] / 2
+
+                    ER_based_coords["R_x"] = R_coords["pre_x"]
+
+                    mngs.io.save(
+                        ER_based_coords,
+                        f"./tmp/figs/scatter/peri_SWR_pos_around_gE_and_gR_new/{event_str}/ER_based_coords/match_{match}/"
+                        f"{i_swr_phase}_{swr_phase}_{set_size}.csv",
                     )
-                    ER_based_coords.append(_ER_based_coords)
-                    R_coords.append(_R_coords)
-                ER_based_coords = pd.concat(ER_based_coords, axis=1)
-                R_coords = pd.concat(R_coords, axis=1)
 
-                # # adjust the ER center as O
-                # for i_period, period in enumerate(["pre", "mid", "post"]):
-                #     ER_based_coords[f"{period}_x"] -= R_coords[f"{period}_x"] / 2
+                    # scatter, positions
+                    fig = plot_scatter(ER_based_coords)
+                    mngs.io.save(
+                        fig,
+                        f"./tmp/figs/scatter/peri_SWR_pos_around_gE_and_gR_new/images/{event_str}/match_{match}/"
+                        f"{i_swr_phase}_{swr_phase}_{set_size}.tif",
+                    )
 
-                ER_based_coords["R_x"] = R_coords["pre_x"]
-                
+                    # for all set sizes
+                    ER_based_coords_all_set_sizes.append(ER_based_coords)
+                    # R_coords_all_set_sizes.append(R_coords)
+
+                ER_based_coords_all_set_sizes = pd.concat(ER_based_coords_all_set_sizes)
+                # R_coords_all_set_sizes = pd.concat(R_coords_all_set_sizes)
                 mngs.io.save(
-                    ER_based_coords,
-                    f"./tmp/figs/scatter/peri_SWR_pos_around_gE_and_gR/ER_based_coords/match_{match}/"
-                    f"{i_swr_phase}_{swr_phase}_{set_size}.csv",
-                )
-                
-                # scatter, positions
-                fig = plot_scatter(ER_based_coords)
-                mngs.io.save(
-                    fig,
-                    f"./tmp/figs/scatter/peri_SWR_pos_around_gE_and_gR/match_{match}/"
-                    f"{i_swr_phase}_{swr_phase}_{set_size}.tif",
+                    ER_based_coords_all_set_sizes,
+                    f"./tmp/figs/scatter/peri_SWR_pos_around_gE_and_gR_new/{event_str}/ER_based_coords/match_{match}/"
+                    f"{i_swr_phase}_{swr_phase}_468.csv",
                 )
 
 
@@ -231,8 +241,8 @@ if __name__ == "__main__":
     rips_df = utils.rips.add_coordinates(
         utils.rips.load_rips_df_with_traj(BIN_SIZE, is_control=False)
     )
-    # cons_df = utils.rips.add_coordinates(
-    #     utils.rips.load_rips_df_with_traj(BIN_SIZE, is_control=True)
-    # )
+    cons_df = utils.rips.add_coordinates(
+        utils.rips.load_rips_df_with_traj(BIN_SIZE, is_control=True)
+    )
 
     main()
