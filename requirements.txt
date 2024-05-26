@@ -1,0 +1,6 @@
+# mngs==0.5.0
+neo
+quantities
+elephant
+imblearn
+scikit-posthocs

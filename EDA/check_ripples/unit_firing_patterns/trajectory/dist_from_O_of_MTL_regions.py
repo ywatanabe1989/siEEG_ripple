@@ -1,20 +1,21 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-# Time-stamp: "2023-04-12 17:05:09 (ywatanabe)"
+# Time-stamp: "2024-05-25 08:46:05 (ywatanabe)"
 
-import mngs
 import matplotlib
+import mngs
 
 matplotlib.use("TkAgg")
+import random
+from itertools import combinations
+from pprint import pprint
+
+import matplotlib
 import matplotlib.pyplot as plt
 import numpy as np
-import scipy
-from itertools import combinations
-from scipy.linalg import norm
 import pandas as pd
-from pprint import pprint
-import random
-import matplotlib
+import scipy
+from scipy.linalg import norm
 
 matplotlib.use("TkAgg")
 import matplotlib.pyplot as plt
@@ -50,7 +51,10 @@ def calc_dist(traj_MTL_region):
     for i_bin in range(traj_MTL_region.shape[-1]):  # i_bin = 0
         traj_MTL_region_i_bin = traj_MTL_region[..., i_bin]
         norm_MTL_region_i_bin = norm(
-            traj_MTL_region_i_bin[~np.isnan(traj_MTL_region_i_bin).any(axis=1)], axis=-1
+            traj_MTL_region_i_bin[
+                ~np.isnan(traj_MTL_region_i_bin).any(axis=1)
+            ],
+            axis=-1,
         )
         norm_nonnan_MTL_region[i_bin] = norm_MTL_region_i_bin
     return mngs.gen.force_dataframe(norm_nonnan_MTL_region)
@@ -63,12 +67,12 @@ def calc_mean_and_ci(dist):
     dist_ci = 1.96 * dist_mm / (dist_sd * dist_nn)
     return dist_mm, dist_ci
 
+
 def calc_dist_between_gs(traj):
     trial_gs = {
         pp: np.nanmedian(traj[:, :, ss:ee], axis=-1)
         for pp, (ss, ee) in GS_BINS_DICT.items()
     }
-
 
     dist_between_gs = {}
     for p1, p2 in list(combinations(GS_BINS_DICT.keys(), 2)):
@@ -78,13 +82,13 @@ def calc_dist_between_gs(traj):
         ]
     return dist_between_gs
 
+
 if __name__ == "__main__":
     import sys
 
     sys.path.append(".")
     import utils
-    from itertools import combinations
-    
+
     (
         PHASES,
         PHASES_BINS_DICT,
@@ -92,7 +96,7 @@ if __name__ == "__main__":
         COLORS_DICT,
         BIN_SIZE,
     ) = utils.define_phase_time()
-    
+
     traj_Hipp = collect_traj("Hipp.")
     traj_EC = collect_traj("EC")
     traj_Amy = collect_traj("Amy.")
@@ -111,13 +115,13 @@ if __name__ == "__main__":
         {
             "Hipp._under": dist_Hipp_mm - dist_Hipp_ci,
             "Hipp._mean": dist_Hipp_mm,
-            "Hipp._upper": dist_Hipp_mm + dist_Hipp_ci,            
+            "Hipp._upper": dist_Hipp_mm + dist_Hipp_ci,
             "EC_under": dist_EC_mm - dist_EC_ci,
             "EC_mean": dist_EC_mm,
-            "EC_upper": dist_EC_mm + dist_EC_ci,            
+            "EC_upper": dist_EC_mm + dist_EC_ci,
             "Amy._under": dist_Amy_mm - dist_Amy_ci,
             "Amy._mean": dist_Amy_mm,
-            "Amy._upper": dist_Amy_mm + dist_Amy_ci,            
+            "Amy._upper": dist_Amy_mm + dist_Amy_ci,
         }
     )
     mngs.io.save(df_mean_and_ci, "./res/figs/line/MTL_regions/dist_from_O.csv")
@@ -126,30 +130,50 @@ if __name__ == "__main__":
     dist_from_O_Hipp_all = np.array(dist_Hipp).reshape(-1)
     dist_from_O_EC_all = np.array(dist_EC).reshape(-1)
     dist_from_O_Amy_all = np.array(dist_Amy).reshape(-1)
-    df_dist_all = mngs.gen.force_dataframe({
-        "Hipp.": dist_from_O_Hipp_all,
-        "EC": dist_from_O_EC_all,
-        "Amy.": dist_from_O_Amy_all,
-    })
+    df_dist_all = mngs.gen.force_dataframe(
+        {
+            "Hipp.": dist_from_O_Hipp_all,
+            "EC": dist_from_O_EC_all,
+            "Amy.": dist_from_O_Amy_all,
+        }
+    )
     mngs.io.save(df_dist_all, "./res/figs/box/MTL_regions/dist_from_O_all.csv")
 
     # Distance between gs
-    dist_between_gs_Hipp_all = np.hstack([val for val in calc_dist_between_gs(traj_Hipp).values()])
-    dist_between_gs_EC_all = np.hstack([val for val in calc_dist_between_gs(traj_EC).values()])
-    dist_between_gs_Amy_all = np.hstack([val for val in calc_dist_between_gs(traj_Amy).values()])
-    df_dist_between_gs_all = mngs.gen.force_dataframe({
-        "Hipp.": dist_between_gs_Hipp_all,
-        "EC": dist_between_gs_EC_all,
-        "Amy.": dist_between_gs_Amy_all,
-    })
-    mngs.io.save(df_dist_between_gs_all, "./res/figs/box/MTL_regions/dist_between_gs_all.csv")    
+    dist_between_gs_Hipp_all = np.hstack(
+        [val for val in calc_dist_between_gs(traj_Hipp).values()]
+    )
+    dist_between_gs_EC_all = np.hstack(
+        [val for val in calc_dist_between_gs(traj_EC).values()]
+    )
+    dist_between_gs_Amy_all = np.hstack(
+        [val for val in calc_dist_between_gs(traj_Amy).values()]
+    )
+    df_dist_between_gs_all = mngs.gen.force_dataframe(
+        {
+            "Hipp.": dist_between_gs_Hipp_all,
+            "EC": dist_between_gs_EC_all,
+            "Amy.": dist_between_gs_Amy_all,
+        }
+    )
+    mngs.io.save(
+        df_dist_between_gs_all,
+        "./res/figs/box/MTL_regions/dist_between_gs_all.csv",
+    )
     # mngs.io.save(df_dist_all, "./res/figs/box/MTL_regions/dist_from_O_all.csv")
 
-    
-    mngs.io.save(pd.DataFrame(dist_between_gs_Hipp), "./res/figs/box/MTL_regions/dist_between_gs_Hipp.csv")
-    mngs.io.save(pd.DataFrame(dist_between_gs_EC), "./res/figs/box/MTL_regions/dist_between_gs_EC.csv")
-    mngs.io.save(pd.DataFrame(dist_between_gs_Amy), "./res/figs/box/MTL_regions/dist_between_gs_Amy.csv")    
-    
+    mngs.io.save(
+        pd.DataFrame(dist_between_gs_Hipp),
+        "./res/figs/box/MTL_regions/dist_between_gs_Hipp.csv",
+    )
+    mngs.io.save(
+        pd.DataFrame(dist_between_gs_EC),
+        "./res/figs/box/MTL_regions/dist_between_gs_EC.csv",
+    )
+    mngs.io.save(
+        pd.DataFrame(dist_between_gs_Amy),
+        "./res/figs/box/MTL_regions/dist_between_gs_Amy.csv",
+    )
 
     # dist_Hipp_mm
 
