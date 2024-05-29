@@ -1,0 +1,38 @@
+Traceback (most recent call last):
+  File "/usr/local/lib64/python3.9/site-packages/elephant/utils.py", line 216, in check_neo_consistency
+    units = neo_objects[0].units
+IndexError: list index out of range
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ywatanabe/proj/siEEG_ripple_dev/./scripts/calc_NT_with_GPFA.py", line 108, in main
+    NTs = np.stack(gpfa.fit_transform(spike_trains), axis=0)
+  File "/usr/local/lib64/python3.9/site-packages/elephant/utils.py", line 446, in wrapper
+    return method(*new_args, **new_kwargs)
+  File "/usr/local/lib64/python3.9/site-packages/elephant/gpfa/gpfa.py", line 534, in fit_transform
+    self.fit(spiketrains)
+  File "/usr/local/lib64/python3.9/site-packages/elephant/utils.py", line 446, in wrapper
+    return method(*new_args, **new_kwargs)
+  File "/usr/local/lib64/python3.9/site-packages/elephant/gpfa/gpfa.py", line 342, in fit
+    seqs_train = self._format_training_data(spiketrains)
+  File "/usr/local/lib64/python3.9/site-packages/elephant/gpfa/gpfa.py", line 290, in _format_training_data
+    seqs = gpfa_util.get_seqs(spiketrains, self.bin_size)
+  File "/usr/local/lib64/python3.9/site-packages/elephant/gpfa/gpfa_util.py", line 62, in get_seqs
+    binned_spiketrain = BinnedSpikeTrain(sts, bin_size=bin_size)
+  File "/usr/local/lib64/python3.9/site-packages/elephant/conversion.py", line 356, in __init__
+    self._resolve_input_parameters(spiketrains)
+  File "/usr/local/lib64/python3.9/site-packages/elephant/conversion.py", line 499, in _resolve_input_parameters
+    check_neo_consistency(spiketrains,
+  File "/usr/local/lib64/python3.9/site-packages/elephant/utils.py", line 220, in check_neo_consistency
+    raise TypeError(f"The input must be a list of {object_type.__name__}")
+TypeError: The input must be a list of SpikeTrain
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ywatanabe/proj/siEEG_ripple_dev/./scripts/calc_NT_with_GPFA.py", line 174, in <module>
+    main(match=None, without_retrieval_phase=False)
+  File "/home/ywatanabe/proj/siEEG_ripple_dev/./scripts/calc_NT_with_GPFA.py", line 111, in main
+    print("\nError raised during GPFA calculation. Skipping.:\n" + e)
+TypeError: can only concatenate str (not "TypeError") to str

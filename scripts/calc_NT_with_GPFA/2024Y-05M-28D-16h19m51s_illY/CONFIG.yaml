@@ -1,0 +1,63 @@
+IS_DEBUG: false
+SUB_DIR: ./data/Sub_XX/
+SESSION_DIR: ./data/Sub_XX/Session_YY/
+RIPPLE_LOW_HZ: 80
+RIPPLE_HIGH_HZ: 140
+RIPPLE_SD: 2
+FS_iEEG: 2000
+FS_EEG: 200
+iEEG_ROIS:
+    - AHL
+    - AHR
+    - PHL
+    - PHR
+    - ECL
+    - ECR
+    - AL
+    - AR
+PHASES:
+    - Fixation
+    - Encoding
+    - Maintenance
+    - Retrieval
+PHASES_COLORS:
+    - black
+    - blue
+    - green
+    - red
+PHASES_DUR_SEC:
+    - 1
+    - 2
+    - 3
+    - 2
+PHASES_BIN_INDI:
+    Fixation:
+        - 0
+        - 20
+    Encoding:
+        - 20
+        - 60
+    Maintenance:
+        - 60
+        - 120
+    Retrieval:
+        - 120
+        - 160
+SESSION_THRES: 2
+SWR_BINS:
+    pre:
+        - -16
+        - -5
+    mid:
+        - -5
+        - 6
+    post:
+        - 6
+        - 17
+GPFA_BIN_SIZE_MS: 50
+ID: 2024Y-05M-28D-16h19m51s_illY
+START_TIME: 2024-05-28 16:19:51.681869
+SDIR: 
+    /home/ywatanabe/proj/siEEG_ripple_dev/scripts/calc_NT_with_GPFA/RUNNING/2024Y-05M-28D-16h19m51s_illY/
+END_TIME: 2024-05-28 16:46:50.758286
+SPENT_TIME: 00:26:59

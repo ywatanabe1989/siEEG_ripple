@@ -1,0 +1,13 @@
+IS_DEBUG: false
+SUB_DIR: ./data/Sub_XX/
+SESSION_DIR: ./data/Sub_XX/Session_YY/
+RIPPLE_LOW_HZ: 80
+RIPPLE_HIGH_HZ: 140
+RIPPLE_SD: 2.0
+FS_iEEG: 2000
+ID: 2024Y-05M-28D-07h31m26s_uJyf
+START_TIME: 2024-05-28 07:31:26.105582
+SDIR: 
+    /home/ywatanabe/proj/siEEG_ripple_dev/scripts/utils/load/nix_2_csv_and_pkl/RUNNING/2024Y-05M-28D-07h31m26s_uJyf/
+END_TIME: 2024-05-28 07:39:16.917055
+SPENT_TIME: 00:07:50

@@ -1,0 +1,21 @@
+Initializing parameters using factor analysis...
+
+Fitting GPFA model...
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev/data/Sub_01/Session_01/NT/AHL_match_all.npy
+[0m
+
+Error raised during GPFA calculation. Spike_trains might be unavailable. Skipping ./data/Sub_01/Session_01/NT/AHL_match_all.npy.:
+
+The input must be a list of SpikeTrain
+
+Error raised during GPFA calculation. Spike_trains might be unavailable. Skipping ./data/Sub_01/Session_01/NT/AHL_match_all.npy.:
+
+The input must be a list of SpikeTrain
+
+Error raised during GPFA calculation. Spike_trains might be unavailable. Skipping ./data/Sub_01/Session_01/NT/AHL_match_all.npy.:
+
+The input must be a list of SpikeTrain
+Initializing parameters using factor analysis...
+
+Fitting GPFA model...

@@ -1,0 +1,4 @@
+/usr/local/lib64/python3.9/site-packages/elephant/gpfa/gpfa_core.py:309: UserWarning: Private variance floor used for one or more observed dimensions in GPFA.
+  warnings.warn('Private variance floor used for one or more observed '
+/usr/local/lib64/python3.9/site-packages/elephant/gpfa/gpfa_core.py:309: UserWarning: Private variance floor used for one or more observed dimensions in GPFA.
+  warnings.warn('Private variance floor used for one or more observed '

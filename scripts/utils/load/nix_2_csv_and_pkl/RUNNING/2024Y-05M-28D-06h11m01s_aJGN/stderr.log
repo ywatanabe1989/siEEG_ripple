@@ -1,0 +1,18 @@
+Traceback (most recent call last):
+  File "/home/ywatanabe/proj/siEEG_ripple_dev/utils/load/nix_2_csv_and_pkl.py", line 350, in <module>
+    main()
+  File "/home/ywatanabe/proj/siEEG_ripple_dev/utils/load/nix_2_csv_and_pkl.py", line 56, in main
+    meta_df, trials_info, iEEG, EEG, spike_times = load_h5(f, iEEG_ROI)
+  File "/home/ywatanabe/proj/siEEG_ripple_dev/utils/load/nix_2_csv_and_pkl.py", line 95, in load_h5
+    _signals = get_signals(f, iEEG_ROI=iEEG_ROI)
+  File "/home/ywatanabe/proj/siEEG_ripple_dev/utils/load/nix_2_csv_and_pkl.py", line 303, in get_signals
+    st_df_trial = _in_get_signals_trial(f, trial_number=i_trial + 1)[
+  File "/home/ywatanabe/proj/siEEG_ripple_dev/utils/load/nix_2_csv_and_pkl.py", line 240, in _in_get_signals_trial
+    f["data"][list(f["data"].keys())[0]]["data_arrays"][
+  File "h5py/_objects.pyx", line 54, in h5py._objects.with_phil.wrapper
+  File "h5py/_objects.pyx", line 55, in h5py._objects.with_phil.wrapper
+  File "/usr/local/lib64/python3.9/site-packages/h5py/_hl/group.py", line 364, in __getitem__
+    return Group(oid)
+  File "/usr/local/lib64/python3.9/site-packages/h5py/_hl/group.py", line 34, in __init__
+    def __init__(self, bind):
+KeyboardInterrupt

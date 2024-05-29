@@ -1,0 +1,14 @@
+module 'mngs.dsp' has no attribute 'bandpass'
+> [0;32m/home/ywatanabe/proj/siEEG_ripple_dev/scripts/detect_ripples.py[0m(119)[0;36mdetect_ripples[0;34m()[0m
+[0;32m    118 [0;31m    [0;31m# preparation[0m[0;34m[0m[0;34m[0m[0m
+[0m[0;32m--> 119 [0;31m    [0mtime_iEEG[0m [0;34m=[0m [0mnp[0m[0;34m.[0m[0marange[0m[0;34m([0m[0miEEG[0m[0;34m.[0m[0mshape[0m[0;34m[[0m[0;34m-[0m[0;36m1[0m[0;34m][0m[0;34m)[0m [0;34m/[0m [0mCONFIG[0m[0;34m[[0m[0;34m"FS_iEEG"[0m[0;34m][0m[0;34m[0m[0;34m[0m[0m
+[0m[0;32m    120 [0;31m    [0mspeed[0m [0;34m=[0m [0;36m0[0m [0;34m*[0m [0mtime_iEEG[0m[0;34m[0m[0;34m[0m[0m
+[0m
+ipdb> <module 'mngs.dsp' from '/home/ywatanabe/proj/siEEG_ripple_dev/scripts/externals/mngs/src/mngs/dsp/__init__.py'>
+ipdb> *** AttributeError: module 'mngs' has no attribute 'src'
+ipdb> TypeError: <class 'module'> is a built-in class
+ipdb> --KeyboardInterrupt--
+ipdb> ['PARAMS', '__builtins__', '__cached__', '__doc__', '__file__', '__loader__', '__name__', '__package__', '__path__', '__spec__', '_crop', '_demo_sig', '_hilbert', '_listen', '_misc', '_mne', '_modulation_index', '_pac', '_psd', '_resample', '_transform', '_wavelet', 'add_noise', 'crop', 'demo_sig', 'ensure_3d', 'filt', 'get_eeg_pos', 'hilbert', 'listen', 'modulation_index', 'norm', 'pac', 'psd', 'reference', 'resample', 'to_segments', 'to_sktime_df', 'utils', 'wavelet']
+ipdb> <module 'mngs.dsp.filt' from '/home/ywatanabe/proj/siEEG_ripple_dev/scripts/externals/mngs/src/mngs/dsp/filt.py'>
+ipdb> ['BandPassFilter', 'BandStopFilter', 'GaussianFilter', 'HighPassFilter', 'LowPassFilter', '__builtins__', '__cached__', '__doc__', '__file__', '__loader__', '__name__', '__package__', '__spec__', '_custom_print', 'bandpass', 'bandstop', 'gauss', 'highpass', 'lowpass', 'mngs', 'np', 'torch_fn']
+ipdb> 

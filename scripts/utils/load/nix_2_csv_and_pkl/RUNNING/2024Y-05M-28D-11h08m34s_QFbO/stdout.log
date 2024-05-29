@@ -1,0 +1,6 @@
+> [0;32m/home/ywatanabe/proj/siEEG_ripple_dev/scripts/utils/load/nix_2_csv_and_pkl.py[0m(299)[0;36m_in_get_signals_trial[0;34m()[0m
+[0;32m    298 [0;31m[0;34m[0m[0m
+[0m[0;32m--> 299 [0;31m        return dict(
+[0m[0;32m    300 [0;31m            [0miEEG[0m[0;34m=[0m[0miEEG[0m[0;34m,[0m[0;34m[0m[0;34m[0m[0m
+[0m
+ipdb> 

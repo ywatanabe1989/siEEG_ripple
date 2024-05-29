@@ -1,0 +1,6 @@
+
+./data/Sub_01/Session_01/sync_z/AHL.npy was not loaded:
+[Errno 2] No such file or directory: './data/Sub_01/Session_01/sync_z/AHL.npy'
+
+./data/Sub_01/Session_01/iEEG_AHL.pkl was not loaded:
+[Errno 2] No such file or directory: './data/Sub_01/Session_01/iEEG_AHL.pkl'

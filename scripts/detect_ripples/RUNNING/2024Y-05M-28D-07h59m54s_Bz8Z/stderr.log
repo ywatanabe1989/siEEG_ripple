@@ -1,0 +1,11 @@
+  0%|          | 0/4 [00:00<?, ?it/s]/home/ywatanabe/proj/siEEG_ripple_dev/scripts/detect_ripples.py:79: FutureWarning: Downcasting behavior in `replace` is deprecated and will be removed in a future version. To retain the old behavior, explicitly call `result.infer_objects(copy=False)`. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`
+  trials_info["correct"] = trials_info["correct"].replace(
+  0%|          | 0/4 [00:00<?, ?it/s]
+Traceback (most recent call last):
+  File "/home/ywatanabe/proj/siEEG_ripple_dev/scripts/detect_ripples.py", line 456, in <module>
+    main()
+  File "/home/ywatanabe/proj/siEEG_ripple_dev/scripts/detect_ripples.py", line 426, in main
+    detect_ripples(
+  File "/home/ywatanabe/proj/siEEG_ripple_dev/scripts/detect_ripples.py", line 88, in detect_ripples
+    iEEG, iEEG_common_ave = utils.load_iEEG(
+AttributeError: module 'scripts.utils' has no attribute 'load_iEEG'

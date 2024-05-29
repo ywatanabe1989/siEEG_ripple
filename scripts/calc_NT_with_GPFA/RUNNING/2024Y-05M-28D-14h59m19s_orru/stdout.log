@@ -1,0 +1,20 @@
+Initializing parameters using factor analysis...
+
+Fitting GPFA model...
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev/data/Sub_01/Session_01/traj/AHL_match_None.npy
+[0m
+The input must be a list of SpikeTrain
+The input must be a list of SpikeTrain
+The input must be a list of SpikeTrain
+Initializing parameters using factor analysis...
+
+Fitting GPFA model...
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev/data/Sub_01/Session_01/traj/ECL_match_None.npy
+[0m
+The input must be a list of SpikeTrain
+The input must be a list of SpikeTrain
+Initializing parameters using factor analysis...
+
+Fitting GPFA model...

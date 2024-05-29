@@ -1,0 +1,53 @@
+Traceback (most recent call last):
+  File "/usr/local/lib64/python3.9/site-packages/elephant/utils.py", line 216, in check_neo_consistency
+    units = neo_objects[0].units
+IndexError: list index out of range
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ywatanabe/proj/siEEG_ripple_dev/./scripts/calc_NT_with_GPFA.py", line 108, in main
+  File "/usr/local/lib64/python3.9/site-packages/elephant/utils.py", line 446, in wrapper
+    return method(*new_args, **new_kwargs)
+  File "/usr/local/lib64/python3.9/site-packages/elephant/gpfa/gpfa.py", line 534, in fit_transform
+    self.fit(spiketrains)
+  File "/usr/local/lib64/python3.9/site-packages/elephant/utils.py", line 446, in wrapper
+    return method(*new_args, **new_kwargs)
+  File "/usr/local/lib64/python3.9/site-packages/elephant/gpfa/gpfa.py", line 342, in fit
+    seqs_train = self._format_training_data(spiketrains)
+  File "/usr/local/lib64/python3.9/site-packages/elephant/gpfa/gpfa.py", line 290, in _format_training_data
+    seqs = gpfa_util.get_seqs(spiketrains, self.bin_size)
+  File "/usr/local/lib64/python3.9/site-packages/elephant/gpfa/gpfa_util.py", line 62, in get_seqs
+    binned_spiketrain = BinnedSpikeTrain(sts, bin_size=bin_size)
+  File "/usr/local/lib64/python3.9/site-packages/elephant/conversion.py", line 356, in __init__
+    self._resolve_input_parameters(spiketrains)
+  File "/usr/local/lib64/python3.9/site-packages/elephant/conversion.py", line 499, in _resolve_input_parameters
+    check_neo_consistency(spiketrains,
+  File "/usr/local/lib64/python3.9/site-packages/elephant/utils.py", line 220, in check_neo_consistency
+    raise TypeError(f"The input must be a list of {object_type.__name__}")
+TypeError: The input must be a list of SpikeTrain
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ywatanabe/proj/siEEG_ripple_dev/./scripts/calc_NT_with_GPFA.py", line 136, in <module>
+  File "/home/ywatanabe/proj/siEEG_ripple_dev/./scripts/calc_NT_with_GPFA.py", line 120, in main
+    mngs.io.save(NTs, spath_NTs, from_git=True)
+  File "/home/ywatanabe/proj/siEEG_ripple_dev/./scripts/calc_NT_with_GPFA.py", line 120, in main
+    mngs.io.save(NTs, spath_NTs, from_git=True)
+  File "/usr/lib64/python3.9/bdb.py", line 88, in trace_dispatch
+    return self.dispatch_line(frame)
+  File "/usr/lib64/python3.9/bdb.py", line 113, in dispatch_line
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+
+If you suspect this is an IPython 7.34.0 bug, please report it at:
+    https://github.com/ipython/ipython/issues
+or send an email to the mailing list at ipython-dev@python.org
+
+You can print a more detailed traceback right now with "%tb", or use "%debug"
+to interactively debug it.
+
+Extra-detailed tracebacks for bug-reporting purposes can be enabled via:
+    %config Application.verbose_crash=True
+

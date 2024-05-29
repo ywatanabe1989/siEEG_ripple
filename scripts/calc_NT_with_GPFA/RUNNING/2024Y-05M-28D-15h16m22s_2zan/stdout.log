@@ -1,0 +1,15 @@
+Initializing parameters using factor analysis...
+
+Fitting GPFA model...
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev/data/Sub_01/Session_01/NT/AHL_match_all.npy
+[0m
+> [0;32m/home/ywatanabe/proj/siEEG_ripple_dev/scripts/calc_NT_with_GPFA.py[0m(120)[0;36mmain[0;34m()[0m
+[0;32m    119 [0;31m            [0m__import__[0m[0;34m([0m[0;34m"ipdb"[0m[0;34m)[0m[0;34m.[0m[0mset_trace[0m[0;34m([0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[0;32m--> 120 [0;31m            [0mprint[0m[0;34m([0m[0;34m"\nError raised during GPFA calculation. Skipping.:\n"[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[0;32m    121 [0;31m            [0mprint[0m[0;34m([0m[0me[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m
+ipdb> array([], dtype=float64)
+ipdb> 1
+ipdb> False
+ipdb> 

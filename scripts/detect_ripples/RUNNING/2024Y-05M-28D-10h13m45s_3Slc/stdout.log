@@ -1,0 +1,56 @@
+2
+2
+axis 1 is out of bounds for array of dimension 1
+> [0;32m/home/ywatanabe/proj/siEEG_ripple_dev/scripts/detect_ripples.py[0m(231)[0;36mdetect_ripples[0;34m()[0m
+[0;32m    230 [0;31m[0;34m[0m[0m
+[0m[0;32m--> 231 [0;31m        [0mrip_dfs[0m[0;34m.[0m[0mappend[0m[0;34m([0m[0mrip_df[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[0;32m    232 [0;31m[0;34m[0m[0m
+[0m
+ipdb> 2
+ipdb> *** SyntaxError: unexpected EOF while parsing
+ipdb> (array([0.0000e+00, 5.0000e-04, 1.0000e-03, ..., 7.9985e+00, 7.9990e+00,
+       7.9995e+00]),)
+ipdb> (array([[-1.51386154,  0.22219144, -0.89056826, ..., -1.05264056,
+        -1.90518439, -1.54193807],
+       [-1.32920265,  0.22745505, -0.82089186, ..., -0.96116626,
+        -1.76288629, -1.50026488],
+       [-0.98435283,  0.23724785, -0.68540025, ..., -0.78638834,
+        -1.48718929, -1.41150177],
+       ...,
+       [ 2.45286632, -0.66056073,  0.26525497, ...,  0.18696904,
+        -2.07528639, -0.02930257],
+       [ 3.1646142 , -0.84206152,  0.44750416, ...,  0.1360648 ,
+        -2.71064472,  0.5845136 ],
+       [ 3.53735185, -0.93976492,  0.54623944, ...,  0.10603947,
+        -3.05046678,  0.92437226]]),)
+ipdb> (array([0., 0., 0., ..., 0., 0., 0.]),)
+ipdb> (2000.0,)
+ipdb> ipdb> ipdb> *** SyntaxError: unmatched ')'
+ipdb>                start_time  end_time
+ripple_number                      
+1                   5.756    5.8695
+2                   7.455    7.6045
+ipdb> *** NameError: name 'rip_df_commons' is not defined
+ipdb> *** NameError: name 'rip_df_commons' is not defined
+ipdb> --KeyboardInterrupt--
+ipdb> *** NameError: name 'rip_df_common' is not defined
+ipdb> *** SyntaxError: unexpected EOF while parsing
+ipdb> (array([0.0000e+00, 5.0000e-04, 1.0000e-03, ..., 7.9985e+00, 7.9990e+00,
+       7.9995e+00]),)
+ipdb> (array([-2.15795207, -1.90720069, -1.43444645, ..., -1.06217921,
+       -1.27048218, -1.37784541]),)
+ipdb> (array([0., 0., 0., ..., 0., 0., 0.]),)
+ipdb> (2000,)
+ipdb> ipdb> ipdb> *** SyntaxError: unmatched ')'
+ipdb> *** NameError: name 'rip_df_common' is not defined
+ipdb> array([-2.15795207, -1.90720069, -1.43444645, ..., -1.06217921,
+       -1.27048218, -1.37784541])
+ipdb> *** SyntaxError: unexpected EOF while parsing
+ipdb> (array([0.0000e+00, 5.0000e-04, 1.0000e-03, ..., 7.9985e+00, 7.9990e+00,
+       7.9995e+00]),)
+ipdb> (array([-2.15795207, -1.90720069, -1.43444645, ..., -1.06217921,
+       -1.27048218, -1.37784541]),)
+ipdb> (array([0., 0., 0., ..., 0., 0., 0.]),)
+ipdb> (2000.0,)
+ipdb> ipdb> ipdb> *** SyntaxError: unmatched ')'
+ipdb> 

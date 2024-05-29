@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/home/ywatanabe/proj/siEEG_ripple_dev/scripts/utils/load/nix_2_csv_and_pkl.py", line 356, in <module>
+    main()
+  File "/home/ywatanabe/proj/siEEG_ripple_dev/scripts/utils/load/nix_2_csv_and_pkl.py", line 67, in main
+    mngs.io.save(meta_df, session_dir + f"meta.csv", from_git=True)
+  File "/home/ywatanabe/proj/siEEG_ripple_dev/scripts/externals/mngs/src/mngs/io/_save.py", line 113, in save
+    sfname = mngs.path.find_git() + sfname
+TypeError: can only concatenate str (not "NoneType") to str

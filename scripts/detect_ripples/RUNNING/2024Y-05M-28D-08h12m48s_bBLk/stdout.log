@@ -1,0 +1,10 @@
+
+./data/Sub_01/Session_01/sync_z/AHL.npy was not loaded:
+[Errno 2] No such file or directory: './data/Sub_01/Session_01/sync_z/AHL.npy'
+module 'mngs.dsp' has no attribute 'bandpass'
+> [0;32m/home/ywatanabe/proj/siEEG_ripple_dev/scripts/detect_ripples.py[0m(125)[0;36mdetect_ripples[0;34m()[0m
+[0;32m    124 [0;31m    [0;31m# preparation[0m[0;34m[0m[0;34m[0m[0m
+[0m[0;32m--> 125 [0;31m    [0mtime_iEEG[0m [0;34m=[0m [0mnp[0m[0;34m.[0m[0marange[0m[0;34m([0m[0miEEG[0m[0;34m.[0m[0mshape[0m[0;34m[[0m[0;34m-[0m[0;36m1[0m[0;34m][0m[0;34m)[0m [0;34m/[0m [0mCONFIG[0m[0;34m[[0m[0;34m"FS_iEEG"[0m[0;34m][0m[0;34m[0m[0;34m[0m[0m
+[0m[0;32m    126 [0;31m    [0mspeed[0m [0;34m=[0m [0;36m0[0m [0;34m*[0m [0mtime_iEEG[0m[0;34m[0m[0;34m[0m[0m
+[0m
+ipdb> 

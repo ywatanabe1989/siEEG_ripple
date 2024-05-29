@@ -1,0 +1,14 @@
+Traceback (most recent call last):
+  File "/home/ywatanabe/proj/siEEG_ripple_dev/./utils/load/load_nix_and_save_as_csv_and_pkl.py", line 357, in <module>
+    main()
+  File "/home/ywatanabe/proj/siEEG_ripple_dev/./utils/load/load_nix_and_save_as_csv_and_pkl.py", line 326, in main
+    _signals = load_signals(f, iEEG_ROI=iEEG_ROI)
+  File "/home/ywatanabe/proj/siEEG_ripple_dev/./utils/load/load_nix_and_save_as_csv_and_pkl.py", line 254, in load_signals
+    iEEG_trial = _in_load_signals_trial(f, trial_number=i_trial + 1)[
+  File "/home/ywatanabe/proj/siEEG_ripple_dev/./utils/load/load_nix_and_save_as_csv_and_pkl.py", line 201, in _in_load_signals_trial
+    iEEG = iEEG[
+  File "/usr/local/lib64/python3.9/site-packages/pandas/core/frame.py", line 4102, in __getitem__
+    indexer = self.columns.get_loc(key)
+  File "/usr/local/lib64/python3.9/site-packages/pandas/core/indexes/range.py", line 417, in get_loc
+    raise KeyError(key)
+KeyError: True

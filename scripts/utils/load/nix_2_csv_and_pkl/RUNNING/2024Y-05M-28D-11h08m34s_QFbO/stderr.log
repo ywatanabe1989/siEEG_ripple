@@ -1,0 +1,28 @@
+Traceback (most recent call last):
+  File "/home/ywatanabe/proj/siEEG_ripple_dev/scripts/utils/load/nix_2_csv_and_pkl.py", line 360, in <module>
+  File "/home/ywatanabe/proj/siEEG_ripple_dev/scripts/utils/load/nix_2_csv_and_pkl.py", line 56, in main
+    meta_df, trials_info, iEEG, EEG, spike_times = load_h5(f, iEEG_ROI)
+  File "/home/ywatanabe/proj/siEEG_ripple_dev/scripts/utils/load/nix_2_csv_and_pkl.py", line 101, in load_h5
+    _signals = get_signals(f, iEEG_ROI=iEEG_ROI)
+  File "/home/ywatanabe/proj/siEEG_ripple_dev/scripts/utils/load/nix_2_csv_and_pkl.py", line 311, in get_signals
+    st_df_trial = _in_get_signals_trial(f, trial_number=i_trial + 1)[
+  File "/home/ywatanabe/proj/siEEG_ripple_dev/scripts/utils/load/nix_2_csv_and_pkl.py", line 299, in _in_get_signals_trial
+    EEG=EEG,
+  File "/home/ywatanabe/proj/siEEG_ripple_dev/scripts/utils/load/nix_2_csv_and_pkl.py", line 299, in _in_get_signals_trial
+    EEG=EEG,
+  File "/usr/lib64/python3.9/bdb.py", line 88, in trace_dispatch
+    return self.dispatch_line(frame)
+  File "/usr/lib64/python3.9/bdb.py", line 113, in dispatch_line
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+
+If you suspect this is an IPython 7.34.0 bug, please report it at:
+    https://github.com/ipython/ipython/issues
+or send an email to the mailing list at ipython-dev@python.org
+
+You can print a more detailed traceback right now with "%tb", or use "%debug"
+to interactively debug it.
+
+Extra-detailed tracebacks for bug-reporting purposes can be enabled via:
+    %config Application.verbose_crash=True
+

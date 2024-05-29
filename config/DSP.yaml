@@ -1,0 +1,20 @@
+RIPPLE_LOW_HZ:
+  80
+  
+RIPPLE_HIGH_HZ:
+  140
+  
+RIPPLE_SD:
+  2
+  
+FS_iEEG:
+  2000
+
+FS_EEG:
+  200
+
+iEEG_ROIS:
+  ["AHL", "AHR", "PHL", "PHR", "ECL", "ECR", "AL", "AR"]
+
+
+

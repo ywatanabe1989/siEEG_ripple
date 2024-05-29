@@ -1,0 +1,3 @@
+/usr/local/lib/python3.9/site-packages/mngs/general/_converters.py:88: UserWarning: Converted from ndarray to Tensor (cuda:0). You might want to consider using Tensor (cuda:0) as input for faster computation.
+  warnings.warn(
+  0%|          | 0/13 [00:00<?, ?it/s]

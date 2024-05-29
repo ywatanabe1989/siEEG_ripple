@@ -1,0 +1,10 @@
+SESSION_THRES:
+  2
+
+SWR_BINS:
+  "pre":
+    [-16, -5]
+  "mid":
+    [-5, 6]
+  "post":
+    [6, 17]  

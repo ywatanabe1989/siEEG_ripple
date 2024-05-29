@@ -1,0 +1,28 @@
+  0%|          | 0/4 [00:00<?, ?it/s]/home/ywatanabe/proj/siEEG_ripple_dev/scripts/detect_ripples.py:73: FutureWarning: Downcasting behavior in `replace` is deprecated and will be removed in a future version. To retain the old behavior, explicitly call `result.infer_objects(copy=False)`. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`
+  trials_info["correct"] = trials_info["correct"].replace(
+  0%|          | 0/4 [01:17<?, ?it/s]
+Traceback (most recent call last):
+  File "/home/ywatanabe/proj/siEEG_ripple_dev/scripts/detect_ripples.py", line 447, in <module>
+    main()
+  File "/home/ywatanabe/proj/siEEG_ripple_dev/scripts/detect_ripples.py", line 417, in main
+    detect_ripples(
+  File "/home/ywatanabe/proj/siEEG_ripple_dev/scripts/detect_ripples.py", line 119, in detect_ripples
+    time_iEEG = np.arange(iEEG.shape[-1]) / CONFIG["FS_iEEG"]
+  File "/home/ywatanabe/proj/siEEG_ripple_dev/scripts/detect_ripples.py", line 119, in detect_ripples
+    time_iEEG = np.arange(iEEG.shape[-1]) / CONFIG["FS_iEEG"]
+  File "/usr/lib64/python3.9/bdb.py", line 88, in trace_dispatch
+    return self.dispatch_line(frame)
+  File "/usr/lib64/python3.9/bdb.py", line 113, in dispatch_line
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+
+If you suspect this is an IPython 7.34.0 bug, please report it at:
+    https://github.com/ipython/ipython/issues
+or send an email to the mailing list at ipython-dev@python.org
+
+You can print a more detailed traceback right now with "%tb", or use "%debug"
+to interactively debug it.
+
+Extra-detailed tracebacks for bug-reporting purposes can be enabled via:
+    %config Application.verbose_crash=True
+

@@ -1,0 +1,1513 @@
+Initializing parameters using factor analysis...
+
+Fitting GPFA model...
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev/data/Sub_01/Session_01/NT/AHL_match_all.npy
+[0m
+
+Error raised during GPFA calculation. Spike_trains might be unavailable. Skipping ./data/Sub_01/Session_01/NT/AHL_match_all.npy.:
+
+The input must be a list of SpikeTrain
+
+Error raised during GPFA calculation. Spike_trains might be unavailable. Skipping ./data/Sub_01/Session_01/NT/AHL_match_all.npy.:
+
+The input must be a list of SpikeTrain
+
+Error raised during GPFA calculation. Spike_trains might be unavailable. Skipping ./data/Sub_01/Session_01/NT/AHL_match_all.npy.:
+
+The input must be a list of SpikeTrain
+Initializing parameters using factor analysis...
+
+Fitting GPFA model...
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev/data/Sub_01/Session_01/NT/ECL_match_all.npy
+[0m
+
+Error raised during GPFA calculation. Spike_trains might be unavailable. Skipping ./data/Sub_01/Session_01/NT/ECL_match_all.npy.:
+
+The input must be a list of SpikeTrain
+
+Error raised during GPFA calculation. Spike_trains might be unavailable. Skipping ./data/Sub_01/Session_01/NT/ECL_match_all.npy.:
+
+The input must be a list of SpikeTrain
+Initializing parameters using factor analysis...
+
+Fitting GPFA model...
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev/data/Sub_01/Session_01/NT/PHR_match_all.npy
+[0m
+Initializing parameters using factor analysis...
+
+Fitting GPFA model...
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev/data/Sub_01/Session_02/NT/AHL_match_all.npy
+[0m
+
+Error raised during GPFA calculation. Spike_trains might be unavailable. Skipping ./data/Sub_01/Session_02/NT/AHL_match_all.npy.:
+
+The input must be a list of SpikeTrain
+
+Error raised during GPFA calculation. Spike_trains might be unavailable. Skipping ./data/Sub_01/Session_02/NT/AHL_match_all.npy.:
+
+The input must be a list of SpikeTrain
+
+Error raised during GPFA calculation. Spike_trains might be unavailable. Skipping ./data/Sub_01/Session_02/NT/AHL_match_all.npy.:
+
+The input must be a list of SpikeTrain
+Initializing parameters using factor analysis...
+
+Fitting GPFA model...
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev/data/Sub_01/Session_02/NT/ECL_match_all.npy
+[0m
+
+Error raised during GPFA calculation. Spike_trains might be unavailable. Skipping ./data/Sub_01/Session_02/NT/ECL_match_all.npy.:
+
+The input must be a list of SpikeTrain
+
+Error raised during GPFA calculation. Spike_trains might be unavailable. Skipping ./data/Sub_01/Session_02/NT/ECL_match_all.npy.:
+
+The input must be a list of SpikeTrain
+Initializing parameters using factor analysis...
+
+Fitting GPFA model...
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev/data/Sub_01/Session_02/NT/PHR_match_all.npy
+[0m
+
+Error raised during GPFA calculation. Spike_trains might be unavailable. Skipping ./data/Sub_01/Session_02/NT/PHR_match_all.npy.:
+
+The input must be a list of SpikeTrain
+
+Error raised during GPFA calculation. Spike_trains might be unavailable. Skipping ./data/Sub_01/Session_02/NT/PHR_match_all.npy.:
+
+The input must be a list of SpikeTrain
+
+Error raised during GPFA calculation. Spike_trains might be unavailable. Skipping ./data/Sub_01/Session_02/NT/PHR_match_all.npy.:
+
+The input must be a list of SpikeTrain
+
+Error raised during GPFA calculation. Spike_trains might be unavailable. Skipping ./data/Sub_01/Session_02/NT/PHR_match_all.npy.:
+
+The input must be a list of SpikeTrain
+
+Error raised during GPFA calculation. Spike_trains might be unavailable. Skipping ./data/Sub_01/Session_02/NT/PHR_match_all.npy.:
+
+The input must be a list of SpikeTrain
+
+Error raised during GPFA calculation. Spike_trains might be unavailable. Skipping ./data/Sub_01/Session_02/NT/PHR_match_all.npy.:
+
+The input must be a list of SpikeTrain
+
+Error raised during GPFA calculation. Spike_trains might be unavailable. Skipping ./data/Sub_01/Session_02/NT/PHR_match_all.npy.:
+
+The input must be a list of SpikeTrain
+
+Error raised during GPFA calculation. Spike_trains might be unavailable. Skipping ./data/Sub_01/Session_02/NT/PHR_match_all.npy.:
+
+The input must be a list of SpikeTrain
+
+Error raised during GPFA calculation. Spike_trains might be unavailable. Skipping ./data/Sub_01/Session_02/NT/PHR_match_all.npy.:
+
+The input must be a list of SpikeTrain
+
+Error raised during GPFA calculation. Spike_trains might be unavailable. Skipping ./data/Sub_01/Session_02/NT/PHR_match_all.npy.:
+
+The input must be a list of SpikeTrain
+
+Error raised during GPFA calculation. Spike_trains might be unavailable. Skipping ./data/Sub_01/Session_02/NT/PHR_match_all.npy.:
+
+The input must be a list of SpikeTrain
+
+Error raised during GPFA calculation. Spike_trains might be unavailable. Skipping ./data/Sub_01/Session_02/NT/PHR_match_all.npy.:
+
+The input must be a list of SpikeTrain
+
+Error raised during GPFA calculation. Spike_trains might be unavailable. Skipping ./data/Sub_01/Session_02/NT/PHR_match_all.npy.:
+
+The input must be a list of SpikeTrain
+
+Error raised during GPFA calculation. Spike_trains might be unavailable. Skipping ./data/Sub_01/Session_02/NT/PHR_match_all.npy.:
+
+The input must be a list of SpikeTrain
+
+Error raised during GPFA calculation. Spike_trains might be unavailable. Skipping ./data/Sub_01/Session_02/NT/PHR_match_all.npy.:
+
+The input must be a list of SpikeTrain
+
+Error raised during GPFA calculation. Spike_trains might be unavailable. Skipping ./data/Sub_01/Session_02/NT/PHR_match_all.npy.:
+
+The input must be a list of SpikeTrain
+Initializing parameters using factor analysis...
+
+Fitting GPFA model...
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev/data/Sub_02/Session_01/NT/AHL_match_all.npy
+[0m
+Initializing parameters using factor analysis...
+
+Error raised during GPFA calculation. Spike_trains might be unavailable. Skipping ./data/Sub_02/Session_01/NT/AHL_match_all.npy.:
+
+Input must be 1- or 2-d.
+Initializing parameters using factor analysis...
+
+Fitting GPFA model...
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev/data/Sub_02/Session_01/NT/AL_match_all.npy
+[0m
+Initializing parameters using factor analysis...
+
+Fitting GPFA model...
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev/data/Sub_02/Session_01/NT/AR_match_all.npy
+[0m
+Initializing parameters using factor analysis...
+
+Fitting GPFA model...
+
+Error raised during GPFA calculation. Spike_trains might be unavailable. Skipping ./data/Sub_02/Session_01/NT/AR_match_all.npy.:
+
+index 2 is out of bounds for axis 2 with size 2
+Initializing parameters using factor analysis...
+
+Fitting GPFA model...
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev/data/Sub_02/Session_01/NT/ECR_match_all.npy
+[0m
+Initializing parameters using factor analysis...
+
+Fitting GPFA model...
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev/data/Sub_02/Session_01/NT/PHL_match_all.npy
+[0m
+Initializing parameters using factor analysis...
+
+Fitting GPFA model...
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev/data/Sub_02/Session_01/NT/PHR_match_all.npy
+[0m
+Initializing parameters using factor analysis...
+
+Fitting GPFA model...
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev/data/Sub_02/Session_02/NT/AHL_match_all.npy
+[0m
+Initializing parameters using factor analysis...
+
+Fitting GPFA model...
+
+Error raised during GPFA calculation. Spike_trains might be unavailable. Skipping ./data/Sub_02/Session_02/NT/AHL_match_all.npy.:
+
+index 2 is out of bounds for axis 2 with size 2
+Initializing parameters using factor analysis...
+
+Fitting GPFA model...
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev/data/Sub_02/Session_02/NT/AL_match_all.npy
+[0m
+Initializing parameters using factor analysis...
+
+Fitting GPFA model...
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev/data/Sub_02/Session_02/NT/AR_match_all.npy
+[0m
+Initializing parameters using factor analysis...
+
+Error raised during GPFA calculation. Spike_trains might be unavailable. Skipping ./data/Sub_02/Session_02/NT/AR_match_all.npy.:
+
+Input must be 1- or 2-d.
+Initializing parameters using factor analysis...
+
+Fitting GPFA model...
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev/data/Sub_02/Session_02/NT/ECR_match_all.npy
+[0m
+Initializing parameters using factor analysis...
+
+Fitting GPFA model...
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev/data/Sub_02/Session_02/NT/PHL_match_all.npy
+[0m
+Initializing parameters using factor analysis...
+
+Fitting GPFA model...
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev/data/Sub_02/Session_02/NT/PHR_match_all.npy
+[0m
+Initializing parameters using factor analysis...
+
+Fitting GPFA model...
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev/data/Sub_02/Session_03/NT/AHL_match_all.npy
+[0m
+Initializing parameters using factor analysis...
+
+Fitting GPFA model...
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev/data/Sub_02/Session_03/NT/AHR_match_all.npy
+[0m
+Initializing parameters using factor analysis...
+
+Fitting GPFA model...
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev/data/Sub_02/Session_03/NT/AL_match_all.npy
+[0m
+Initializing parameters using factor analysis...
+
+Fitting GPFA model...
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev/data/Sub_02/Session_03/NT/AR_match_all.npy
+[0m
+Initializing parameters using factor analysis...
+
+Fitting GPFA model...
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev/data/Sub_02/Session_03/NT/ECL_match_all.npy
+[0m
+Initializing parameters using factor analysis...
+
+Error raised during GPFA calculation. Spike_trains might be unavailable. Skipping ./data/Sub_02/Session_03/NT/ECL_match_all.npy.:
+
+Input must be 1- or 2-d.
+Initializing parameters using factor analysis...
+
+Fitting GPFA model...
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev/data/Sub_02/Session_03/NT/PHL_match_all.npy
+[0m
+Initializing parameters using factor analysis...
+
+Fitting GPFA model...
+
+Error raised during GPFA calculation. Spike_trains might be unavailable. Skipping ./data/Sub_02/Session_03/NT/PHL_match_all.npy.:
+
+index 2 is out of bounds for axis 2 with size 2
+Initializing parameters using factor analysis...
+
+Fitting GPFA model...
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev/data/Sub_02/Session_04/NT/AHL_match_all.npy
+[0m
+Initializing parameters using factor analysis...
+
+Fitting GPFA model...
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev/data/Sub_02/Session_04/NT/AHR_match_all.npy
+[0m
+Initializing parameters using factor analysis...
+
+Fitting GPFA model...
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev/data/Sub_02/Session_04/NT/AL_match_all.npy
+[0m
+Initializing parameters using factor analysis...
+
+Fitting GPFA model...
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev/data/Sub_02/Session_04/NT/AR_match_all.npy
+[0m
+Initializing parameters using factor analysis...
+
+Error raised during GPFA calculation. Spike_trains might be unavailable. Skipping ./data/Sub_02/Session_04/NT/AR_match_all.npy.:
+
+Input must be 1- or 2-d.
+Initializing parameters using factor analysis...
+
+Fitting GPFA model...
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev/data/Sub_02/Session_04/NT/ECR_match_all.npy
+[0m
+Initializing parameters using factor analysis...
+
+Fitting GPFA model...
+
+Error raised during GPFA calculation. Spike_trains might be unavailable. Skipping ./data/Sub_02/Session_04/NT/ECR_match_all.npy.:
+
+index 2 is out of bounds for axis 2 with size 2
+Initializing parameters using factor analysis...
+
+Fitting GPFA model...
+
+Error raised during GPFA calculation. Spike_trains might be unavailable. Skipping ./data/Sub_02/Session_04/NT/ECR_match_all.npy.:
+
+index 2 is out of bounds for axis 2 with size 2
+Initializing parameters using factor analysis...
+
+Fitting GPFA model...
+
+Error raised during GPFA calculation. Spike_trains might be unavailable. Skipping ./data/Sub_02/Session_04/NT/ECR_match_all.npy.:
+
+index 2 is out of bounds for axis 2 with size 2
+Initializing parameters using factor analysis...
+
+Fitting GPFA model...
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev/data/Sub_02/Session_05/NT/AHR_match_all.npy
+[0m
+Initializing parameters using factor analysis...
+
+Fitting GPFA model...
+
+Error raised during GPFA calculation. Spike_trains might be unavailable. Skipping ./data/Sub_02/Session_05/NT/AHR_match_all.npy.:
+
+index 2 is out of bounds for axis 2 with size 2
+Initializing parameters using factor analysis...
+
+Fitting GPFA model...
+
+Error raised during GPFA calculation. Spike_trains might be unavailable. Skipping ./data/Sub_02/Session_05/NT/AHR_match_all.npy.:
+
+index 2 is out of bounds for axis 2 with size 2
+Initializing parameters using factor analysis...
+
+Fitting GPFA model...
+
+Error raised during GPFA calculation. Spike_trains might be unavailable. Skipping ./data/Sub_02/Session_05/NT/AHR_match_all.npy.:
+
+index 2 is out of bounds for axis 2 with size 2
+Initializing parameters using factor analysis...
+
+Fitting GPFA model...
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev/data/Sub_02/Session_05/NT/ECR_match_all.npy
+[0m
+
+Error raised during GPFA calculation. Spike_trains might be unavailable. Skipping ./data/Sub_02/Session_05/NT/ECR_match_all.npy.:
+
+The input must be a list of SpikeTrain
+Initializing parameters using factor analysis...
+
+Error raised during GPFA calculation. Spike_trains might be unavailable. Skipping ./data/Sub_02/Session_05/NT/ECR_match_all.npy.:
+
+Input must be 1- or 2-d.
+Initializing parameters using factor analysis...
+
+Fitting GPFA model...
+
+Error raised during GPFA calculation. Spike_trains might be unavailable. Skipping ./data/Sub_02/Session_05/NT/ECR_match_all.npy.:
+
+index 2 is out of bounds for axis 2 with size 2
+Initializing parameters using factor analysis...
+
+Fitting GPFA model...
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev/data/Sub_02/Session_06/NT/AHR_match_all.npy
+[0m
+Initializing parameters using factor analysis...
+
+Fitting GPFA model...
+
+Error raised during GPFA calculation. Spike_trains might be unavailable. Skipping ./data/Sub_02/Session_06/NT/AHR_match_all.npy.:
+
+index 2 is out of bounds for axis 2 with size 2
+Initializing parameters using factor analysis...
+
+Fitting GPFA model...
+
+Error raised during GPFA calculation. Spike_trains might be unavailable. Skipping ./data/Sub_02/Session_06/NT/AHR_match_all.npy.:
+
+index 2 is out of bounds for axis 2 with size 2
+Initializing parameters using factor analysis...
+
+Fitting GPFA model...
+
+Error raised during GPFA calculation. Spike_trains might be unavailable. Skipping ./data/Sub_02/Session_06/NT/AHR_match_all.npy.:
+
+index 2 is out of bounds for axis 2 with size 2
+Initializing parameters using factor analysis...
+
+Fitting GPFA model...
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev/data/Sub_02/Session_06/NT/ECR_match_all.npy
+[0m
+
+Error raised during GPFA calculation. Spike_trains might be unavailable. Skipping ./data/Sub_02/Session_06/NT/ECR_match_all.npy.:
+
+The input must be a list of SpikeTrain
+Initializing parameters using factor analysis...
+
+Error raised during GPFA calculation. Spike_trains might be unavailable. Skipping ./data/Sub_02/Session_06/NT/ECR_match_all.npy.:
+
+Input must be 1- or 2-d.
+Initializing parameters using factor analysis...
+
+Fitting GPFA model...
+
+Error raised during GPFA calculation. Spike_trains might be unavailable. Skipping ./data/Sub_02/Session_06/NT/ECR_match_all.npy.:
+
+index 2 is out of bounds for axis 2 with size 2
+Initializing parameters using factor analysis...
+
+Fitting GPFA model...
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev/data/Sub_02/Session_07/NT/AHR_match_all.npy
+[0m
+Initializing parameters using factor analysis...
+
+Fitting GPFA model...
+
+Error raised during GPFA calculation. Spike_trains might be unavailable. Skipping ./data/Sub_02/Session_07/NT/AHR_match_all.npy.:
+
+index 2 is out of bounds for axis 2 with size 2
+Initializing parameters using factor analysis...
+
+Fitting GPFA model...
+
+Error raised during GPFA calculation. Spike_trains might be unavailable. Skipping ./data/Sub_02/Session_07/NT/AHR_match_all.npy.:
+
+index 2 is out of bounds for axis 2 with size 2
+Initializing parameters using factor analysis...
+
+Fitting GPFA model...
+
+Error raised during GPFA calculation. Spike_trains might be unavailable. Skipping ./data/Sub_02/Session_07/NT/AHR_match_all.npy.:
+
+index 2 is out of bounds for axis 2 with size 2
+Initializing parameters using factor analysis...
+
+Fitting GPFA model...
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev/data/Sub_02/Session_07/NT/ECR_match_all.npy
+[0m
+
+Error raised during GPFA calculation. Spike_trains might be unavailable. Skipping ./data/Sub_02/Session_07/NT/ECR_match_all.npy.:
+
+The input must be a list of SpikeTrain
+Initializing parameters using factor analysis...
+
+Error raised during GPFA calculation. Spike_trains might be unavailable. Skipping ./data/Sub_02/Session_07/NT/ECR_match_all.npy.:
+
+Input must be 1- or 2-d.
+Initializing parameters using factor analysis...
+
+Error raised during GPFA calculation. Spike_trains might be unavailable. Skipping ./data/Sub_02/Session_07/NT/ECR_match_all.npy.:
+
+Input must be 1- or 2-d.
+Initializing parameters using factor analysis...
+
+Fitting GPFA model...
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev/data/Sub_03/Session_01/NT/AHR_match_all.npy
+[0m
+Initializing parameters using factor analysis...
+
+Error raised during GPFA calculation. Spike_trains might be unavailable. Skipping ./data/Sub_03/Session_01/NT/AHR_match_all.npy.:
+
+Input must be 1- or 2-d.
+
+Error raised during GPFA calculation. Spike_trains might be unavailable. Skipping ./data/Sub_03/Session_01/NT/AHR_match_all.npy.:
+
+The input must be a list of SpikeTrain
+
+Error raised during GPFA calculation. Spike_trains might be unavailable. Skipping ./data/Sub_03/Session_01/NT/AHR_match_all.npy.:
+
+The input must be a list of SpikeTrain
+
+Error raised during GPFA calculation. Spike_trains might be unavailable. Skipping ./data/Sub_03/Session_01/NT/AHR_match_all.npy.:
+
+The input must be a list of SpikeTrain
+
+Error raised during GPFA calculation. Spike_trains might be unavailable. Skipping ./data/Sub_03/Session_01/NT/AHR_match_all.npy.:
+
+The input must be a list of SpikeTrain
+
+Error raised during GPFA calculation. Spike_trains might be unavailable. Skipping ./data/Sub_03/Session_01/NT/AHR_match_all.npy.:
+
+The input must be a list of SpikeTrain
+Initializing parameters using factor analysis...
+
+Error raised during GPFA calculation. Spike_trains might be unavailable. Skipping ./data/Sub_03/Session_01/NT/AHR_match_all.npy.:
+
+Input must be 1- or 2-d.
+Initializing parameters using factor analysis...
+
+Fitting GPFA model...
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev/data/Sub_03/Session_02/NT/AHR_match_all.npy
+[0m
+Initializing parameters using factor analysis...
+
+Fitting GPFA model...
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev/data/Sub_03/Session_02/NT/AL_match_all.npy
+[0m
+
+Error raised during GPFA calculation. Spike_trains might be unavailable. Skipping ./data/Sub_03/Session_02/NT/AL_match_all.npy.:
+
+The input must be a list of SpikeTrain
+
+Error raised during GPFA calculation. Spike_trains might be unavailable. Skipping ./data/Sub_03/Session_02/NT/AL_match_all.npy.:
+
+The input must be a list of SpikeTrain
+
+Error raised during GPFA calculation. Spike_trains might be unavailable. Skipping ./data/Sub_03/Session_02/NT/AL_match_all.npy.:
+
+The input must be a list of SpikeTrain
+
+Error raised during GPFA calculation. Spike_trains might be unavailable. Skipping ./data/Sub_03/Session_02/NT/AL_match_all.npy.:
+
+The input must be a list of SpikeTrain
+
+Error raised during GPFA calculation. Spike_trains might be unavailable. Skipping ./data/Sub_03/Session_02/NT/AL_match_all.npy.:
+
+The input must be a list of SpikeTrain
+
+Error raised during GPFA calculation. Spike_trains might be unavailable. Skipping ./data/Sub_03/Session_02/NT/AL_match_all.npy.:
+
+The input must be a list of SpikeTrain
+Initializing parameters using factor analysis...
+
+Fitting GPFA model...
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev/data/Sub_03/Session_03/NT/AHR_match_all.npy
+[0m
+Initializing parameters using factor analysis...
+
+Fitting GPFA model...
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev/data/Sub_03/Session_03/NT/AL_match_all.npy
+[0m
+
+Error raised during GPFA calculation. Spike_trains might be unavailable. Skipping ./data/Sub_03/Session_03/NT/AL_match_all.npy.:
+
+The input must be a list of SpikeTrain
+
+Error raised during GPFA calculation. Spike_trains might be unavailable. Skipping ./data/Sub_03/Session_03/NT/AL_match_all.npy.:
+
+The input must be a list of SpikeTrain
+
+Error raised during GPFA calculation. Spike_trains might be unavailable. Skipping ./data/Sub_03/Session_03/NT/AL_match_all.npy.:
+
+The input must be a list of SpikeTrain
+
+Error raised during GPFA calculation. Spike_trains might be unavailable. Skipping ./data/Sub_03/Session_03/NT/AL_match_all.npy.:
+
+The input must be a list of SpikeTrain
+
+Error raised during GPFA calculation. Spike_trains might be unavailable. Skipping ./data/Sub_03/Session_03/NT/AL_match_all.npy.:
+
+The input must be a list of SpikeTrain
+Initializing parameters using factor analysis...
+
+Fitting GPFA model...
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev/data/Sub_04/Session_01/NT/AHL_match_all.npy
+[0m
+Initializing parameters using factor analysis...
+
+Fitting GPFA model...
+
+Error raised during GPFA calculation. Spike_trains might be unavailable. Skipping ./data/Sub_04/Session_01/NT/AHL_match_all.npy.:
+
+index 2 is out of bounds for axis 2 with size 2
+Initializing parameters using factor analysis...
+
+Fitting GPFA model...
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev/data/Sub_04/Session_01/NT/AL_match_all.npy
+[0m
+Initializing parameters using factor analysis...
+
+Fitting GPFA model...
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev/data/Sub_04/Session_01/NT/AR_match_all.npy
+[0m
+Initializing parameters using factor analysis...
+
+Fitting GPFA model...
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev/data/Sub_04/Session_01/NT/ECL_match_all.npy
+[0m
+Initializing parameters using factor analysis...
+
+Fitting GPFA model...
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev/data/Sub_04/Session_01/NT/ECR_match_all.npy
+[0m
+Initializing parameters using factor analysis...
+
+Fitting GPFA model...
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev/data/Sub_04/Session_01/NT/PHL_match_all.npy
+[0m
+Initializing parameters using factor analysis...
+
+Fitting GPFA model...
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev/data/Sub_04/Session_01/NT/PHR_match_all.npy
+[0m
+Initializing parameters using factor analysis...
+
+Fitting GPFA model...
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev/data/Sub_04/Session_02/NT/AHL_match_all.npy
+[0m
+Initializing parameters using factor analysis...
+
+Fitting GPFA model...
+
+Error raised during GPFA calculation. Spike_trains might be unavailable. Skipping ./data/Sub_04/Session_02/NT/AHL_match_all.npy.:
+
+index 2 is out of bounds for axis 2 with size 2
+Initializing parameters using factor analysis...
+
+Fitting GPFA model...
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev/data/Sub_04/Session_02/NT/AL_match_all.npy
+[0m
+Initializing parameters using factor analysis...
+
+Fitting GPFA model...
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev/data/Sub_04/Session_02/NT/AR_match_all.npy
+[0m
+Initializing parameters using factor analysis...
+
+Fitting GPFA model...
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev/data/Sub_04/Session_02/NT/ECL_match_all.npy
+[0m
+Initializing parameters using factor analysis...
+
+Fitting GPFA model...
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev/data/Sub_04/Session_02/NT/ECR_match_all.npy
+[0m
+Initializing parameters using factor analysis...
+
+Fitting GPFA model...
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev/data/Sub_04/Session_02/NT/PHL_match_all.npy
+[0m
+Initializing parameters using factor analysis...
+
+Fitting GPFA model...
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev/data/Sub_04/Session_02/NT/PHR_match_all.npy
+[0m
+
+Error raised during GPFA calculation. Spike_trains might be unavailable. Skipping ./data/Sub_04/Session_02/NT/PHR_match_all.npy.:
+
+The input must be a list of SpikeTrain
+
+Error raised during GPFA calculation. Spike_trains might be unavailable. Skipping ./data/Sub_04/Session_02/NT/PHR_match_all.npy.:
+
+The input must be a list of SpikeTrain
+Initializing parameters using factor analysis...
+
+Fitting GPFA model...
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev/data/Sub_05/Session_01/NT/AL_match_all.npy
+[0m
+
+Error raised during GPFA calculation. Spike_trains might be unavailable. Skipping ./data/Sub_05/Session_01/NT/AL_match_all.npy.:
+
+The input must be a list of SpikeTrain
+
+Error raised during GPFA calculation. Spike_trains might be unavailable. Skipping ./data/Sub_05/Session_01/NT/AL_match_all.npy.:
+
+The input must be a list of SpikeTrain
+
+Error raised during GPFA calculation. Spike_trains might be unavailable. Skipping ./data/Sub_05/Session_01/NT/AL_match_all.npy.:
+
+The input must be a list of SpikeTrain
+
+Error raised during GPFA calculation. Spike_trains might be unavailable. Skipping ./data/Sub_05/Session_01/NT/AL_match_all.npy.:
+
+The input must be a list of SpikeTrain
+
+Error raised during GPFA calculation. Spike_trains might be unavailable. Skipping ./data/Sub_05/Session_01/NT/AL_match_all.npy.:
+
+The input must be a list of SpikeTrain
+
+Error raised during GPFA calculation. Spike_trains might be unavailable. Skipping ./data/Sub_05/Session_01/NT/AL_match_all.npy.:
+
+The input must be a list of SpikeTrain
+
+Error raised during GPFA calculation. Spike_trains might be unavailable. Skipping ./data/Sub_05/Session_01/NT/AL_match_all.npy.:
+
+The input must be a list of SpikeTrain
+Initializing parameters using factor analysis...
+
+Fitting GPFA model...
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev/data/Sub_05/Session_02/NT/AL_match_all.npy
+[0m
+
+Error raised during GPFA calculation. Spike_trains might be unavailable. Skipping ./data/Sub_05/Session_02/NT/AL_match_all.npy.:
+
+The input must be a list of SpikeTrain
+
+Error raised during GPFA calculation. Spike_trains might be unavailable. Skipping ./data/Sub_05/Session_02/NT/AL_match_all.npy.:
+
+The input must be a list of SpikeTrain
+
+Error raised during GPFA calculation. Spike_trains might be unavailable. Skipping ./data/Sub_05/Session_02/NT/AL_match_all.npy.:
+
+The input must be a list of SpikeTrain
+
+Error raised during GPFA calculation. Spike_trains might be unavailable. Skipping ./data/Sub_05/Session_02/NT/AL_match_all.npy.:
+
+The input must be a list of SpikeTrain
+
+Error raised during GPFA calculation. Spike_trains might be unavailable. Skipping ./data/Sub_05/Session_02/NT/AL_match_all.npy.:
+
+The input must be a list of SpikeTrain
+
+Error raised during GPFA calculation. Spike_trains might be unavailable. Skipping ./data/Sub_05/Session_02/NT/AL_match_all.npy.:
+
+The input must be a list of SpikeTrain
+
+Error raised during GPFA calculation. Spike_trains might be unavailable. Skipping ./data/Sub_05/Session_02/NT/AL_match_all.npy.:
+
+The input must be a list of SpikeTrain
+Initializing parameters using factor analysis...
+
+Error raised during GPFA calculation. Spike_trains might be unavailable. Skipping ./data/Sub_05/Session_02/NT/AL_match_all.npy.:
+
+Input must be 1- or 2-d.
+
+Error raised during GPFA calculation. Spike_trains might be unavailable. Skipping ./data/Sub_05/Session_02/NT/AL_match_all.npy.:
+
+The input must be a list of SpikeTrain
+
+Error raised during GPFA calculation. Spike_trains might be unavailable. Skipping ./data/Sub_05/Session_02/NT/AL_match_all.npy.:
+
+The input must be a list of SpikeTrain
+
+Error raised during GPFA calculation. Spike_trains might be unavailable. Skipping ./data/Sub_05/Session_02/NT/AL_match_all.npy.:
+
+The input must be a list of SpikeTrain
+
+Error raised during GPFA calculation. Spike_trains might be unavailable. Skipping ./data/Sub_05/Session_02/NT/AL_match_all.npy.:
+
+The input must be a list of SpikeTrain
+
+Error raised during GPFA calculation. Spike_trains might be unavailable. Skipping ./data/Sub_05/Session_02/NT/AL_match_all.npy.:
+
+The input must be a list of SpikeTrain
+Initializing parameters using factor analysis...
+
+Fitting GPFA model...
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev/data/Sub_06/Session_01/NT/AHL_match_all.npy
+[0m
+
+Error raised during GPFA calculation. Spike_trains might be unavailable. Skipping ./data/Sub_06/Session_01/NT/AHL_match_all.npy.:
+
+The input must be a list of SpikeTrain
+Initializing parameters using factor analysis...
+
+Fitting GPFA model...
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev/data/Sub_06/Session_01/NT/AL_match_all.npy
+[0m
+Initializing parameters using factor analysis...
+
+Fitting GPFA model...
+
+Error raised during GPFA calculation. Spike_trains might be unavailable. Skipping ./data/Sub_06/Session_01/NT/AL_match_all.npy.:
+
+index 2 is out of bounds for axis 2 with size 2
+Initializing parameters using factor analysis...
+
+Fitting GPFA model...
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev/data/Sub_06/Session_01/NT/ECL_match_all.npy
+[0m
+
+Error raised during GPFA calculation. Spike_trains might be unavailable. Skipping ./data/Sub_06/Session_01/NT/ECL_match_all.npy.:
+
+The input must be a list of SpikeTrain
+
+Error raised during GPFA calculation. Spike_trains might be unavailable. Skipping ./data/Sub_06/Session_01/NT/ECL_match_all.npy.:
+
+The input must be a list of SpikeTrain
+Initializing parameters using factor analysis...
+
+Fitting GPFA model...
+
+Error raised during GPFA calculation. Spike_trains might be unavailable. Skipping ./data/Sub_06/Session_01/NT/ECL_match_all.npy.:
+
+index 2 is out of bounds for axis 2 with size 2
+Initializing parameters using factor analysis...
+
+Fitting GPFA model...
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev/data/Sub_06/Session_02/NT/AHL_match_all.npy
+[0m
+
+Error raised during GPFA calculation. Spike_trains might be unavailable. Skipping ./data/Sub_06/Session_02/NT/AHL_match_all.npy.:
+
+The input must be a list of SpikeTrain
+Initializing parameters using factor analysis...
+
+Fitting GPFA model...
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev/data/Sub_06/Session_02/NT/AL_match_all.npy
+[0m
+Initializing parameters using factor analysis...
+
+Fitting GPFA model...
+
+Error raised during GPFA calculation. Spike_trains might be unavailable. Skipping ./data/Sub_06/Session_02/NT/AL_match_all.npy.:
+
+index 2 is out of bounds for axis 2 with size 2
+Initializing parameters using factor analysis...
+
+Fitting GPFA model...
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev/data/Sub_06/Session_02/NT/ECL_match_all.npy
+[0m
+
+Error raised during GPFA calculation. Spike_trains might be unavailable. Skipping ./data/Sub_06/Session_02/NT/ECL_match_all.npy.:
+
+The input must be a list of SpikeTrain
+
+Error raised during GPFA calculation. Spike_trains might be unavailable. Skipping ./data/Sub_06/Session_02/NT/ECL_match_all.npy.:
+
+The input must be a list of SpikeTrain
+Initializing parameters using factor analysis...
+
+Fitting GPFA model...
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev/data/Sub_06/Session_02/NT/PHR_match_all.npy
+[0m
+Initializing parameters using factor analysis...
+
+Fitting GPFA model...
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev/data/Sub_06/Session_03/NT/AHL_match_all.npy
+[0m
+
+Error raised during GPFA calculation. Spike_trains might be unavailable. Skipping ./data/Sub_06/Session_03/NT/AHL_match_all.npy.:
+
+The input must be a list of SpikeTrain
+Initializing parameters using factor analysis...
+
+Fitting GPFA model...
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev/data/Sub_06/Session_03/NT/AL_match_all.npy
+[0m
+Initializing parameters using factor analysis...
+
+Fitting GPFA model...
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev/data/Sub_06/Session_03/NT/AR_match_all.npy
+[0m
+Initializing parameters using factor analysis...
+
+Fitting GPFA model...
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev/data/Sub_06/Session_03/NT/ECL_match_all.npy
+[0m
+
+Error raised during GPFA calculation. Spike_trains might be unavailable. Skipping ./data/Sub_06/Session_03/NT/ECL_match_all.npy.:
+
+The input must be a list of SpikeTrain
+
+Error raised during GPFA calculation. Spike_trains might be unavailable. Skipping ./data/Sub_06/Session_03/NT/ECL_match_all.npy.:
+
+The input must be a list of SpikeTrain
+Initializing parameters using factor analysis...
+
+Error raised during GPFA calculation. Spike_trains might be unavailable. Skipping ./data/Sub_06/Session_03/NT/ECL_match_all.npy.:
+
+Input must be 1- or 2-d.
+
+Error raised during GPFA calculation. Spike_trains might be unavailable. Skipping ./data/Sub_06/Session_03/NT/ECL_match_all.npy.:
+
+The input must be a list of SpikeTrain
+
+Error raised during GPFA calculation. Spike_trains might be unavailable. Skipping ./data/Sub_06/Session_03/NT/ECL_match_all.npy.:
+
+The input must be a list of SpikeTrain
+
+Error raised during GPFA calculation. Spike_trains might be unavailable. Skipping ./data/Sub_06/Session_03/NT/ECL_match_all.npy.:
+
+The input must be a list of SpikeTrain
+
+Error raised during GPFA calculation. Spike_trains might be unavailable. Skipping ./data/Sub_06/Session_03/NT/ECL_match_all.npy.:
+
+The input must be a list of SpikeTrain
+
+Error raised during GPFA calculation. Spike_trains might be unavailable. Skipping ./data/Sub_06/Session_03/NT/ECL_match_all.npy.:
+
+The input must be a list of SpikeTrain
+
+Error raised during GPFA calculation. Spike_trains might be unavailable. Skipping ./data/Sub_06/Session_03/NT/ECL_match_all.npy.:
+
+The input must be a list of SpikeTrain
+
+Error raised during GPFA calculation. Spike_trains might be unavailable. Skipping ./data/Sub_06/Session_03/NT/ECL_match_all.npy.:
+
+The input must be a list of SpikeTrain
+
+Error raised during GPFA calculation. Spike_trains might be unavailable. Skipping ./data/Sub_06/Session_03/NT/ECL_match_all.npy.:
+
+The input must be a list of SpikeTrain
+
+Error raised during GPFA calculation. Spike_trains might be unavailable. Skipping ./data/Sub_06/Session_03/NT/ECL_match_all.npy.:
+
+The input must be a list of SpikeTrain
+
+Error raised during GPFA calculation. Spike_trains might be unavailable. Skipping ./data/Sub_06/Session_03/NT/ECL_match_all.npy.:
+
+The input must be a list of SpikeTrain
+
+Error raised during GPFA calculation. Spike_trains might be unavailable. Skipping ./data/Sub_06/Session_03/NT/ECL_match_all.npy.:
+
+The input must be a list of SpikeTrain
+
+Error raised during GPFA calculation. Spike_trains might be unavailable. Skipping ./data/Sub_06/Session_03/NT/ECL_match_all.npy.:
+
+The input must be a list of SpikeTrain
+
+Error raised during GPFA calculation. Spike_trains might be unavailable. Skipping ./data/Sub_06/Session_03/NT/ECL_match_all.npy.:
+
+The input must be a list of SpikeTrain
+
+Error raised during GPFA calculation. Spike_trains might be unavailable. Skipping ./data/Sub_06/Session_03/NT/ECL_match_all.npy.:
+
+The input must be a list of SpikeTrain
+
+Error raised during GPFA calculation. Spike_trains might be unavailable. Skipping ./data/Sub_06/Session_03/NT/ECL_match_all.npy.:
+
+The input must be a list of SpikeTrain
+
+Error raised during GPFA calculation. Spike_trains might be unavailable. Skipping ./data/Sub_06/Session_03/NT/ECL_match_all.npy.:
+
+The input must be a list of SpikeTrain
+
+Error raised during GPFA calculation. Spike_trains might be unavailable. Skipping ./data/Sub_06/Session_03/NT/ECL_match_all.npy.:
+
+The input must be a list of SpikeTrain
+
+Error raised during GPFA calculation. Spike_trains might be unavailable. Skipping ./data/Sub_06/Session_03/NT/ECL_match_all.npy.:
+
+The input must be a list of SpikeTrain
+
+Error raised during GPFA calculation. Spike_trains might be unavailable. Skipping ./data/Sub_06/Session_03/NT/ECL_match_all.npy.:
+
+The input must be a list of SpikeTrain
+
+Error raised during GPFA calculation. Spike_trains might be unavailable. Skipping ./data/Sub_06/Session_03/NT/ECL_match_all.npy.:
+
+The input must be a list of SpikeTrain
+
+Error raised during GPFA calculation. Spike_trains might be unavailable. Skipping ./data/Sub_06/Session_03/NT/ECL_match_all.npy.:
+
+The input must be a list of SpikeTrain
+
+Error raised during GPFA calculation. Spike_trains might be unavailable. Skipping ./data/Sub_06/Session_03/NT/ECL_match_all.npy.:
+
+The input must be a list of SpikeTrain
+
+Error raised during GPFA calculation. Spike_trains might be unavailable. Skipping ./data/Sub_06/Session_03/NT/ECL_match_all.npy.:
+
+The input must be a list of SpikeTrain
+
+Error raised during GPFA calculation. Spike_trains might be unavailable. Skipping ./data/Sub_06/Session_03/NT/ECL_match_all.npy.:
+
+The input must be a list of SpikeTrain
+
+Error raised during GPFA calculation. Spike_trains might be unavailable. Skipping ./data/Sub_06/Session_03/NT/ECL_match_all.npy.:
+
+The input must be a list of SpikeTrain
+
+Error raised during GPFA calculation. Spike_trains might be unavailable. Skipping ./data/Sub_06/Session_03/NT/ECL_match_all.npy.:
+
+The input must be a list of SpikeTrain
+
+Error raised during GPFA calculation. Spike_trains might be unavailable. Skipping ./data/Sub_06/Session_03/NT/ECL_match_all.npy.:
+
+The input must be a list of SpikeTrain
+
+Error raised during GPFA calculation. Spike_trains might be unavailable. Skipping ./data/Sub_06/Session_03/NT/ECL_match_all.npy.:
+
+The input must be a list of SpikeTrain
+
+Error raised during GPFA calculation. Spike_trains might be unavailable. Skipping ./data/Sub_06/Session_03/NT/ECL_match_all.npy.:
+
+The input must be a list of SpikeTrain
+
+Error raised during GPFA calculation. Spike_trains might be unavailable. Skipping ./data/Sub_06/Session_03/NT/ECL_match_all.npy.:
+
+The input must be a list of SpikeTrain
+
+Error raised during GPFA calculation. Spike_trains might be unavailable. Skipping ./data/Sub_06/Session_03/NT/ECL_match_all.npy.:
+
+The input must be a list of SpikeTrain
+
+Error raised during GPFA calculation. Spike_trains might be unavailable. Skipping ./data/Sub_06/Session_03/NT/ECL_match_all.npy.:
+
+The input must be a list of SpikeTrain
+
+Error raised during GPFA calculation. Spike_trains might be unavailable. Skipping ./data/Sub_06/Session_03/NT/ECL_match_all.npy.:
+
+The input must be a list of SpikeTrain
+
+Error raised during GPFA calculation. Spike_trains might be unavailable. Skipping ./data/Sub_06/Session_03/NT/ECL_match_all.npy.:
+
+The input must be a list of SpikeTrain
+
+Error raised during GPFA calculation. Spike_trains might be unavailable. Skipping ./data/Sub_06/Session_03/NT/ECL_match_all.npy.:
+
+The input must be a list of SpikeTrain
+
+Error raised during GPFA calculation. Spike_trains might be unavailable. Skipping ./data/Sub_06/Session_03/NT/ECL_match_all.npy.:
+
+The input must be a list of SpikeTrain
+
+Error raised during GPFA calculation. Spike_trains might be unavailable. Skipping ./data/Sub_06/Session_03/NT/ECL_match_all.npy.:
+
+The input must be a list of SpikeTrain
+
+Error raised during GPFA calculation. Spike_trains might be unavailable. Skipping ./data/Sub_06/Session_03/NT/ECL_match_all.npy.:
+
+The input must be a list of SpikeTrain
+
+Error raised during GPFA calculation. Spike_trains might be unavailable. Skipping ./data/Sub_06/Session_03/NT/ECL_match_all.npy.:
+
+The input must be a list of SpikeTrain
+
+Error raised during GPFA calculation. Spike_trains might be unavailable. Skipping ./data/Sub_06/Session_03/NT/ECL_match_all.npy.:
+
+The input must be a list of SpikeTrain
+
+Error raised during GPFA calculation. Spike_trains might be unavailable. Skipping ./data/Sub_06/Session_03/NT/ECL_match_all.npy.:
+
+The input must be a list of SpikeTrain
+Initializing parameters using factor analysis...
+
+Fitting GPFA model...
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev/data/Sub_07/Session_02/NT/AHR_match_all.npy
+[0m
+Initializing parameters using factor analysis...
+
+Fitting GPFA model...
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev/data/Sub_07/Session_02/NT/AL_match_all.npy
+[0m
+Initializing parameters using factor analysis...
+
+Fitting GPFA model...
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev/data/Sub_07/Session_02/NT/AR_match_all.npy
+[0m
+
+Error raised during GPFA calculation. Spike_trains might be unavailable. Skipping ./data/Sub_07/Session_02/NT/AR_match_all.npy.:
+
+The input must be a list of SpikeTrain
+Initializing parameters using factor analysis...
+
+Fitting GPFA model...
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev/data/Sub_07/Session_02/NT/ECR_match_all.npy
+[0m
+Initializing parameters using factor analysis...
+
+Fitting GPFA model...
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev/data/Sub_07/Session_02/NT/PHL_match_all.npy
+[0m
+Initializing parameters using factor analysis...
+
+Fitting GPFA model...
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev/data/Sub_07/Session_02/NT/PHR_match_all.npy
+[0m
+Initializing parameters using factor analysis...
+
+Fitting GPFA model...
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev/data/Sub_07/Session_03/NT/AHL_match_all.npy
+[0m
+Initializing parameters using factor analysis...
+
+Fitting GPFA model...
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev/data/Sub_07/Session_03/NT/AHR_match_all.npy
+[0m
+Initializing parameters using factor analysis...
+
+Fitting GPFA model...
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev/data/Sub_07/Session_03/NT/AL_match_all.npy
+[0m
+Initializing parameters using factor analysis...
+
+Fitting GPFA model...
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev/data/Sub_07/Session_03/NT/AR_match_all.npy
+[0m
+
+Error raised during GPFA calculation. Spike_trains might be unavailable. Skipping ./data/Sub_07/Session_03/NT/AR_match_all.npy.:
+
+The input must be a list of SpikeTrain
+Initializing parameters using factor analysis...
+
+Fitting GPFA model...
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev/data/Sub_07/Session_03/NT/ECR_match_all.npy
+[0m
+Initializing parameters using factor analysis...
+
+Fitting GPFA model...
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev/data/Sub_07/Session_03/NT/PHL_match_all.npy
+[0m
+
+Error raised during GPFA calculation. Spike_trains might be unavailable. Skipping ./data/Sub_07/Session_03/NT/PHL_match_all.npy.:
+
+The input must be a list of SpikeTrain
+
+Error raised during GPFA calculation. Spike_trains might be unavailable. Skipping ./data/Sub_07/Session_03/NT/PHL_match_all.npy.:
+
+The input must be a list of SpikeTrain
+
+Error raised during GPFA calculation. Spike_trains might be unavailable. Skipping ./data/Sub_07/Session_03/NT/PHL_match_all.npy.:
+
+The input must be a list of SpikeTrain
+Initializing parameters using factor analysis...
+
+Fitting GPFA model...
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev/data/Sub_07/Session_04/NT/AL_match_all.npy
+[0m
+Initializing parameters using factor analysis...
+
+Fitting GPFA model...
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev/data/Sub_07/Session_04/NT/AR_match_all.npy
+[0m
+
+Error raised during GPFA calculation. Spike_trains might be unavailable. Skipping ./data/Sub_07/Session_04/NT/AR_match_all.npy.:
+
+The input must be a list of SpikeTrain
+Initializing parameters using factor analysis...
+
+Fitting GPFA model...
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev/data/Sub_07/Session_04/NT/ECR_match_all.npy
+[0m
+Initializing parameters using factor analysis...
+
+Fitting GPFA model...
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev/data/Sub_07/Session_04/NT/PHL_match_all.npy
+[0m
+
+Error raised during GPFA calculation. Spike_trains might be unavailable. Skipping ./data/Sub_07/Session_04/NT/PHL_match_all.npy.:
+
+The input must be a list of SpikeTrain
+Initializing parameters using factor analysis...
+
+Fitting GPFA model...
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev/data/Sub_08/Session_01/NT/AHL_match_all.npy
+[0m
+
+Error raised during GPFA calculation. Spike_trains might be unavailable. Skipping ./data/Sub_08/Session_01/NT/AHL_match_all.npy.:
+
+The input must be a list of SpikeTrain
+Initializing parameters using factor analysis...
+
+Fitting GPFA model...
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev/data/Sub_08/Session_01/NT/AL_match_all.npy
+[0m
+Initializing parameters using factor analysis...
+
+Fitting GPFA model...
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev/data/Sub_08/Session_01/NT/AR_match_all.npy
+[0m
+
+Error raised during GPFA calculation. Spike_trains might be unavailable. Skipping ./data/Sub_08/Session_01/NT/AR_match_all.npy.:
+
+The input must be a list of SpikeTrain
+Initializing parameters using factor analysis...
+
+Fitting GPFA model...
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev/data/Sub_08/Session_01/NT/ECR_match_all.npy
+[0m
+Initializing parameters using factor analysis...
+
+Error raised during GPFA calculation. Spike_trains might be unavailable. Skipping ./data/Sub_08/Session_01/NT/ECR_match_all.npy.:
+
+Input must be 1- or 2-d.
+
+Error raised during GPFA calculation. Spike_trains might be unavailable. Skipping ./data/Sub_08/Session_01/NT/ECR_match_all.npy.:
+
+The input must be a list of SpikeTrain
+Initializing parameters using factor analysis...
+
+Fitting GPFA model...
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev/data/Sub_08/Session_02/NT/AHL_match_all.npy
+[0m
+
+Error raised during GPFA calculation. Spike_trains might be unavailable. Skipping ./data/Sub_08/Session_02/NT/AHL_match_all.npy.:
+
+The input must be a list of SpikeTrain
+Initializing parameters using factor analysis...
+
+Fitting GPFA model...
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev/data/Sub_08/Session_02/NT/AL_match_all.npy
+[0m
+Initializing parameters using factor analysis...
+
+Fitting GPFA model...
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev/data/Sub_08/Session_02/NT/AR_match_all.npy
+[0m
+
+Error raised during GPFA calculation. Spike_trains might be unavailable. Skipping ./data/Sub_08/Session_02/NT/AR_match_all.npy.:
+
+The input must be a list of SpikeTrain
+Initializing parameters using factor analysis...
+
+Fitting GPFA model...
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev/data/Sub_08/Session_02/NT/ECR_match_all.npy
+[0m
+
+Error raised during GPFA calculation. Spike_trains might be unavailable. Skipping ./data/Sub_08/Session_02/NT/ECR_match_all.npy.:
+
+The input must be a list of SpikeTrain
+
+Error raised during GPFA calculation. Spike_trains might be unavailable. Skipping ./data/Sub_08/Session_02/NT/ECR_match_all.npy.:
+
+The input must be a list of SpikeTrain
+Initializing parameters using factor analysis...
+
+Fitting GPFA model...
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev/data/Sub_08/Session_03/NT/AHL_match_all.npy
+[0m
+
+Error raised during GPFA calculation. Spike_trains might be unavailable. Skipping ./data/Sub_08/Session_03/NT/AHL_match_all.npy.:
+
+The input must be a list of SpikeTrain
+Initializing parameters using factor analysis...
+
+Fitting GPFA model...
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev/data/Sub_08/Session_03/NT/AL_match_all.npy
+[0m
+Initializing parameters using factor analysis...
+
+Fitting GPFA model...
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev/data/Sub_08/Session_03/NT/AR_match_all.npy
+[0m
+
+Error raised during GPFA calculation. Spike_trains might be unavailable. Skipping ./data/Sub_08/Session_03/NT/AR_match_all.npy.:
+
+The input must be a list of SpikeTrain
+Initializing parameters using factor analysis...
+
+Fitting GPFA model...
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev/data/Sub_08/Session_03/NT/ECR_match_all.npy
+[0m
+Initializing parameters using factor analysis...
+
+Error raised during GPFA calculation. Spike_trains might be unavailable. Skipping ./data/Sub_08/Session_03/NT/ECR_match_all.npy.:
+
+Input must be 1- or 2-d.
+
+Error raised during GPFA calculation. Spike_trains might be unavailable. Skipping ./data/Sub_08/Session_03/NT/ECR_match_all.npy.:
+
+The input must be a list of SpikeTrain
+Initializing parameters using factor analysis...
+
+Fitting GPFA model...
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev/data/Sub_08/Session_04/NT/AHL_match_all.npy
+[0m
+
+Error raised during GPFA calculation. Spike_trains might be unavailable. Skipping ./data/Sub_08/Session_04/NT/AHL_match_all.npy.:
+
+The input must be a list of SpikeTrain
+Initializing parameters using factor analysis...
+
+Fitting GPFA model...
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev/data/Sub_08/Session_04/NT/AL_match_all.npy
+[0m
+Initializing parameters using factor analysis...
+
+Fitting GPFA model...
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev/data/Sub_08/Session_04/NT/AR_match_all.npy
+[0m
+
+Error raised during GPFA calculation. Spike_trains might be unavailable. Skipping ./data/Sub_08/Session_04/NT/AR_match_all.npy.:
+
+The input must be a list of SpikeTrain
+Initializing parameters using factor analysis...
+
+Fitting GPFA model...
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev/data/Sub_08/Session_04/NT/ECR_match_all.npy
+[0m
+Initializing parameters using factor analysis...
+
+Fitting GPFA model...
+
+Error raised during GPFA calculation. Spike_trains might be unavailable. Skipping ./data/Sub_08/Session_04/NT/ECR_match_all.npy.:
+
+index 2 is out of bounds for axis 2 with size 2
+
+Error raised during GPFA calculation. Spike_trains might be unavailable. Skipping ./data/Sub_08/Session_04/NT/ECR_match_all.npy.:
+
+The input must be a list of SpikeTrain
+Initializing parameters using factor analysis...
+
+Fitting GPFA model...
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev/data/Sub_08/Session_05/NT/AHL_match_all.npy
+[0m
+
+Error raised during GPFA calculation. Spike_trains might be unavailable. Skipping ./data/Sub_08/Session_05/NT/AHL_match_all.npy.:
+
+The input must be a list of SpikeTrain
+Initializing parameters using factor analysis...
+
+Fitting GPFA model...
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev/data/Sub_08/Session_05/NT/AL_match_all.npy
+[0m
+Initializing parameters using factor analysis...
+
+Fitting GPFA model...
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev/data/Sub_08/Session_05/NT/AR_match_all.npy
+[0m
+Initializing parameters using factor analysis...
+
+Fitting GPFA model...
+
+Error raised during GPFA calculation. Spike_trains might be unavailable. Skipping ./data/Sub_08/Session_05/NT/AR_match_all.npy.:
+
+index 2 is out of bounds for axis 2 with size 2
+Initializing parameters using factor analysis...
+
+Fitting GPFA model...
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev/data/Sub_08/Session_05/NT/ECR_match_all.npy
+[0m
+Initializing parameters using factor analysis...
+
+Error raised during GPFA calculation. Spike_trains might be unavailable. Skipping ./data/Sub_08/Session_05/NT/ECR_match_all.npy.:
+
+Input must be 1- or 2-d.
+
+Error raised during GPFA calculation. Spike_trains might be unavailable. Skipping ./data/Sub_08/Session_05/NT/ECR_match_all.npy.:
+
+The input must be a list of SpikeTrain
+
+Error raised during GPFA calculation. Spike_trains might be unavailable. Skipping ./data/Sub_08/Session_05/NT/ECR_match_all.npy.:
+
+The input must be a list of SpikeTrain
+Initializing parameters using factor analysis...
+
+Fitting GPFA model...
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev/data/Sub_09/Session_01/NT/AHR_match_all.npy
+[0m
+
+Error raised during GPFA calculation. Spike_trains might be unavailable. Skipping ./data/Sub_09/Session_01/NT/AHR_match_all.npy.:
+
+The input must be a list of SpikeTrain
+Initializing parameters using factor analysis...
+
+Fitting GPFA model...
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev/data/Sub_09/Session_01/NT/AR_match_all.npy
+[0m
+Initializing parameters using factor analysis...
+
+Fitting GPFA model...
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev/data/Sub_09/Session_01/NT/ECL_match_all.npy
+[0m
+Initializing parameters using factor analysis...
+
+Fitting GPFA model...
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev/data/Sub_09/Session_01/NT/ECR_match_all.npy
+[0m
+Initializing parameters using factor analysis...
+
+Fitting GPFA model...
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev/data/Sub_09/Session_01/NT/PHL_match_all.npy
+[0m
+
+Error raised during GPFA calculation. Spike_trains might be unavailable. Skipping ./data/Sub_09/Session_01/NT/PHL_match_all.npy.:
+
+The input must be a list of SpikeTrain
+
+Error raised during GPFA calculation. Spike_trains might be unavailable. Skipping ./data/Sub_09/Session_01/NT/PHL_match_all.npy.:
+
+The input must be a list of SpikeTrain
+Initializing parameters using factor analysis...
+
+Fitting GPFA model...
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev/data/Sub_09/Session_02/NT/AHR_match_all.npy
+[0m
+
+Error raised during GPFA calculation. Spike_trains might be unavailable. Skipping ./data/Sub_09/Session_02/NT/AHR_match_all.npy.:
+
+The input must be a list of SpikeTrain
+Initializing parameters using factor analysis...
+
+Fitting GPFA model...
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev/data/Sub_09/Session_02/NT/AR_match_all.npy
+[0m
+Initializing parameters using factor analysis...
+
+Fitting GPFA model...
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev/data/Sub_09/Session_02/NT/ECL_match_all.npy
+[0m
+Initializing parameters using factor analysis...
+
+Fitting GPFA model...
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev/data/Sub_09/Session_02/NT/ECR_match_all.npy
+[0m
+Initializing parameters using factor analysis...
+
+Fitting GPFA model...
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev/data/Sub_09/Session_02/NT/PHL_match_all.npy
+[0m
+
+Error raised during GPFA calculation. Spike_trains might be unavailable. Skipping ./data/Sub_09/Session_02/NT/PHL_match_all.npy.:
+
+The input must be a list of SpikeTrain
+
+        Please set environmental variables to use this function:
+
+
+        $ export MNGS_SENDER_GMAIL="mngs.notification@gmail.com"
+        $ export MNGS_SENDER_GMAIL_PASSWORD="YOUR_APP_PASSWORD"
+        $ export MNGS_RECIPIENT_GMAIL="YOUR_GMAIL_ADDRESS"
+        
+Email was not sent: 'NoneType' object has no attribute 'encode'
+[93m
+----------------------------------------
+Congratulations! The script completed.
+
+/home/ywatanabe/proj/siEEG_ripple_dev/scripts/calc_NT_with_GPFA/2024Y-05M-28D-16h19m51s_illY/
+----------------------------------------
+[0m

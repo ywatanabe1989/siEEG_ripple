@@ -1,0 +1,16 @@
+PHASES:
+  ["Fixation", "Encoding", "Maintenance", "Retrieval"]  
+
+PHASES_COLORS:
+    ["black", "blue", "green", "red"]
+    
+PHASES_DUR_SEC:
+  [1, 2, 3, 2]
+
+PHASES_BIN_INDI:
+  {
+  "Fixation": [0, 20],
+  "Encoding": [20, 60],
+  "Maintenance": [60, 120],
+  "Retrieval": [120, 160],  
+  }

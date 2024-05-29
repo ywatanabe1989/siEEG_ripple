@@ -1,11 +1,37 @@
-# RippleWM
+# siEEGRipple (scalpe and intracranial EEG data and Ripples)
 
-# Installation
+# [Installation](./docs/installation.md)
+
+# Converts the downloaded .h5 files into csv and pkl files
+```bash
+./scripts/utils/load/nix_2_csv_and_pkl.py
 ```
-cd /home/ywatanabe/proj/build
-sbuildw ripple_wm_2024_0526.def
-sbuildw_edit ~/proj/build/ripple_wm_2024_0526
+
+# Detects ripples
+```bash
+./scripts/detect_ripples.py
 ```
+
+# Calculates neural trajectory (NT) with GPFA
+```bash
+find data -name '*NT*' | xargs rm -rf
+./scripts/calc_NT_with_GPFA.py
+./scripts/znorm_NT.py
+```
+
+# Wavelet transformation
+
+``` bash
+./scripts/calc_wavelet.py
+```
+
+
+
+
+
+
+
+
 
 ./EDA/check_ripples/
 ./EDA/check_ripples/unit_firing_patterns/

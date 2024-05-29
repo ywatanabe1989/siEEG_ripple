@@ -1,0 +1,1830 @@
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_01/Session_01/meta.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_01/Session_01/trials_info.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_01/Session_01/iEEG/AHL.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_01/Session_01/EEG.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_01/Session_01/spike_times/AHL.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_01/Session_02/meta.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_01/Session_02/trials_info.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_01/Session_02/iEEG/AHL.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_01/Session_02/EEG.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_01/Session_02/spike_times/AHL.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_01/Session_03/meta.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_01/Session_03/trials_info.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_01/Session_03/iEEG/AHL.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_01/Session_03/EEG.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_01/Session_03/spike_times/AHL.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_01/Session_04/meta.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_01/Session_04/trials_info.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_01/Session_04/iEEG/AHL.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_01/Session_04/EEG.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_01/Session_04/spike_times/AHL.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_02/Session_01/meta.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_02/Session_01/trials_info.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_02/Session_01/iEEG/AHL.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_02/Session_01/EEG.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_02/Session_01/spike_times/AHL.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_02/Session_02/meta.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_02/Session_02/trials_info.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_02/Session_02/iEEG/AHL.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_02/Session_02/EEG.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_02/Session_02/spike_times/AHL.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_02/Session_03/meta.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_02/Session_03/trials_info.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_02/Session_03/iEEG/AHL.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_02/Session_03/EEG.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_02/Session_03/spike_times/AHL.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_02/Session_04/meta.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_02/Session_04/trials_info.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_02/Session_04/iEEG/AHL.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_02/Session_04/EEG.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_02/Session_04/spike_times/AHL.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_02/Session_05/meta.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_02/Session_05/trials_info.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_02/Session_05/iEEG/AHL.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_02/Session_05/EEG.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_02/Session_05/spike_times/AHL.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_02/Session_06/meta.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_02/Session_06/trials_info.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_02/Session_06/iEEG/AHL.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_02/Session_06/EEG.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_02/Session_06/spike_times/AHL.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_02/Session_07/meta.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_02/Session_07/trials_info.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_02/Session_07/iEEG/AHL.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_02/Session_07/EEG.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_02/Session_07/spike_times/AHL.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_03/Session_01/meta.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_03/Session_01/trials_info.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_03/Session_01/iEEG/AHL.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_03/Session_01/EEG.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_03/Session_01/spike_times/AHL.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_03/Session_02/meta.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_03/Session_02/trials_info.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_03/Session_02/iEEG/AHL.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_03/Session_02/EEG.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_03/Session_02/spike_times/AHL.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_03/Session_03/meta.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_03/Session_03/trials_info.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_03/Session_03/iEEG/AHL.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_03/Session_03/EEG.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_03/Session_03/spike_times/AHL.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_04/Session_01/meta.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_04/Session_01/trials_info.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_04/Session_01/iEEG/AHL.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_04/Session_01/EEG.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_04/Session_01/spike_times/AHL.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_04/Session_02/meta.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_04/Session_02/trials_info.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_04/Session_02/iEEG/AHL.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_04/Session_02/EEG.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_04/Session_02/spike_times/AHL.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_05/Session_01/meta.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_05/Session_01/trials_info.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_05/Session_01/iEEG/AHL.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_05/Session_01/EEG.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_05/Session_01/spike_times/AHL.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_06/Session_01/meta.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_06/Session_01/trials_info.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_06/Session_01/iEEG/AHL.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_06/Session_01/EEG.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_06/Session_01/spike_times/AHL.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_05/Session_02/meta.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_05/Session_02/trials_info.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_05/Session_02/iEEG/AHL.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_05/Session_02/EEG.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_05/Session_02/spike_times/AHL.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_05/Session_03/meta.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_05/Session_03/trials_info.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_05/Session_03/iEEG/AHL.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_05/Session_03/EEG.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_05/Session_03/spike_times/AHL.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_06/Session_02/meta.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_06/Session_02/trials_info.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_06/Session_02/iEEG/AHL.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_06/Session_02/EEG.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_06/Session_02/spike_times/AHL.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_06/Session_03/meta.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_06/Session_03/trials_info.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_06/Session_03/iEEG/AHL.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_06/Session_03/EEG.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_06/Session_03/spike_times/AHL.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_06/Session_04/meta.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_06/Session_04/trials_info.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_06/Session_04/iEEG/AHL.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_06/Session_04/EEG.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_06/Session_04/spike_times/AHL.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_06/Session_05/meta.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_06/Session_05/trials_info.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_06/Session_05/iEEG/AHL.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_06/Session_05/EEG.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_06/Session_05/spike_times/AHL.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_06/Session_06/meta.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_06/Session_06/trials_info.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_06/Session_06/iEEG/AHL.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_06/Session_06/EEG.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_06/Session_06/spike_times/AHL.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_06/Session_07/meta.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_06/Session_07/trials_info.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_06/Session_07/iEEG/AHL.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_06/Session_07/EEG.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_06/Session_07/spike_times/AHL.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_07/Session_01/meta.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_07/Session_01/trials_info.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_07/Session_01/iEEG/AHL.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_07/Session_01/EEG.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_07/Session_01/spike_times/AHL.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_07/Session_02/meta.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_07/Session_02/trials_info.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_07/Session_02/iEEG/AHL.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_07/Session_02/EEG.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_07/Session_02/spike_times/AHL.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_07/Session_03/meta.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_07/Session_03/trials_info.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_07/Session_03/iEEG/AHL.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_07/Session_03/EEG.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_07/Session_03/spike_times/AHL.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_07/Session_04/meta.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_07/Session_04/trials_info.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_07/Session_04/iEEG/AHL.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_07/Session_04/EEG.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_07/Session_04/spike_times/AHL.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_08/Session_01/meta.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_08/Session_01/trials_info.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_08/Session_01/iEEG/AHL.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_08/Session_01/EEG.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_08/Session_01/spike_times/AHL.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_08/Session_02/meta.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_08/Session_02/trials_info.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_08/Session_02/iEEG/AHL.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_08/Session_02/EEG.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_08/Session_02/spike_times/AHL.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_08/Session_03/meta.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_08/Session_03/trials_info.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_08/Session_03/iEEG/AHL.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_08/Session_03/EEG.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_08/Session_03/spike_times/AHL.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_08/Session_04/meta.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_08/Session_04/trials_info.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_08/Session_04/iEEG/AHL.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_08/Session_04/EEG.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_08/Session_04/spike_times/AHL.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_08/Session_05/meta.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_08/Session_05/trials_info.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_08/Session_05/iEEG/AHL.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_08/Session_05/EEG.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_08/Session_05/spike_times/AHL.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_09/Session_01/meta.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_09/Session_01/trials_info.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_09/Session_01/iEEG/AHL.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_09/Session_01/EEG.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_09/Session_01/spike_times/AHL.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_09/Session_02/meta.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_09/Session_02/trials_info.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_09/Session_02/iEEG/AHL.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_09/Session_02/EEG.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_09/Session_02/spike_times/AHL.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_01/Session_01/meta.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_01/Session_01/trials_info.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_01/Session_01/iEEG/AHR.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_01/Session_01/EEG.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_01/Session_01/spike_times/AHR.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_01/Session_02/meta.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_01/Session_02/trials_info.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_01/Session_02/iEEG/AHR.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_01/Session_02/EEG.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_01/Session_02/spike_times/AHR.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_01/Session_03/meta.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_01/Session_03/trials_info.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_01/Session_03/iEEG/AHR.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_01/Session_03/EEG.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_01/Session_03/spike_times/AHR.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_01/Session_04/meta.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_01/Session_04/trials_info.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_01/Session_04/iEEG/AHR.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_01/Session_04/EEG.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_01/Session_04/spike_times/AHR.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_02/Session_01/meta.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_02/Session_01/trials_info.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_02/Session_01/iEEG/AHR.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_02/Session_01/EEG.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_02/Session_01/spike_times/AHR.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_02/Session_02/meta.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_02/Session_02/trials_info.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_02/Session_02/iEEG/AHR.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_02/Session_02/EEG.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_02/Session_02/spike_times/AHR.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_02/Session_03/meta.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_02/Session_03/trials_info.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_02/Session_03/iEEG/AHR.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_02/Session_03/EEG.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_02/Session_03/spike_times/AHR.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_02/Session_04/meta.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_02/Session_04/trials_info.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_02/Session_04/iEEG/AHR.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_02/Session_04/EEG.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_02/Session_04/spike_times/AHR.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_02/Session_05/meta.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_02/Session_05/trials_info.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_02/Session_05/iEEG/AHR.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_02/Session_05/EEG.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_02/Session_05/spike_times/AHR.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_02/Session_06/meta.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_02/Session_06/trials_info.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_02/Session_06/iEEG/AHR.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_02/Session_06/EEG.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_02/Session_06/spike_times/AHR.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_02/Session_07/meta.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_02/Session_07/trials_info.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_02/Session_07/iEEG/AHR.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_02/Session_07/EEG.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_02/Session_07/spike_times/AHR.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_03/Session_01/meta.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_03/Session_01/trials_info.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_03/Session_01/iEEG/AHR.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_03/Session_01/EEG.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_03/Session_01/spike_times/AHR.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_03/Session_02/meta.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_03/Session_02/trials_info.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_03/Session_02/iEEG/AHR.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_03/Session_02/EEG.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_03/Session_02/spike_times/AHR.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_03/Session_03/meta.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_03/Session_03/trials_info.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_03/Session_03/iEEG/AHR.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_03/Session_03/EEG.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_03/Session_03/spike_times/AHR.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_04/Session_01/meta.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_04/Session_01/trials_info.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_04/Session_01/iEEG/AHR.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_04/Session_01/EEG.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_04/Session_01/spike_times/AHR.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_04/Session_02/meta.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_04/Session_02/trials_info.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_04/Session_02/iEEG/AHR.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_04/Session_02/EEG.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_04/Session_02/spike_times/AHR.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_05/Session_01/meta.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_05/Session_01/trials_info.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_05/Session_01/iEEG/AHR.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_05/Session_01/EEG.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_05/Session_01/spike_times/AHR.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_06/Session_01/meta.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_06/Session_01/trials_info.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_06/Session_01/iEEG/AHR.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_06/Session_01/EEG.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_06/Session_01/spike_times/AHR.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_05/Session_02/meta.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_05/Session_02/trials_info.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_05/Session_02/iEEG/AHR.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_05/Session_02/EEG.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_05/Session_02/spike_times/AHR.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_05/Session_03/meta.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_05/Session_03/trials_info.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_05/Session_03/iEEG/AHR.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_05/Session_03/EEG.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_05/Session_03/spike_times/AHR.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_06/Session_02/meta.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_06/Session_02/trials_info.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_06/Session_02/iEEG/AHR.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_06/Session_02/EEG.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_06/Session_02/spike_times/AHR.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_06/Session_03/meta.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_06/Session_03/trials_info.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_06/Session_03/iEEG/AHR.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_06/Session_03/EEG.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_06/Session_03/spike_times/AHR.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_06/Session_04/meta.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_06/Session_04/trials_info.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_06/Session_04/iEEG/AHR.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_06/Session_04/EEG.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_06/Session_04/spike_times/AHR.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_06/Session_05/meta.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_06/Session_05/trials_info.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_06/Session_05/iEEG/AHR.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_06/Session_05/EEG.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_06/Session_05/spike_times/AHR.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_06/Session_06/meta.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_06/Session_06/trials_info.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_06/Session_06/iEEG/AHR.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_06/Session_06/EEG.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_06/Session_06/spike_times/AHR.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_06/Session_07/meta.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_06/Session_07/trials_info.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_06/Session_07/iEEG/AHR.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_06/Session_07/EEG.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_06/Session_07/spike_times/AHR.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_07/Session_01/meta.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_07/Session_01/trials_info.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_07/Session_01/iEEG/AHR.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_07/Session_01/EEG.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_07/Session_01/spike_times/AHR.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_07/Session_02/meta.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_07/Session_02/trials_info.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_07/Session_02/iEEG/AHR.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_07/Session_02/EEG.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_07/Session_02/spike_times/AHR.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_07/Session_03/meta.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_07/Session_03/trials_info.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_07/Session_03/iEEG/AHR.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_07/Session_03/EEG.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_07/Session_03/spike_times/AHR.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_07/Session_04/meta.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_07/Session_04/trials_info.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_07/Session_04/iEEG/AHR.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_07/Session_04/EEG.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_07/Session_04/spike_times/AHR.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_08/Session_01/meta.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_08/Session_01/trials_info.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_08/Session_01/iEEG/AHR.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_08/Session_01/EEG.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_08/Session_01/spike_times/AHR.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_08/Session_02/meta.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_08/Session_02/trials_info.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_08/Session_02/iEEG/AHR.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_08/Session_02/EEG.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_08/Session_02/spike_times/AHR.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_08/Session_03/meta.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_08/Session_03/trials_info.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_08/Session_03/iEEG/AHR.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_08/Session_03/EEG.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_08/Session_03/spike_times/AHR.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_08/Session_04/meta.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_08/Session_04/trials_info.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_08/Session_04/iEEG/AHR.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_08/Session_04/EEG.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_08/Session_04/spike_times/AHR.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_08/Session_05/meta.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_08/Session_05/trials_info.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_08/Session_05/iEEG/AHR.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_08/Session_05/EEG.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_08/Session_05/spike_times/AHR.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_09/Session_01/meta.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_09/Session_01/trials_info.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_09/Session_01/iEEG/AHR.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_09/Session_01/EEG.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_09/Session_01/spike_times/AHR.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_09/Session_02/meta.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_09/Session_02/trials_info.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_09/Session_02/iEEG/AHR.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_09/Session_02/EEG.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_09/Session_02/spike_times/AHR.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_01/Session_01/meta.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_01/Session_01/trials_info.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_01/Session_01/iEEG/PHL.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_01/Session_01/EEG.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_01/Session_01/spike_times/PHL.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_01/Session_02/meta.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_01/Session_02/trials_info.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_01/Session_02/iEEG/PHL.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_01/Session_02/EEG.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_01/Session_02/spike_times/PHL.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_01/Session_03/meta.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_01/Session_03/trials_info.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_01/Session_03/iEEG/PHL.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_01/Session_03/EEG.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_01/Session_03/spike_times/PHL.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_01/Session_04/meta.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_01/Session_04/trials_info.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_01/Session_04/iEEG/PHL.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_01/Session_04/EEG.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_01/Session_04/spike_times/PHL.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_02/Session_01/meta.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_02/Session_01/trials_info.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_02/Session_01/iEEG/PHL.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_02/Session_01/EEG.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_02/Session_01/spike_times/PHL.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_02/Session_02/meta.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_02/Session_02/trials_info.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_02/Session_02/iEEG/PHL.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_02/Session_02/EEG.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_02/Session_02/spike_times/PHL.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_02/Session_03/meta.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_02/Session_03/trials_info.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_02/Session_03/iEEG/PHL.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_02/Session_03/EEG.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_02/Session_03/spike_times/PHL.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_02/Session_04/meta.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_02/Session_04/trials_info.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_02/Session_04/iEEG/PHL.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_02/Session_04/EEG.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_02/Session_04/spike_times/PHL.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_02/Session_05/meta.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_02/Session_05/trials_info.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_02/Session_05/iEEG/PHL.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_02/Session_05/EEG.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_02/Session_05/spike_times/PHL.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_02/Session_06/meta.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_02/Session_06/trials_info.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_02/Session_06/iEEG/PHL.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_02/Session_06/EEG.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_02/Session_06/spike_times/PHL.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_02/Session_07/meta.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_02/Session_07/trials_info.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_02/Session_07/iEEG/PHL.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_02/Session_07/EEG.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_02/Session_07/spike_times/PHL.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_03/Session_01/meta.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_03/Session_01/trials_info.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_03/Session_01/iEEG/PHL.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_03/Session_01/EEG.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_03/Session_01/spike_times/PHL.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_03/Session_02/meta.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_03/Session_02/trials_info.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_03/Session_02/iEEG/PHL.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_03/Session_02/EEG.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_03/Session_02/spike_times/PHL.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_03/Session_03/meta.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_03/Session_03/trials_info.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_03/Session_03/iEEG/PHL.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_03/Session_03/EEG.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_03/Session_03/spike_times/PHL.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_04/Session_01/meta.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_04/Session_01/trials_info.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_04/Session_01/iEEG/PHL.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_04/Session_01/EEG.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_04/Session_01/spike_times/PHL.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_04/Session_02/meta.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_04/Session_02/trials_info.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_04/Session_02/iEEG/PHL.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_04/Session_02/EEG.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_04/Session_02/spike_times/PHL.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_05/Session_01/meta.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_05/Session_01/trials_info.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_05/Session_01/iEEG/PHL.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_05/Session_01/EEG.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_05/Session_01/spike_times/PHL.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_06/Session_01/meta.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_06/Session_01/trials_info.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_06/Session_01/iEEG/PHL.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_06/Session_01/EEG.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_06/Session_01/spike_times/PHL.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_05/Session_02/meta.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_05/Session_02/trials_info.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_05/Session_02/iEEG/PHL.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_05/Session_02/EEG.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_05/Session_02/spike_times/PHL.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_05/Session_03/meta.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_05/Session_03/trials_info.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_05/Session_03/iEEG/PHL.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_05/Session_03/EEG.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_05/Session_03/spike_times/PHL.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_06/Session_02/meta.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_06/Session_02/trials_info.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_06/Session_02/iEEG/PHL.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_06/Session_02/EEG.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_06/Session_02/spike_times/PHL.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_06/Session_03/meta.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_06/Session_03/trials_info.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_06/Session_03/iEEG/PHL.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_06/Session_03/EEG.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_06/Session_03/spike_times/PHL.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_06/Session_04/meta.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_06/Session_04/trials_info.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_06/Session_04/iEEG/PHL.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_06/Session_04/EEG.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_06/Session_04/spike_times/PHL.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_06/Session_05/meta.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_06/Session_05/trials_info.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_06/Session_05/iEEG/PHL.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_06/Session_05/EEG.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_06/Session_05/spike_times/PHL.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_06/Session_06/meta.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_06/Session_06/trials_info.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_06/Session_06/iEEG/PHL.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_06/Session_06/EEG.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_06/Session_06/spike_times/PHL.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_06/Session_07/meta.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_06/Session_07/trials_info.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_06/Session_07/iEEG/PHL.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_06/Session_07/EEG.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_06/Session_07/spike_times/PHL.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_07/Session_01/meta.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_07/Session_01/trials_info.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_07/Session_01/iEEG/PHL.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_07/Session_01/EEG.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_07/Session_01/spike_times/PHL.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_07/Session_02/meta.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_07/Session_02/trials_info.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_07/Session_02/iEEG/PHL.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_07/Session_02/EEG.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_07/Session_02/spike_times/PHL.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_07/Session_03/meta.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_07/Session_03/trials_info.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_07/Session_03/iEEG/PHL.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_07/Session_03/EEG.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_07/Session_03/spike_times/PHL.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_07/Session_04/meta.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_07/Session_04/trials_info.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_07/Session_04/iEEG/PHL.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_07/Session_04/EEG.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_07/Session_04/spike_times/PHL.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_08/Session_01/meta.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_08/Session_01/trials_info.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_08/Session_01/iEEG/PHL.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_08/Session_01/EEG.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_08/Session_01/spike_times/PHL.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_08/Session_02/meta.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_08/Session_02/trials_info.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_08/Session_02/iEEG/PHL.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_08/Session_02/EEG.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_08/Session_02/spike_times/PHL.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_08/Session_03/meta.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_08/Session_03/trials_info.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_08/Session_03/iEEG/PHL.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_08/Session_03/EEG.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_08/Session_03/spike_times/PHL.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_08/Session_04/meta.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_08/Session_04/trials_info.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_08/Session_04/iEEG/PHL.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_08/Session_04/EEG.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_08/Session_04/spike_times/PHL.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_08/Session_05/meta.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_08/Session_05/trials_info.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_08/Session_05/iEEG/PHL.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_08/Session_05/EEG.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_08/Session_05/spike_times/PHL.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_09/Session_01/meta.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_09/Session_01/trials_info.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_09/Session_01/iEEG/PHL.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_09/Session_01/EEG.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_09/Session_01/spike_times/PHL.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_09/Session_02/meta.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_09/Session_02/trials_info.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_09/Session_02/iEEG/PHL.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_09/Session_02/EEG.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_09/Session_02/spike_times/PHL.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_01/Session_01/meta.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_01/Session_01/trials_info.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_01/Session_01/iEEG/PHR.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_01/Session_01/EEG.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_01/Session_01/spike_times/PHR.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_01/Session_02/meta.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_01/Session_02/trials_info.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_01/Session_02/iEEG/PHR.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_01/Session_02/EEG.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_01/Session_02/spike_times/PHR.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_01/Session_03/meta.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_01/Session_03/trials_info.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_01/Session_03/iEEG/PHR.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_01/Session_03/EEG.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_01/Session_03/spike_times/PHR.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_01/Session_04/meta.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_01/Session_04/trials_info.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_01/Session_04/iEEG/PHR.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_01/Session_04/EEG.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_01/Session_04/spike_times/PHR.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_02/Session_01/meta.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_02/Session_01/trials_info.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_02/Session_01/iEEG/PHR.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_02/Session_01/EEG.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_02/Session_01/spike_times/PHR.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_02/Session_02/meta.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_02/Session_02/trials_info.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_02/Session_02/iEEG/PHR.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_02/Session_02/EEG.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_02/Session_02/spike_times/PHR.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_02/Session_03/meta.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_02/Session_03/trials_info.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_02/Session_03/iEEG/PHR.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_02/Session_03/EEG.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_02/Session_03/spike_times/PHR.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_02/Session_04/meta.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_02/Session_04/trials_info.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_02/Session_04/iEEG/PHR.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_02/Session_04/EEG.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_02/Session_04/spike_times/PHR.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_02/Session_05/meta.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_02/Session_05/trials_info.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_02/Session_05/iEEG/PHR.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_02/Session_05/EEG.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_02/Session_05/spike_times/PHR.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_02/Session_06/meta.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_02/Session_06/trials_info.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_02/Session_06/iEEG/PHR.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_02/Session_06/EEG.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_02/Session_06/spike_times/PHR.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_02/Session_07/meta.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_02/Session_07/trials_info.csv
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_02/Session_07/iEEG/PHR.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_02/Session_07/EEG.pkl
+[0m
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev./data/Sub_02/Session_07/spike_times/PHR.pkl
+[0m

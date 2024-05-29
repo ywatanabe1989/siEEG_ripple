@@ -1,0 +1,43 @@
+IS_DEBUG: false
+SUB_DIR: ./data/Sub_XX/
+SESSION_DIR: ./data/Sub_XX/Session_YY/
+RIPPLE_LOW_HZ: 80
+RIPPLE_HIGH_HZ: 140
+RIPPLE_SD: 2
+FS_iEEG: 2000
+iEEG_ROIS:
+    - AHL
+    - AHR
+    - PHL
+    - PHR
+    - ECL
+    - ECR
+    - AL
+    - AR
+PHASES:
+    - Fixation
+    - Encoding
+    - Maintenance
+    - Retrieval
+DURS_OF_PHASES:
+    - 1
+    - 2
+    - 3
+    - 2
+SESSION_THRES: 2
+SWR_BINS:
+    pre:
+        - -16
+        - -5
+    mid:
+        - -5
+        - 6
+    post:
+        - 6
+        - 17
+ID: 2024Y-05M-28D-10h26m57s_DV3F
+START_TIME: 2024-05-28 10:26:57.937130
+SDIR: 
+    /home/ywatanabe/proj/siEEG_ripple_dev/scripts/detect_ripples/RUNNING/2024Y-05M-28D-10h26m57s_DV3F/
+END_TIME: 2024-05-28 10:30:35.416406
+SPENT_TIME: 00:03:37

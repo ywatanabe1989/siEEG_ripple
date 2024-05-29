@@ -1,0 +1,715 @@
+/home/ywatanabe/proj/siEEG_ripple_dev/utils/load/nix_2_csv_and_pkl/data/
+├── Sub_01
+│   ├── Session_01
+│   │   ├── EEG.pkl
+│   │   ├── iEEG_AHL.pkl
+│   │   ├── iEEG_AHR.pkl
+│   │   ├── iEEG_AL.pkl
+│   │   ├── iEEG_AR.pkl
+│   │   ├── iEEG_ECL.pkl
+│   │   ├── iEEG_ECR.pkl
+│   │   ├── iEEG_PHL.pkl
+│   │   ├── iEEG_PHR.pkl
+│   │   ├── spike_times_AHL.pkl
+│   │   ├── spike_times_AHR.pkl
+│   │   ├── spike_times_AL.pkl
+│   │   ├── spike_times_AR.pkl
+│   │   ├── spike_times_ECL.pkl
+│   │   ├── spike_times_ECR.pkl
+│   │   ├── spike_times_PHL.pkl
+│   │   ├── spike_times_PHR.pkl
+│   │   └── trials_info.csv
+│   ├── Session_02
+│   │   ├── EEG.pkl
+│   │   ├── iEEG_AHL.pkl
+│   │   ├── iEEG_AHR.pkl
+│   │   ├── iEEG_AL.pkl
+│   │   ├── iEEG_AR.pkl
+│   │   ├── iEEG_ECL.pkl
+│   │   ├── iEEG_ECR.pkl
+│   │   ├── iEEG_PHL.pkl
+│   │   ├── iEEG_PHR.pkl
+│   │   ├── spike_times_AHL.pkl
+│   │   ├── spike_times_AHR.pkl
+│   │   ├── spike_times_AL.pkl
+│   │   ├── spike_times_AR.pkl
+│   │   ├── spike_times_ECL.pkl
+│   │   ├── spike_times_ECR.pkl
+│   │   ├── spike_times_PHL.pkl
+│   │   ├── spike_times_PHR.pkl
+│   │   └── trials_info.csv
+│   ├── Session_03
+│   │   ├── EEG.pkl
+│   │   ├── iEEG_AHL.pkl
+│   │   ├── iEEG_AHR.pkl
+│   │   ├── iEEG_AL.pkl
+│   │   ├── iEEG_AR.pkl
+│   │   ├── iEEG_ECL.pkl
+│   │   ├── iEEG_ECR.pkl
+│   │   ├── iEEG_PHL.pkl
+│   │   ├── iEEG_PHR.pkl
+│   │   ├── spike_times_AHL.pkl
+│   │   ├── spike_times_AHR.pkl
+│   │   ├── spike_times_AL.pkl
+│   │   ├── spike_times_AR.pkl
+│   │   ├── spike_times_ECL.pkl
+│   │   ├── spike_times_ECR.pkl
+│   │   ├── spike_times_PHL.pkl
+│   │   ├── spike_times_PHR.pkl
+│   │   └── trials_info.csv
+│   └── Session_04
+│       ├── EEG.pkl
+│       ├── iEEG_AHL.pkl
+│       ├── iEEG_AHR.pkl
+│       ├── iEEG_AL.pkl
+│       ├── iEEG_AR.pkl
+│       ├── iEEG_ECL.pkl
+│       ├── iEEG_ECR.pkl
+│       ├── iEEG_PHL.pkl
+│       ├── iEEG_PHR.pkl
+│       ├── spike_times_AHL.pkl
+│       ├── spike_times_AHR.pkl
+│       ├── spike_times_AL.pkl
+│       ├── spike_times_AR.pkl
+│       ├── spike_times_ECL.pkl
+│       ├── spike_times_ECR.pkl
+│       ├── spike_times_PHL.pkl
+│       ├── spike_times_PHR.pkl
+│       └── trials_info.csv
+├── Sub_02
+│   ├── Session_01
+│   │   ├── EEG.pkl
+│   │   ├── iEEG_AHL.pkl
+│   │   ├── iEEG_AHR.pkl
+│   │   ├── iEEG_AL.pkl
+│   │   ├── iEEG_AR.pkl
+│   │   ├── iEEG_ECL.pkl
+│   │   ├── iEEG_ECR.pkl
+│   │   ├── iEEG_PHL.pkl
+│   │   ├── iEEG_PHR.pkl
+│   │   ├── spike_times_AHL.pkl
+│   │   ├── spike_times_AHR.pkl
+│   │   ├── spike_times_AL.pkl
+│   │   ├── spike_times_AR.pkl
+│   │   ├── spike_times_ECL.pkl
+│   │   ├── spike_times_ECR.pkl
+│   │   ├── spike_times_PHL.pkl
+│   │   ├── spike_times_PHR.pkl
+│   │   └── trials_info.csv
+│   ├── Session_02
+│   │   ├── EEG.pkl
+│   │   ├── iEEG_AHL.pkl
+│   │   ├── iEEG_AHR.pkl
+│   │   ├── iEEG_AL.pkl
+│   │   ├── iEEG_AR.pkl
+│   │   ├── iEEG_ECL.pkl
+│   │   ├── iEEG_ECR.pkl
+│   │   ├── iEEG_PHL.pkl
+│   │   ├── iEEG_PHR.pkl
+│   │   ├── spike_times_AHL.pkl
+│   │   ├── spike_times_AHR.pkl
+│   │   ├── spike_times_AL.pkl
+│   │   ├── spike_times_AR.pkl
+│   │   ├── spike_times_ECL.pkl
+│   │   ├── spike_times_ECR.pkl
+│   │   ├── spike_times_PHL.pkl
+│   │   ├── spike_times_PHR.pkl
+│   │   └── trials_info.csv
+│   ├── Session_03
+│   │   ├── EEG.pkl
+│   │   ├── iEEG_AHL.pkl
+│   │   ├── iEEG_AHR.pkl
+│   │   ├── iEEG_AL.pkl
+│   │   ├── iEEG_AR.pkl
+│   │   ├── iEEG_ECL.pkl
+│   │   ├── iEEG_ECR.pkl
+│   │   ├── iEEG_PHL.pkl
+│   │   ├── iEEG_PHR.pkl
+│   │   ├── spike_times_AHL.pkl
+│   │   ├── spike_times_AHR.pkl
+│   │   ├── spike_times_AL.pkl
+│   │   ├── spike_times_AR.pkl
+│   │   ├── spike_times_ECL.pkl
+│   │   ├── spike_times_ECR.pkl
+│   │   ├── spike_times_PHL.pkl
+│   │   ├── spike_times_PHR.pkl
+│   │   └── trials_info.csv
+│   ├── Session_04
+│   │   ├── EEG.pkl
+│   │   ├── iEEG_AHL.pkl
+│   │   ├── iEEG_AHR.pkl
+│   │   ├── iEEG_AL.pkl
+│   │   ├── iEEG_AR.pkl
+│   │   ├── iEEG_ECL.pkl
+│   │   ├── iEEG_ECR.pkl
+│   │   ├── iEEG_PHL.pkl
+│   │   ├── iEEG_PHR.pkl
+│   │   ├── spike_times_AHL.pkl
+│   │   ├── spike_times_AHR.pkl
+│   │   ├── spike_times_AL.pkl
+│   │   ├── spike_times_AR.pkl
+│   │   ├── spike_times_ECL.pkl
+│   │   ├── spike_times_ECR.pkl
+│   │   ├── spike_times_PHL.pkl
+│   │   ├── spike_times_PHR.pkl
+│   │   └── trials_info.csv
+│   ├── Session_05
+│   │   ├── EEG.pkl
+│   │   ├── iEEG_AHL.pkl
+│   │   ├── iEEG_AHR.pkl
+│   │   ├── iEEG_AL.pkl
+│   │   ├── iEEG_AR.pkl
+│   │   ├── iEEG_ECL.pkl
+│   │   ├── iEEG_ECR.pkl
+│   │   ├── iEEG_PHL.pkl
+│   │   ├── iEEG_PHR.pkl
+│   │   ├── spike_times_AHL.pkl
+│   │   ├── spike_times_AHR.pkl
+│   │   ├── spike_times_AL.pkl
+│   │   ├── spike_times_AR.pkl
+│   │   ├── spike_times_ECL.pkl
+│   │   ├── spike_times_ECR.pkl
+│   │   ├── spike_times_PHL.pkl
+│   │   ├── spike_times_PHR.pkl
+│   │   └── trials_info.csv
+│   ├── Session_06
+│   │   ├── EEG.pkl
+│   │   ├── iEEG_AHL.pkl
+│   │   ├── iEEG_AHR.pkl
+│   │   ├── iEEG_AL.pkl
+│   │   ├── iEEG_AR.pkl
+│   │   ├── iEEG_ECL.pkl
+│   │   ├── iEEG_ECR.pkl
+│   │   ├── iEEG_PHL.pkl
+│   │   ├── iEEG_PHR.pkl
+│   │   ├── spike_times_AHL.pkl
+│   │   ├── spike_times_AHR.pkl
+│   │   ├── spike_times_AL.pkl
+│   │   ├── spike_times_AR.pkl
+│   │   ├── spike_times_ECL.pkl
+│   │   ├── spike_times_ECR.pkl
+│   │   ├── spike_times_PHL.pkl
+│   │   ├── spike_times_PHR.pkl
+│   │   └── trials_info.csv
+│   └── Session_07
+│       ├── EEG.pkl
+│       ├── iEEG_AHL.pkl
+│       ├── iEEG_AHR.pkl
+│       ├── iEEG_AL.pkl
+│       ├── iEEG_AR.pkl
+│       ├── iEEG_ECL.pkl
+│       ├── iEEG_ECR.pkl
+│       ├── iEEG_PHL.pkl
+│       ├── iEEG_PHR.pkl
+│       ├── spike_times_AHL.pkl
+│       ├── spike_times_AHR.pkl
+│       ├── spike_times_AL.pkl
+│       ├── spike_times_AR.pkl
+│       ├── spike_times_ECL.pkl
+│       ├── spike_times_ECR.pkl
+│       ├── spike_times_PHL.pkl
+│       ├── spike_times_PHR.pkl
+│       └── trials_info.csv
+├── Sub_03
+│   ├── Session_01
+│   │   ├── EEG.pkl
+│   │   ├── iEEG_AHL.pkl
+│   │   ├── iEEG_AHR.pkl
+│   │   ├── iEEG_AL.pkl
+│   │   ├── iEEG_AR.pkl
+│   │   ├── iEEG_ECL.pkl
+│   │   ├── iEEG_ECR.pkl
+│   │   ├── iEEG_PHL.pkl
+│   │   ├── iEEG_PHR.pkl
+│   │   ├── spike_times_AHL.pkl
+│   │   ├── spike_times_AHR.pkl
+│   │   ├── spike_times_AL.pkl
+│   │   ├── spike_times_AR.pkl
+│   │   ├── spike_times_ECL.pkl
+│   │   ├── spike_times_ECR.pkl
+│   │   ├── spike_times_PHL.pkl
+│   │   ├── spike_times_PHR.pkl
+│   │   └── trials_info.csv
+│   ├── Session_02
+│   │   ├── EEG.pkl
+│   │   ├── iEEG_AHL.pkl
+│   │   ├── iEEG_AHR.pkl
+│   │   ├── iEEG_AL.pkl
+│   │   ├── iEEG_AR.pkl
+│   │   ├── iEEG_ECL.pkl
+│   │   ├── iEEG_ECR.pkl
+│   │   ├── iEEG_PHL.pkl
+│   │   ├── iEEG_PHR.pkl
+│   │   ├── spike_times_AHL.pkl
+│   │   ├── spike_times_AHR.pkl
+│   │   ├── spike_times_AL.pkl
+│   │   ├── spike_times_AR.pkl
+│   │   ├── spike_times_ECL.pkl
+│   │   ├── spike_times_ECR.pkl
+│   │   ├── spike_times_PHL.pkl
+│   │   ├── spike_times_PHR.pkl
+│   │   └── trials_info.csv
+│   └── Session_03
+│       ├── EEG.pkl
+│       ├── iEEG_AHL.pkl
+│       ├── iEEG_AHR.pkl
+│       ├── iEEG_AL.pkl
+│       ├── iEEG_AR.pkl
+│       ├── iEEG_ECL.pkl
+│       ├── iEEG_ECR.pkl
+│       ├── iEEG_PHL.pkl
+│       ├── iEEG_PHR.pkl
+│       ├── spike_times_AHL.pkl
+│       ├── spike_times_AHR.pkl
+│       ├── spike_times_AL.pkl
+│       ├── spike_times_AR.pkl
+│       ├── spike_times_ECL.pkl
+│       ├── spike_times_ECR.pkl
+│       ├── spike_times_PHL.pkl
+│       ├── spike_times_PHR.pkl
+│       └── trials_info.csv
+├── Sub_04
+│   ├── Session_01
+│   │   ├── EEG.pkl
+│   │   ├── iEEG_AHL.pkl
+│   │   ├── iEEG_AHR.pkl
+│   │   ├── iEEG_AL.pkl
+│   │   ├── iEEG_AR.pkl
+│   │   ├── iEEG_ECL.pkl
+│   │   ├── iEEG_ECR.pkl
+│   │   ├── iEEG_PHL.pkl
+│   │   ├── iEEG_PHR.pkl
+│   │   ├── spike_times_AHL.pkl
+│   │   ├── spike_times_AHR.pkl
+│   │   ├── spike_times_AL.pkl
+│   │   ├── spike_times_AR.pkl
+│   │   ├── spike_times_ECL.pkl
+│   │   ├── spike_times_ECR.pkl
+│   │   ├── spike_times_PHL.pkl
+│   │   ├── spike_times_PHR.pkl
+│   │   └── trials_info.csv
+│   └── Session_02
+│       ├── EEG.pkl
+│       ├── iEEG_AHL.pkl
+│       ├── iEEG_AHR.pkl
+│       ├── iEEG_AL.pkl
+│       ├── iEEG_AR.pkl
+│       ├── iEEG_ECL.pkl
+│       ├── iEEG_ECR.pkl
+│       ├── iEEG_PHL.pkl
+│       ├── iEEG_PHR.pkl
+│       ├── spike_times_AHL.pkl
+│       ├── spike_times_AHR.pkl
+│       ├── spike_times_AL.pkl
+│       ├── spike_times_AR.pkl
+│       ├── spike_times_ECL.pkl
+│       ├── spike_times_ECR.pkl
+│       ├── spike_times_PHL.pkl
+│       ├── spike_times_PHR.pkl
+│       └── trials_info.csv
+├── Sub_05
+│   ├── Session_01
+│   │   ├── EEG.pkl
+│   │   ├── iEEG_AHL.pkl
+│   │   ├── iEEG_AHR.pkl
+│   │   ├── iEEG_AL.pkl
+│   │   ├── iEEG_AR.pkl
+│   │   ├── iEEG_ECL.pkl
+│   │   ├── iEEG_ECR.pkl
+│   │   ├── iEEG_PHL.pkl
+│   │   ├── iEEG_PHR.pkl
+│   │   ├── spike_times_AHL.pkl
+│   │   ├── spike_times_AHR.pkl
+│   │   ├── spike_times_AL.pkl
+│   │   ├── spike_times_AR.pkl
+│   │   ├── spike_times_ECL.pkl
+│   │   ├── spike_times_ECR.pkl
+│   │   ├── spike_times_PHL.pkl
+│   │   ├── spike_times_PHR.pkl
+│   │   └── trials_info.csv
+│   ├── Session_02
+│   │   ├── EEG.pkl
+│   │   ├── iEEG_AHL.pkl
+│   │   ├── iEEG_AHR.pkl
+│   │   ├── iEEG_AL.pkl
+│   │   ├── iEEG_AR.pkl
+│   │   ├── iEEG_ECL.pkl
+│   │   ├── iEEG_ECR.pkl
+│   │   ├── iEEG_PHL.pkl
+│   │   ├── iEEG_PHR.pkl
+│   │   ├── spike_times_AHL.pkl
+│   │   ├── spike_times_AHR.pkl
+│   │   ├── spike_times_AL.pkl
+│   │   ├── spike_times_AR.pkl
+│   │   ├── spike_times_ECL.pkl
+│   │   ├── spike_times_ECR.pkl
+│   │   ├── spike_times_PHL.pkl
+│   │   ├── spike_times_PHR.pkl
+│   │   └── trials_info.csv
+│   └── Session_03
+│       ├── EEG.pkl
+│       ├── iEEG_AHL.pkl
+│       ├── iEEG_AHR.pkl
+│       ├── iEEG_AL.pkl
+│       ├── iEEG_AR.pkl
+│       ├── iEEG_ECL.pkl
+│       ├── iEEG_ECR.pkl
+│       ├── iEEG_PHL.pkl
+│       ├── iEEG_PHR.pkl
+│       ├── spike_times_AHL.pkl
+│       ├── spike_times_AHR.pkl
+│       ├── spike_times_AL.pkl
+│       ├── spike_times_AR.pkl
+│       ├── spike_times_ECL.pkl
+│       ├── spike_times_ECR.pkl
+│       ├── spike_times_PHL.pkl
+│       ├── spike_times_PHR.pkl
+│       └── trials_info.csv
+├── Sub_06
+│   ├── Session_01
+│   │   ├── EEG.pkl
+│   │   ├── iEEG_AHL.pkl
+│   │   ├── iEEG_AHR.pkl
+│   │   ├── iEEG_AL.pkl
+│   │   ├── iEEG_AR.pkl
+│   │   ├── iEEG_ECL.pkl
+│   │   ├── iEEG_ECR.pkl
+│   │   ├── iEEG_PHL.pkl
+│   │   ├── iEEG_PHR.pkl
+│   │   ├── spike_times_AHL.pkl
+│   │   ├── spike_times_AHR.pkl
+│   │   ├── spike_times_AL.pkl
+│   │   ├── spike_times_AR.pkl
+│   │   ├── spike_times_ECL.pkl
+│   │   ├── spike_times_ECR.pkl
+│   │   ├── spike_times_PHL.pkl
+│   │   ├── spike_times_PHR.pkl
+│   │   └── trials_info.csv
+│   ├── Session_02
+│   │   ├── EEG.pkl
+│   │   ├── iEEG_AHL.pkl
+│   │   ├── iEEG_AHR.pkl
+│   │   ├── iEEG_AL.pkl
+│   │   ├── iEEG_AR.pkl
+│   │   ├── iEEG_ECL.pkl
+│   │   ├── iEEG_ECR.pkl
+│   │   ├── iEEG_PHL.pkl
+│   │   ├── iEEG_PHR.pkl
+│   │   ├── spike_times_AHL.pkl
+│   │   ├── spike_times_AHR.pkl
+│   │   ├── spike_times_AL.pkl
+│   │   ├── spike_times_AR.pkl
+│   │   ├── spike_times_ECL.pkl
+│   │   ├── spike_times_ECR.pkl
+│   │   ├── spike_times_PHL.pkl
+│   │   ├── spike_times_PHR.pkl
+│   │   └── trials_info.csv
+│   ├── Session_03
+│   │   ├── EEG.pkl
+│   │   ├── iEEG_AHL.pkl
+│   │   ├── iEEG_AHR.pkl
+│   │   ├── iEEG_AL.pkl
+│   │   ├── iEEG_AR.pkl
+│   │   ├── iEEG_ECL.pkl
+│   │   ├── iEEG_ECR.pkl
+│   │   ├── iEEG_PHL.pkl
+│   │   ├── iEEG_PHR.pkl
+│   │   ├── spike_times_AHL.pkl
+│   │   ├── spike_times_AHR.pkl
+│   │   ├── spike_times_AL.pkl
+│   │   ├── spike_times_AR.pkl
+│   │   ├── spike_times_ECL.pkl
+│   │   ├── spike_times_ECR.pkl
+│   │   ├── spike_times_PHL.pkl
+│   │   ├── spike_times_PHR.pkl
+│   │   └── trials_info.csv
+│   ├── Session_04
+│   │   ├── EEG.pkl
+│   │   ├── iEEG_AHL.pkl
+│   │   ├── iEEG_AHR.pkl
+│   │   ├── iEEG_AL.pkl
+│   │   ├── iEEG_AR.pkl
+│   │   ├── iEEG_ECL.pkl
+│   │   ├── iEEG_ECR.pkl
+│   │   ├── iEEG_PHL.pkl
+│   │   ├── iEEG_PHR.pkl
+│   │   ├── spike_times_AHL.pkl
+│   │   ├── spike_times_AHR.pkl
+│   │   ├── spike_times_AL.pkl
+│   │   ├── spike_times_AR.pkl
+│   │   ├── spike_times_ECL.pkl
+│   │   ├── spike_times_ECR.pkl
+│   │   ├── spike_times_PHL.pkl
+│   │   ├── spike_times_PHR.pkl
+│   │   └── trials_info.csv
+│   ├── Session_05
+│   │   ├── EEG.pkl
+│   │   ├── iEEG_AHL.pkl
+│   │   ├── iEEG_AHR.pkl
+│   │   ├── iEEG_AL.pkl
+│   │   ├── iEEG_AR.pkl
+│   │   ├── iEEG_ECL.pkl
+│   │   ├── iEEG_ECR.pkl
+│   │   ├── iEEG_PHL.pkl
+│   │   ├── iEEG_PHR.pkl
+│   │   ├── spike_times_AHL.pkl
+│   │   ├── spike_times_AHR.pkl
+│   │   ├── spike_times_AL.pkl
+│   │   ├── spike_times_AR.pkl
+│   │   ├── spike_times_ECL.pkl
+│   │   ├── spike_times_ECR.pkl
+│   │   ├── spike_times_PHL.pkl
+│   │   ├── spike_times_PHR.pkl
+│   │   └── trials_info.csv
+│   ├── Session_06
+│   │   ├── EEG.pkl
+│   │   ├── iEEG_AHL.pkl
+│   │   ├── iEEG_AHR.pkl
+│   │   ├── iEEG_AL.pkl
+│   │   ├── iEEG_AR.pkl
+│   │   ├── iEEG_ECL.pkl
+│   │   ├── iEEG_ECR.pkl
+│   │   ├── iEEG_PHL.pkl
+│   │   ├── iEEG_PHR.pkl
+│   │   ├── spike_times_AHL.pkl
+│   │   ├── spike_times_AHR.pkl
+│   │   ├── spike_times_AL.pkl
+│   │   ├── spike_times_AR.pkl
+│   │   ├── spike_times_ECL.pkl
+│   │   ├── spike_times_ECR.pkl
+│   │   ├── spike_times_PHL.pkl
+│   │   ├── spike_times_PHR.pkl
+│   │   └── trials_info.csv
+│   └── Session_07
+│       ├── EEG.pkl
+│       ├── iEEG_AHL.pkl
+│       ├── iEEG_AHR.pkl
+│       ├── iEEG_AL.pkl
+│       ├── iEEG_AR.pkl
+│       ├── iEEG_ECL.pkl
+│       ├── iEEG_ECR.pkl
+│       ├── iEEG_PHL.pkl
+│       ├── iEEG_PHR.pkl
+│       ├── spike_times_AHL.pkl
+│       ├── spike_times_AHR.pkl
+│       ├── spike_times_AL.pkl
+│       ├── spike_times_AR.pkl
+│       ├── spike_times_ECL.pkl
+│       ├── spike_times_ECR.pkl
+│       ├── spike_times_PHL.pkl
+│       ├── spike_times_PHR.pkl
+│       └── trials_info.csv
+├── Sub_07
+│   ├── Session_01
+│   │   ├── EEG.pkl
+│   │   ├── iEEG_AHL.pkl
+│   │   ├── iEEG_AHR.pkl
+│   │   ├── iEEG_AL.pkl
+│   │   ├── iEEG_AR.pkl
+│   │   ├── iEEG_ECL.pkl
+│   │   ├── iEEG_ECR.pkl
+│   │   ├── iEEG_PHL.pkl
+│   │   ├── iEEG_PHR.pkl
+│   │   ├── spike_times_AHL.pkl
+│   │   ├── spike_times_AHR.pkl
+│   │   ├── spike_times_AL.pkl
+│   │   ├── spike_times_AR.pkl
+│   │   ├── spike_times_ECL.pkl
+│   │   ├── spike_times_ECR.pkl
+│   │   ├── spike_times_PHL.pkl
+│   │   ├── spike_times_PHR.pkl
+│   │   └── trials_info.csv
+│   ├── Session_02
+│   │   ├── EEG.pkl
+│   │   ├── iEEG_AHL.pkl
+│   │   ├── iEEG_AHR.pkl
+│   │   ├── iEEG_AL.pkl
+│   │   ├── iEEG_AR.pkl
+│   │   ├── iEEG_ECL.pkl
+│   │   ├── iEEG_ECR.pkl
+│   │   ├── iEEG_PHL.pkl
+│   │   ├── iEEG_PHR.pkl
+│   │   ├── spike_times_AHL.pkl
+│   │   ├── spike_times_AHR.pkl
+│   │   ├── spike_times_AL.pkl
+│   │   ├── spike_times_AR.pkl
+│   │   ├── spike_times_ECL.pkl
+│   │   ├── spike_times_ECR.pkl
+│   │   ├── spike_times_PHL.pkl
+│   │   ├── spike_times_PHR.pkl
+│   │   └── trials_info.csv
+│   ├── Session_03
+│   │   ├── EEG.pkl
+│   │   ├── iEEG_AHL.pkl
+│   │   ├── iEEG_AHR.pkl
+│   │   ├── iEEG_AL.pkl
+│   │   ├── iEEG_AR.pkl
+│   │   ├── iEEG_ECL.pkl
+│   │   ├── iEEG_ECR.pkl
+│   │   ├── iEEG_PHL.pkl
+│   │   ├── iEEG_PHR.pkl
+│   │   ├── spike_times_AHL.pkl
+│   │   ├── spike_times_AHR.pkl
+│   │   ├── spike_times_AL.pkl
+│   │   ├── spike_times_AR.pkl
+│   │   ├── spike_times_ECL.pkl
+│   │   ├── spike_times_ECR.pkl
+│   │   ├── spike_times_PHL.pkl
+│   │   ├── spike_times_PHR.pkl
+│   │   └── trials_info.csv
+│   └── Session_04
+│       ├── EEG.pkl
+│       ├── iEEG_AHL.pkl
+│       ├── iEEG_AHR.pkl
+│       ├── iEEG_AL.pkl
+│       ├── iEEG_AR.pkl
+│       ├── iEEG_ECL.pkl
+│       ├── iEEG_ECR.pkl
+│       ├── iEEG_PHL.pkl
+│       ├── iEEG_PHR.pkl
+│       ├── spike_times_AHL.pkl
+│       ├── spike_times_AHR.pkl
+│       ├── spike_times_AL.pkl
+│       ├── spike_times_AR.pkl
+│       ├── spike_times_ECL.pkl
+│       ├── spike_times_ECR.pkl
+│       ├── spike_times_PHL.pkl
+│       ├── spike_times_PHR.pkl
+│       └── trials_info.csv
+├── Sub_08
+│   ├── Session_01
+│   │   ├── EEG.pkl
+│   │   ├── iEEG_AHL.pkl
+│   │   ├── iEEG_AHR.pkl
+│   │   ├── iEEG_AL.pkl
+│   │   ├── iEEG_AR.pkl
+│   │   ├── iEEG_ECL.pkl
+│   │   ├── iEEG_ECR.pkl
+│   │   ├── iEEG_PHL.pkl
+│   │   ├── iEEG_PHR.pkl
+│   │   ├── spike_times_AHL.pkl
+│   │   ├── spike_times_AHR.pkl
+│   │   ├── spike_times_AL.pkl
+│   │   ├── spike_times_AR.pkl
+│   │   ├── spike_times_ECL.pkl
+│   │   ├── spike_times_ECR.pkl
+│   │   ├── spike_times_PHL.pkl
+│   │   ├── spike_times_PHR.pkl
+│   │   └── trials_info.csv
+│   ├── Session_02
+│   │   ├── EEG.pkl
+│   │   ├── iEEG_AHL.pkl
+│   │   ├── iEEG_AHR.pkl
+│   │   ├── iEEG_AL.pkl
+│   │   ├── iEEG_AR.pkl
+│   │   ├── iEEG_ECL.pkl
+│   │   ├── iEEG_ECR.pkl
+│   │   ├── iEEG_PHL.pkl
+│   │   ├── iEEG_PHR.pkl
+│   │   ├── spike_times_AHL.pkl
+│   │   ├── spike_times_AHR.pkl
+│   │   ├── spike_times_AL.pkl
+│   │   ├── spike_times_AR.pkl
+│   │   ├── spike_times_ECL.pkl
+│   │   ├── spike_times_ECR.pkl
+│   │   ├── spike_times_PHL.pkl
+│   │   ├── spike_times_PHR.pkl
+│   │   └── trials_info.csv
+│   ├── Session_03
+│   │   ├── EEG.pkl
+│   │   ├── iEEG_AHL.pkl
+│   │   ├── iEEG_AHR.pkl
+│   │   ├── iEEG_AL.pkl
+│   │   ├── iEEG_AR.pkl
+│   │   ├── iEEG_ECL.pkl
+│   │   ├── iEEG_ECR.pkl
+│   │   ├── iEEG_PHL.pkl
+│   │   ├── iEEG_PHR.pkl
+│   │   ├── spike_times_AHL.pkl
+│   │   ├── spike_times_AHR.pkl
+│   │   ├── spike_times_AL.pkl
+│   │   ├── spike_times_AR.pkl
+│   │   ├── spike_times_ECL.pkl
+│   │   ├── spike_times_ECR.pkl
+│   │   ├── spike_times_PHL.pkl
+│   │   ├── spike_times_PHR.pkl
+│   │   └── trials_info.csv
+│   ├── Session_04
+│   │   ├── EEG.pkl
+│   │   ├── iEEG_AHL.pkl
+│   │   ├── iEEG_AHR.pkl
+│   │   ├── iEEG_AL.pkl
+│   │   ├── iEEG_AR.pkl
+│   │   ├── iEEG_ECL.pkl
+│   │   ├── iEEG_ECR.pkl
+│   │   ├── iEEG_PHL.pkl
+│   │   ├── iEEG_PHR.pkl
+│   │   ├── spike_times_AHL.pkl
+│   │   ├── spike_times_AHR.pkl
+│   │   ├── spike_times_AL.pkl
+│   │   ├── spike_times_AR.pkl
+│   │   ├── spike_times_ECL.pkl
+│   │   ├── spike_times_ECR.pkl
+│   │   ├── spike_times_PHL.pkl
+│   │   ├── spike_times_PHR.pkl
+│   │   └── trials_info.csv
+│   └── Session_05
+│       ├── EEG.pkl
+│       ├── iEEG_AHL.pkl
+│       ├── iEEG_AHR.pkl
+│       ├── iEEG_AL.pkl
+│       ├── iEEG_AR.pkl
+│       ├── iEEG_ECL.pkl
+│       ├── iEEG_ECR.pkl
+│       ├── iEEG_PHL.pkl
+│       ├── iEEG_PHR.pkl
+│       ├── spike_times_AHL.pkl
+│       ├── spike_times_AHR.pkl
+│       ├── spike_times_AL.pkl
+│       ├── spike_times_AR.pkl
+│       ├── spike_times_ECL.pkl
+│       ├── spike_times_ECR.pkl
+│       ├── spike_times_PHL.pkl
+│       ├── spike_times_PHR.pkl
+│       └── trials_info.csv
+└── Sub_09
+    ├── Session_01
+    │   ├── EEG.pkl
+    │   ├── iEEG_AHL.pkl
+    │   ├── iEEG_AHR.pkl
+    │   ├── iEEG_AL.pkl
+    │   ├── iEEG_AR.pkl
+    │   ├── iEEG_ECL.pkl
+    │   ├── iEEG_ECR.pkl
+    │   ├── iEEG_PHL.pkl
+    │   ├── iEEG_PHR.pkl
+    │   ├── spike_times_AHL.pkl
+    │   ├── spike_times_AHR.pkl
+    │   ├── spike_times_AL.pkl
+    │   ├── spike_times_AR.pkl
+    │   ├── spike_times_ECL.pkl
+    │   ├── spike_times_ECR.pkl
+    │   ├── spike_times_PHL.pkl
+    │   ├── spike_times_PHR.pkl
+    │   └── trials_info.csv
+    └── Session_02
+        ├── EEG.pkl
+        ├── iEEG_AHL.pkl
+        ├── iEEG_AHR.pkl
+        ├── iEEG_AL.pkl
+        ├── iEEG_AR.pkl
+        ├── iEEG_ECL.pkl
+        ├── iEEG_ECR.pkl
+        ├── iEEG_PHL.pkl
+        ├── iEEG_PHR.pkl
+        ├── spike_times_AHL.pkl
+        ├── spike_times_AHR.pkl
+        ├── spike_times_AL.pkl
+        ├── spike_times_AR.pkl
+        ├── spike_times_ECL.pkl
+        ├── spike_times_ECR.pkl
+        ├── spike_times_PHL.pkl
+        ├── spike_times_PHR.pkl
+        └── trials_info.csv
+
+46 directories, 666 files

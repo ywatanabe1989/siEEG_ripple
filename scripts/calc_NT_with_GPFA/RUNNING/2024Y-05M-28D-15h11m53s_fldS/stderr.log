@@ -1,0 +1,19 @@
+Traceback (most recent call last):
+  File "/home/ywatanabe/proj/siEEG_ripple_dev/./scripts/calc_NT_with_GPFA.py", line 174, in <module>
+  File "/home/ywatanabe/proj/siEEG_ripple_dev/./scripts/calc_NT_with_GPFA.py", line 108, in main
+    NTs = np.stack(gpfa.fit_transform(spike_trains), axis=0)
+  File "/usr/local/lib64/python3.9/site-packages/elephant/utils.py", line 446, in wrapper
+    return method(*new_args, **new_kwargs)
+  File "/usr/local/lib64/python3.9/site-packages/elephant/gpfa/gpfa.py", line 534, in fit_transform
+    self.fit(spiketrains)
+  File "/usr/local/lib64/python3.9/site-packages/elephant/utils.py", line 446, in wrapper
+    return method(*new_args, **new_kwargs)
+  File "/usr/local/lib64/python3.9/site-packages/elephant/gpfa/gpfa.py", line 365, in fit
+    self.params_estimated, self.fit_info = gpfa_core.fit(
+  File "/usr/local/lib64/python3.9/site-packages/elephant/gpfa/gpfa_core.py", line 138, in fit
+    params_est, seqs_train_cut, ll_cut, iter_time = em(
+  File "/usr/local/lib64/python3.9/site-packages/elephant/gpfa/gpfa_core.py", line 239, in em
+    seqs_latent, ll = exact_inference_with_ll(seqs_train, params,
+  File "/usr/local/lib64/python3.9/site-packages/elephant/gpfa/gpfa_core.py", line 426, in exact_inference_with_ll
+    gpfa_util.fill_persymm(np.eye(x_dim * t_half, x_dim * t) -
+KeyboardInterrupt

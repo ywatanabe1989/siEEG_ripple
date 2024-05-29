@@ -1,0 +1,24 @@
+Traceback (most recent call last):
+  File "/home/ywatanabe/proj/siEEG_ripple_dev/./scripts/calc_NT_with_GPFA.py", line 172, in <module>
+    main(match=None, without_retrieval_phase=False)
+  File "/home/ywatanabe/proj/siEEG_ripple_dev/./scripts/calc_NT_with_GPFA.py", line 108, in main
+    NTs = np.stack(gpfa.fit_transform(spike_trains), axis=0)
+  File "/usr/local/lib64/python3.9/site-packages/elephant/utils.py", line 446, in wrapper
+    return method(*new_args, **new_kwargs)
+  File "/usr/local/lib64/python3.9/site-packages/elephant/gpfa/gpfa.py", line 534, in fit_transform
+    self.fit(spiketrains)
+  File "/usr/local/lib64/python3.9/site-packages/elephant/utils.py", line 446, in wrapper
+    return method(*new_args, **new_kwargs)
+  File "/usr/local/lib64/python3.9/site-packages/elephant/gpfa/gpfa.py", line 365, in fit
+    self.params_estimated, self.fit_info = gpfa_core.fit(
+  File "/usr/local/lib64/python3.9/site-packages/elephant/gpfa/gpfa_core.py", line 138, in fit
+    params_est, seqs_train_cut, ll_cut, iter_time = em(
+  File "/usr/local/lib64/python3.9/site-packages/elephant/gpfa/gpfa_core.py", line 289, in em
+    res = learn_gp_params(seqs_latent, params, verbose=verbose)
+  File "/usr/local/lib64/python3.9/site-packages/elephant/gpfa/gpfa_core.py", line 488, in learn_gp_params
+    precomp = gpfa_util.make_precomp(seqs_latent, x_dim)
+  File "/usr/local/lib64/python3.9/site-packages/elephant/gpfa/gpfa_util.py", line 424, in make_precomp
+    + np.outer(seqs[n]['latent_variable'][i, :],
+  File "/usr/local/lib64/python3.9/site-packages/numpy/core/numeric.py", line 925, in outer
+    return multiply(a.ravel()[:, newaxis], b.ravel()[newaxis, :], out)
+KeyboardInterrupt

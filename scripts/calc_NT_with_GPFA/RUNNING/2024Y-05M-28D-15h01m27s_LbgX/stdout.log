@@ -1,0 +1,137 @@
+Initializing parameters using factor analysis...
+
+Fitting GPFA model...
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev/data/Sub_01/Session_01/NT/AHL_match_None.npy
+[0m
+The input must be a list of SpikeTrain
+The input must be a list of SpikeTrain
+The input must be a list of SpikeTrain
+Initializing parameters using factor analysis...
+
+Fitting GPFA model...
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev/data/Sub_01/Session_01/NT/ECL_match_None.npy
+[0m
+The input must be a list of SpikeTrain
+The input must be a list of SpikeTrain
+Initializing parameters using factor analysis...
+
+Fitting GPFA model...
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev/data/Sub_01/Session_01/NT/PHR_match_None.npy
+[0m
+Initializing parameters using factor analysis...
+
+Fitting GPFA model...
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev/data/Sub_01/Session_02/NT/AHL_match_None.npy
+[0m
+The input must be a list of SpikeTrain
+The input must be a list of SpikeTrain
+The input must be a list of SpikeTrain
+Initializing parameters using factor analysis...
+
+Fitting GPFA model...
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev/data/Sub_01/Session_02/NT/ECL_match_None.npy
+[0m
+The input must be a list of SpikeTrain
+The input must be a list of SpikeTrain
+Initializing parameters using factor analysis...
+
+Fitting GPFA model...
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev/data/Sub_01/Session_02/NT/PHR_match_None.npy
+[0m
+The input must be a list of SpikeTrain
+The input must be a list of SpikeTrain
+The input must be a list of SpikeTrain
+The input must be a list of SpikeTrain
+The input must be a list of SpikeTrain
+The input must be a list of SpikeTrain
+The input must be a list of SpikeTrain
+The input must be a list of SpikeTrain
+The input must be a list of SpikeTrain
+The input must be a list of SpikeTrain
+The input must be a list of SpikeTrain
+The input must be a list of SpikeTrain
+The input must be a list of SpikeTrain
+The input must be a list of SpikeTrain
+The input must be a list of SpikeTrain
+The input must be a list of SpikeTrain
+Initializing parameters using factor analysis...
+
+Fitting GPFA model...
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev/data/Sub_02/Session_01/NT/AHL_match_None.npy
+[0m
+Initializing parameters using factor analysis...
+Input must be 1- or 2-d.
+Initializing parameters using factor analysis...
+
+Fitting GPFA model...
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev/data/Sub_02/Session_01/NT/AL_match_None.npy
+[0m
+Initializing parameters using factor analysis...
+
+Fitting GPFA model...
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev/data/Sub_02/Session_01/NT/AR_match_None.npy
+[0m
+Initializing parameters using factor analysis...
+
+Fitting GPFA model...
+index 2 is out of bounds for axis 2 with size 2
+Initializing parameters using factor analysis...
+
+Fitting GPFA model...
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev/data/Sub_02/Session_01/NT/ECR_match_None.npy
+[0m
+Initializing parameters using factor analysis...
+
+Fitting GPFA model...
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev/data/Sub_02/Session_01/NT/PHL_match_None.npy
+[0m
+Initializing parameters using factor analysis...
+
+Fitting GPFA model...
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev/data/Sub_02/Session_01/NT/PHR_match_None.npy
+[0m
+Initializing parameters using factor analysis...
+
+Fitting GPFA model...
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev/data/Sub_02/Session_02/NT/AHL_match_None.npy
+[0m
+Initializing parameters using factor analysis...
+
+Fitting GPFA model...
+index 2 is out of bounds for axis 2 with size 2
+Initializing parameters using factor analysis...
+
+Fitting GPFA model...
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev/data/Sub_02/Session_02/NT/AL_match_None.npy
+[0m
+Initializing parameters using factor analysis...
+
+Fitting GPFA model...
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev/data/Sub_02/Session_02/NT/AR_match_None.npy
+[0m
+Initializing parameters using factor analysis...
+Input must be 1- or 2-d.
+Initializing parameters using factor analysis...
+
+Fitting GPFA model...
+[93m
+Saved to: /home/ywatanabe/proj/siEEG_ripple_dev/data/Sub_02/Session_02/NT/ECR_match_None.npy
+[0m
+Initializing parameters using factor analysis...
+
+Fitting GPFA model...

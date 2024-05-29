@@ -1,0 +1,8 @@
+> [0;32m/home/ywatanabe/proj/siEEG_ripple_dev/scripts/externals/mngs/src/mngs/io/_save.py[0m(131)[0;36msave[0;34m()[0m
+[0;32m    130 [0;31m    [0m__import__[0m[0;34m([0m[0;34m"ipdb"[0m[0;34m)[0m[0;34m.[0m[0mset_trace[0m[0;34m([0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[0;32m--> 131 [0;31m    [0;32mif[0m [0mfrom_git[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[0m[0;32m    132 [0;31m        [0mspath[0m [0;34m=[0m [0mmngs[0m[0;34m.[0m[0mpath[0m[0;34m.[0m[0mfind_git[0m[0;34m([0m[0;34m)[0m [0;34m+[0m [0mspath[0m[0;34m[0m[0;34m[0m[0m
+[0m
+ipdb> ipdb> '/home/ywatanabe/proj/siEEG_ripple_dev//home/ywatanabe/proj/siEEG_ripple_dev/scripts/utils/load/nix_2_csv_and_pkl/./data/Sub_01/Session_01/meta.csv'
+ipdb> ipdb> '/home/ywatanabe/proj/siEEG_ripple_dev/home/ywatanabe/proj/siEEG_ripple_dev/scripts/utils/load/nix_2_csv_and_pkl/data/Sub_01/Session_01/meta.csv'
+ipdb> 

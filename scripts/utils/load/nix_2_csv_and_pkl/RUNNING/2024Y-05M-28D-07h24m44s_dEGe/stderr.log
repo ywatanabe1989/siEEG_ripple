@@ -1,0 +1,23 @@
+Traceback (most recent call last):
+  File "/home/ywatanabe/proj/siEEG_ripple_dev/scripts/utils/load/nix_2_csv_and_pkl.py", line 356, in <module>
+    main()
+  File "/home/ywatanabe/proj/siEEG_ripple_dev/scripts/utils/load/nix_2_csv_and_pkl.py", line 67, in main
+    mngs.io.save(meta_df, session_dir + f"meta.csv", from_git=True)
+  File "/home/ywatanabe/proj/siEEG_ripple_dev/scripts/externals/mngs/src/mngs/io/_save.py", line 131, in save
+  File "/home/ywatanabe/proj/siEEG_ripple_dev/scripts/externals/mngs/src/mngs/io/_save.py", line 131, in save
+  File "/usr/lib64/python3.9/bdb.py", line 88, in trace_dispatch
+    return self.dispatch_line(frame)
+  File "/usr/lib64/python3.9/bdb.py", line 113, in dispatch_line
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+
+If you suspect this is an IPython 7.34.0 bug, please report it at:
+    https://github.com/ipython/ipython/issues
+or send an email to the mailing list at ipython-dev@python.org
+
+You can print a more detailed traceback right now with "%tb", or use "%debug"
+to interactively debug it.
+
+Extra-detailed tracebacks for bug-reporting purposes can be enabled via:
+    %config Application.verbose_crash=True
+

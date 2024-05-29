@@ -1,0 +1,40 @@
+Traceback (most recent call last):
+  File "/home/ywatanabe/proj/siEEG_ripple_dev/scripts/calc_NT_with_GPFA.py", line 150, in <module>
+    main(match="all", without_retrieval_phase=False)
+  File "/home/ywatanabe/proj/siEEG_ripple_dev/scripts/calc_NT_with_GPFA.py", line 122, in main
+    NTs = np.stack(gpfa.fit_transform(spike_trains), axis=0)
+  File "/usr/local/lib64/python3.9/site-packages/elephant/utils.py", line 446, in wrapper
+    return method(*new_args, **new_kwargs)
+  File "/usr/local/lib64/python3.9/site-packages/elephant/gpfa/gpfa.py", line 534, in fit_transform
+    self.fit(spiketrains)
+  File "/usr/local/lib64/python3.9/site-packages/elephant/utils.py", line 446, in wrapper
+    return method(*new_args, **new_kwargs)
+  File "/usr/local/lib64/python3.9/site-packages/elephant/gpfa/gpfa.py", line 365, in fit
+    self.params_estimated, self.fit_info = gpfa_core.fit(
+  File "/usr/local/lib64/python3.9/site-packages/elephant/gpfa/gpfa_core.py", line 138, in fit
+    params_est, seqs_train_cut, ll_cut, iter_time = em(
+  File "/usr/local/lib64/python3.9/site-packages/elephant/gpfa/gpfa_core.py", line 289, in em
+    res = learn_gp_params(seqs_latent, params, verbose=verbose)
+  File "/usr/local/lib64/python3.9/site-packages/elephant/gpfa/gpfa_core.py", line 494, in learn_gp_params
+    res_opt = optimize.minimize(gpfa_util.grad_betgam, initp,
+  File "/usr/local/lib64/python3.9/site-packages/scipy/optimize/_minimize.py", line 713, in minimize
+    res = _minimize_lbfgsb(fun, x0, args, jac, bounds,
+  File "/usr/local/lib64/python3.9/site-packages/scipy/optimize/_lbfgsb_py.py", line 407, in _minimize_lbfgsb
+    f, g = func_and_grad(x)
+  File "/usr/local/lib64/python3.9/site-packages/scipy/optimize/_differentiable_functions.py", line 296, in fun_and_grad
+    self._update_fun()
+  File "/usr/local/lib64/python3.9/site-packages/scipy/optimize/_differentiable_functions.py", line 262, in _update_fun
+    self._update_fun_impl()
+  File "/usr/local/lib64/python3.9/site-packages/scipy/optimize/_differentiable_functions.py", line 163, in update_fun
+    self.f = fun_wrapped(self.x)
+  File "/usr/local/lib64/python3.9/site-packages/scipy/optimize/_differentiable_functions.py", line 145, in fun_wrapped
+    fx = fun(np.copy(x), *args)
+  File "/usr/local/lib64/python3.9/site-packages/scipy/optimize/_optimize.py", line 79, in __call__
+    self._compute_if_needed(x, *args)
+  File "/usr/local/lib64/python3.9/site-packages/scipy/optimize/_optimize.py", line 73, in _compute_if_needed
+    fg = self.fun(x, *args)
+  File "/usr/local/lib64/python3.9/site-packages/elephant/gpfa/gpfa_util.py", line 465, in grad_betgam
+    Kinv = np.linalg.inv(Kmax[:T, :T])
+  File "/usr/local/lib64/python3.9/site-packages/numpy/linalg/linalg.py", line 561, in inv
+    ainv = _umath_linalg.inv(a, signature=signature, extobj=extobj)
+KeyboardInterrupt

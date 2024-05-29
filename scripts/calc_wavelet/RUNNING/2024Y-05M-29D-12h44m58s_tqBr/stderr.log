@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "/home/ywatanabe/proj/siEEG_ripple_dev/./scripts/calc_wavelet.py", line 62, in <module>
+    main()
+  File "/home/ywatanabe/proj/siEEG_ripple_dev/./scripts/calc_wavelet.py", line 45, in main
+    print(torch.utils.collect_env())
+TypeError: 'module' object is not callable
