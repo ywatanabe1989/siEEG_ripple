@@ -1,3 +1,5 @@
+!**.gitkeep**
+
 ## large files
 *.mat
 *.npy
@@ -21,6 +23,7 @@
 
 ## data
 data/*
+!data/.gitkeep
 
 # singularity
 singularity
